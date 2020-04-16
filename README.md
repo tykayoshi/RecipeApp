@@ -1,4 +1,2 @@
-# CoordinatorSkeleton
-Skeleton Coordinator ready for a tab bar application
-
-Uses VIPER pattern
+# RecipeApp
+Starter project for furlough project
