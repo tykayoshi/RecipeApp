@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */; };
 		C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */; };
+		C44E8473244DC18A00D97E32 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E8472244DC18A00D97E32 /* Endpoint.swift */; };
 		C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */; };
 		C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F3232F9E04001EEB3D /* ViewController.swift */; };
 		C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DFE8F5232F9E04001EEB3D /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
 		C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
+		C44E8472244DC18A00D97E32 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C4DFE8EE232F9E04001EEB3D /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DFE8F3232F9E04001EEB3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,22 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		C44E8470244DC0AA00D97E32 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C44E8471244DC13200D97E32 /* Endpoint */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C44E8471244DC13200D97E32 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				C44E8472244DC18A00D97E32 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
 		C4DFE8E5232F9E04001EEB3D = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +162,7 @@
 				C4DFE92A232FC3DE001EEB3D /* Extensions */,
 				C4DFE927232FC37E001EEB3D /* Home */,
 				C4DFE922232FA0A2001EEB3D /* Base */,
+				C44E8470244DC0AA00D97E32 /* Networking */,
 				C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */,
 				C4DFE8F3232F9E04001EEB3D /* ViewController.swift */,
 				C4DFE8F5232F9E04001EEB3D /* Main.storyboard */,
@@ -380,6 +399,7 @@
 				C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */,
 				C4DFE93B232FD98F001EEB3D /* HomeInteractor.swift in Sources */,
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
+				C44E8473244DC18A00D97E32 /* Endpoint.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
 				C4DFE939232FD87A001EEB3D /* HomeContract.swift in Sources */,
