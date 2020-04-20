@@ -15,6 +15,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ServiceLayer.request(router: Router.getSources) { (result: Result<[String: [CollectionItem]], Error>) in
+            switch result {
+            case .success:
+                print(result)
+            case .failure:
+                print(result)
+            }
+        }
     }
     
 }
