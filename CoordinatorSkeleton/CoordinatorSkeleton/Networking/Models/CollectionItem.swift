@@ -1,5 +1,5 @@
 //
-//  Endpoint.swift
+//  CollectionItem.swift
 //  RecipeApp
 //
 //  Created by Ilkay Hamit on 20/04/2020.
@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct CollectionItem: Codable {
+    let title: String
+    let id: Int
+}
