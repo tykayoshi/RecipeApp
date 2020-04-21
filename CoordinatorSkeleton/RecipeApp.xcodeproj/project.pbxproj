@@ -12,6 +12,7 @@
 		C44E8485244DD99300D97E32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E8484244DD99300D97E32 /* Router.swift */; };
 		C44E8487244DE2F000D97E32 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E8486244DE2F000D97E32 /* ServiceLayer.swift */; };
 		C44E848B244DEFA900D97E32 /* CollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E848A244DEFA900D97E32 /* CollectionItem.swift */; };
+		C45A59C3244F0FCB00F68A06 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59C2244F0FCB00F68A06 /* UserManager.swift */; };
 		C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */; };
 		C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F3232F9E04001EEB3D /* ViewController.swift */; };
 		C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DFE8F5232F9E04001EEB3D /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		C44E8484244DD99300D97E32 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C44E8486244DE2F000D97E32 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		C44E848A244DEFA900D97E32 /* CollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItem.swift; sourceTree = "<group>"; };
+		C45A59C2244F0FCB00F68A06 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		C4DFE8EE232F9E04001EEB3D /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DFE8F3232F9E04001EEB3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		C45A59C1244F0FB500F68A06 /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+				C45A59C2244F0FCB00F68A06 /* UserManager.swift */,
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
 		C4DFE8E5232F9E04001EEB3D = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 		C4DFE922232FA0A2001EEB3D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C45A59C1244F0FB500F68A06 /* UserManager */,
 				C4DFE925232FA208001EEB3D /* AppCoordinator.swift */,
 				C4DFE923232FA0B4001EEB3D /* Coordinator.swift */,
 			);
@@ -409,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45A59C3244F0FCB00F68A06 /* UserManager.swift in Sources */,
 				C4DFE924232FA0B4001EEB3D /* Coordinator.swift in Sources */,
 				C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */,
 				C4DFE93B232FD98F001EEB3D /* HomeInteractor.swift in Sources */,
