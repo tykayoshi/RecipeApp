@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B3760152450675600C2577F /* RhiannaaContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3760142450675600C2577F /* RhiannaaContract.swift */; };
+		1B3760172450677000C2577F /* RhiannaaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3760162450677000C2577F /* RhiannaaCoordinator.swift */; };
+		1B3760192450679A00C2577F /* RhiannaaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3760182450679A00C2577F /* RhiannaaInteractor.swift */; };
+		1B37601B245067AE00C2577F /* RhiannaaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37601A245067AE00C2577F /* RhiannaaPresenter.swift */; };
+		1B37601D245067E400C2577F /* RhiannaaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37601C245067E400C2577F /* RhiannaaViewController.swift */; };
+		1B37601F245067F000C2577F /* Rhiannaa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B37601E245067F000C2577F /* Rhiannaa.storyboard */; };
 		C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */; };
 		C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */; };
 		C44E8485244DD99300D97E32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E8484244DD99300D97E32 /* Router.swift */; };
@@ -57,6 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B3760142450675600C2577F /* RhiannaaContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhiannaaContract.swift; sourceTree = "<group>"; };
+		1B3760162450677000C2577F /* RhiannaaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhiannaaCoordinator.swift; sourceTree = "<group>"; };
+		1B3760182450679A00C2577F /* RhiannaaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhiannaaInteractor.swift; sourceTree = "<group>"; };
+		1B37601A245067AE00C2577F /* RhiannaaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhiannaaPresenter.swift; sourceTree = "<group>"; };
+		1B37601C245067E400C2577F /* RhiannaaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhiannaaViewController.swift; sourceTree = "<group>"; };
+		1B37601E245067F000C2577F /* Rhiannaa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rhiannaa.storyboard; sourceTree = "<group>"; };
 		C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
 		C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		C44E8484244DD99300D97E32 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -120,6 +132,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B37600D2450659E00C2577F /* Rhiannaa */ = {
+			isa = PBXGroup;
+			children = (
+				1B37600E245065AC00C2577F /* Coordinator */,
+				1B37600F245065B900C2577F /* Contract */,
+				1B376013245066E800C2577F /* Interactor */,
+				1B376011245065D200C2577F /* Presenter */,
+				1B376010245065CF00C2577F /* View */,
+			);
+			path = Rhiannaa;
+			sourceTree = "<group>";
+		};
+		1B37600E245065AC00C2577F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1B3760162450677000C2577F /* RhiannaaCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1B37600F245065B900C2577F /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				1B3760142450675600C2577F /* RhiannaaContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		1B376010245065CF00C2577F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B37601C245067E400C2577F /* RhiannaaViewController.swift */,
+				1B37601E245067F000C2577F /* Rhiannaa.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B376011245065D200C2577F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1B37601A245067AE00C2577F /* RhiannaaPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1B376013245066E800C2577F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1B3760182450679A00C2577F /* RhiannaaInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		C44C5C3C24473103003B7825 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +312,7 @@
 		C4DFE8F0232F9E04001EEB3D /* CoordinatorSkeleton */ = {
 			isa = PBXGroup;
 			children = (
+				1B37600D2450659E00C2577F /* Rhiannaa */,
 				C44C5C3C24473103003B7825 /* Resources */,
 				C4DFE92A232FC3DE001EEB3D /* Extensions */,
 				C4DFE927232FC37E001EEB3D /* Home */,
@@ -462,6 +528,7 @@
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
+				1B37601F245067F000C2577F /* Rhiannaa.storyboard in Resources */,
 				C45A59CC245055E800F68A06 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,21 +561,26 @@
 				C4DFE93B232FD98F001EEB3D /* HomeInteractor.swift in Sources */,
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
+				1B3760172450677000C2577F /* RhiannaaCoordinator.swift in Sources */,
+				1B37601D245067E400C2577F /* RhiannaaViewController.swift in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
 				C4DFE939232FD87A001EEB3D /* HomeContract.swift in Sources */,
 				C44E8485244DD99300D97E32 /* Router.swift in Sources */,
+				1B3760152450675600C2577F /* RhiannaaContract.swift in Sources */,
 				C4DFE92C232FC3EC001EEB3D /* TabBarController+Extension.swift in Sources */,
 				C45A59D62450586400F68A06 /* SetttingsCoordinator.swift in Sources */,
 				C44E848B244DEFA900D97E32 /* CollectionItem.swift in Sources */,
 				C4DFE929232FC38B001EEB3D /* TabBarCoordinator.swift in Sources */,
 				C45A59D4245056A900F68A06 /* SettingsViewController.swift in Sources */,
 				C4DFE926232FA208001EEB3D /* AppCoordinator.swift in Sources */,
+				1B3760192450679A00C2577F /* RhiannaaInteractor.swift in Sources */,
 				C44E8487244DE2F000D97E32 /* ServiceLayer.swift in Sources */,
 				C4DFE937232FD852001EEB3D /* HomeViewController.swift in Sources */,
 				C4DFE92E232FC4AF001EEB3D /* HomeCoordinator.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */,
 				C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */,
+				1B37601B245067AE00C2577F /* RhiannaaPresenter.swift in Sources */,
 				C45A59D22450569600F68A06 /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
