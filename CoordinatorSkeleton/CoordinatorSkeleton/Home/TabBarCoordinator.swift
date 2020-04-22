@@ -45,6 +45,12 @@ class TabBarCoordinator: Coordinator {
         homeCoodinator.start()
         
         // Settings
+        let settingsCoordinator = SettingsCoordinator(tabBarController: tabBarController,
+                                                      tabBarCoordinator: self,
+                                                      navigationController: UINavigationController())
+        
+        addChildCoordinator(settingsCoordinator)
+        settingsCoordinator.start()
         
         // Set Tab Bar on Navigation Controller
         navigationController.setViewControllers([tabBarController], animated: false)
