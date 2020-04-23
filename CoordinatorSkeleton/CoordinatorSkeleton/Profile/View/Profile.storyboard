@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
-        <scene sceneID="dKg-IQ-JdM">
+        <!--Profile-->
+        <scene sceneID="dPk-v1-SiA">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="gy5-kB-oRm" customClass="SettingsViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="m2B-VZ-wLH">
+                <viewController storyboardIdentifier="ProfileViewController" id="4YH-vQ-k9Y" customClass="ProfileViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7wI-MF-l5O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFU-N9-BIS">
-                                <rect key="frame" x="175" y="437.5" width="64" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzT-wK-ODy">
+                                <rect key="frame" x="182.5" y="437.5" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -25,20 +25,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dFU-N9-BIS" firstAttribute="centerX" secondItem="m2B-VZ-wLH" secondAttribute="centerX" id="1V9-6s-3Fl"/>
-                            <constraint firstItem="dFU-N9-BIS" firstAttribute="centerY" secondItem="m2B-VZ-wLH" secondAttribute="centerY" id="POq-Jy-3Me"/>
+                            <constraint firstItem="UzT-wK-ODy" firstAttribute="centerX" secondItem="7wI-MF-l5O" secondAttribute="centerX" id="bnP-Jd-fT2"/>
+                            <constraint firstItem="UzT-wK-ODy" firstAttribute="centerY" secondItem="7wI-MF-l5O" secondAttribute="centerY" id="npI-vp-tdM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2HJ-7R-VX7"/>
+                        <viewLayoutGuide key="safeArea" id="rb0-oC-9c3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="doc" catalog="system" id="QqK-wr-mij"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.2" catalog="system" id="crB-bP-Hmn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Hh-jc-HKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSt-8D-oMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="153"/>
+            <point key="canvasLocation" x="81" y="135"/>
         </scene>
     </scenes>
     <resources>
-        <image name="doc" catalog="system" width="56" height="64"/>
+        <image name="person.2" catalog="system" width="64" height="40"/>
     </resources>
 </document>

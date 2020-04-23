@@ -44,6 +44,14 @@ class TabBarCoordinator: Coordinator {
         addChildCoordinator(homeCoodinator)
         homeCoodinator.start()
         
+        // Profile
+        let profileCoordinator = ProfileCoordinator(tabBarController: tabBarController,
+                                                      tabBarCoordinator: self,
+                                                      navigationController: UINavigationController())
+        
+        addChildCoordinator(profileCoordinator)
+        profileCoordinator.start()
+        
         // Settings
         let settingsCoordinator = SettingsCoordinator(tabBarController: tabBarController,
                                                       tabBarCoordinator: self,

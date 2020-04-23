@@ -19,6 +19,12 @@
 		C45A59D22450569600F68A06 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59D12450569600F68A06 /* SettingsPresenter.swift */; };
 		C45A59D4245056A900F68A06 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59D3245056A900F68A06 /* SettingsViewController.swift */; };
 		C45A59D62450586400F68A06 /* SetttingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59D52450586400F68A06 /* SetttingsCoordinator.swift */; };
+		C45A59DE24519ADC00F68A06 /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59DD24519ADC00F68A06 /* ProfileContract.swift */; };
+		C45A59E024519BFB00F68A06 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59DF24519BFB00F68A06 /* ProfileInteractor.swift */; };
+		C45A59E224519C1000F68A06 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45A59E124519C1000F68A06 /* Profile.storyboard */; };
+		C45A59E424519C6300F68A06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E324519C6300F68A06 /* ProfileViewController.swift */; };
+		C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */; };
+		C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */; };
 		C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */; };
 		C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F3232F9E04001EEB3D /* ViewController.swift */; };
 		C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DFE8F5232F9E04001EEB3D /* Main.storyboard */; };
@@ -69,6 +75,12 @@
 		C45A59D12450569600F68A06 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		C45A59D3245056A900F68A06 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C45A59D52450586400F68A06 /* SetttingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetttingsCoordinator.swift; sourceTree = "<group>"; };
+		C45A59DD24519ADC00F68A06 /* ProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContract.swift; sourceTree = "<group>"; };
+		C45A59DF24519BFB00F68A06 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		C45A59E124519C1000F68A06 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		C45A59E324519C6300F68A06 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		C4DFE8EE232F9E04001EEB3D /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DFE8F3232F9E04001EEB3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +236,59 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C45A59D72451993200F68A06 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C45A59DB2451999100F68A06 /* Coordinator */,
+				C45A59DA2451998F00F68A06 /* Contract */,
+				C45A59D92451998C00F68A06 /* Interactor */,
+				C45A59D82451998700F68A06 /* Presenter */,
+				C45A59DC245199B600F68A06 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C45A59D82451998700F68A06 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C45A59D92451998C00F68A06 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C45A59DF24519BFB00F68A06 /* ProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C45A59DA2451998F00F68A06 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				C45A59DD24519ADC00F68A06 /* ProfileContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		C45A59DB2451999100F68A06 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C45A59DC245199B600F68A06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C45A59E124519C1000F68A06 /* Profile.storyboard */,
+				C45A59E324519C6300F68A06 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C4DFE8E5232F9E04001EEB3D = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +315,7 @@
 				C44C5C3C24473103003B7825 /* Resources */,
 				C4DFE92A232FC3DE001EEB3D /* Extensions */,
 				C4DFE927232FC37E001EEB3D /* Home */,
+				C45A59D72451993200F68A06 /* Profile */,
 				C45A59C42450552000F68A06 /* Settings */,
 				C4DFE922232FA0A2001EEB3D /* Base */,
 				C44E8470244DC0AA00D97E32 /* Networking */,
@@ -458,6 +524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45A59E224519C1000F68A06 /* Profile.storyboard in Resources */,
 				C4DFE8FF232F9E05001EEB3D /* LaunchScreen.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
@@ -495,19 +562,24 @@
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
+				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
 				C4DFE939232FD87A001EEB3D /* HomeContract.swift in Sources */,
 				C44E8485244DD99300D97E32 /* Router.swift in Sources */,
+				C45A59E424519C6300F68A06 /* ProfileViewController.swift in Sources */,
 				C4DFE92C232FC3EC001EEB3D /* TabBarController+Extension.swift in Sources */,
 				C45A59D62450586400F68A06 /* SetttingsCoordinator.swift in Sources */,
 				C44E848B244DEFA900D97E32 /* CollectionItem.swift in Sources */,
 				C4DFE929232FC38B001EEB3D /* TabBarCoordinator.swift in Sources */,
 				C45A59D4245056A900F68A06 /* SettingsViewController.swift in Sources */,
+				C45A59DE24519ADC00F68A06 /* ProfileContract.swift in Sources */,
 				C4DFE926232FA208001EEB3D /* AppCoordinator.swift in Sources */,
 				C44E8487244DE2F000D97E32 /* ServiceLayer.swift in Sources */,
 				C4DFE937232FD852001EEB3D /* HomeViewController.swift in Sources */,
 				C4DFE92E232FC4AF001EEB3D /* HomeCoordinator.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */,
+				C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */,
+				C45A59E024519BFB00F68A06 /* ProfileInteractor.swift in Sources */,
 				C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */,
 				C45A59D22450569600F68A06 /* SettingsPresenter.swift in Sources */,
 			);
