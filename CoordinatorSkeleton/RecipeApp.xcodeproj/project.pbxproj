@@ -285,6 +285,7 @@
 		C4DFE922232FA0A2001EEB3D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C4DFE928232FC38B001EEB3D /* TabBarCoordinator.swift */,
 				C45A59C1244F0FB500F68A06 /* UserManager */,
 				C4DFE925232FA208001EEB3D /* AppCoordinator.swift */,
 				C4DFE923232FA0B4001EEB3D /* Coordinator.swift */,
@@ -295,7 +296,6 @@
 		C4DFE927232FC37E001EEB3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C4DFE928232FC38B001EEB3D /* TabBarCoordinator.swift */,
 				C4DFE931232FD796001EEB3D /* Coordinator */,
 				C4DFE92F232FD78B001EEB3D /* Contract */,
 				C4DFE930232FD791001EEB3D /* Interactor */,
