@@ -13,8 +13,11 @@ class UserManager {
     static let shared = UserManager()
     private let userDefaults: UserDefaults
     
+    var currentUser: User?
+    
     init(userDefaults: UserDefaults = UserDefaults.standard) {
         self.userDefaults = userDefaults
+        self.currentUser = User(name: "User Name From API", age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
     }
     
     var foodPref: String? {

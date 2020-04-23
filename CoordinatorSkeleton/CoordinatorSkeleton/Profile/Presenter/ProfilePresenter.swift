@@ -9,11 +9,11 @@
 import Foundation
 
 class ProfilePresenter: ProfilePresenterProtocol {
-    
-    
+
     weak var view: ProfileViewProtocol?
     var interactor: ProfileInteractorProtocol
     weak var coordinator: ProfileCoordinatorProtocol?
+    var currentUser = UserManager.shared.currentUser!
     
     init(view: ProfileViewProtocol,
          interactor: ProfileInteractorProtocol,
@@ -22,6 +22,10 @@ class ProfilePresenter: ProfilePresenterProtocol {
         self.view = view
         self.interactor = interactor
         self.coordinator = coordinator
+    }
+    
+    func passCurrentUser() {
+        self.view?.getCurrentUser(user: currentUser)
     }
     
 }
