@@ -33,10 +33,10 @@ class TabBarCoordinator: Coordinator {
     }
     
     override func start() {
-        showHomeTabBarController()
+        showTabBarController()
     }
     
-    func showHomeTabBarController() {
+    func showTabBarController() {
         // Home
         let homeCoodinator = HomeCoordinator(tabBarController: tabBarController,
                                              tabBarCoordinator: self,
