@@ -27,6 +27,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<ViewController>(storyboard: Main.self)
   }
+  internal enum Profile: StoryboardType {
+    internal static let storyboardName = "Profile"
+
+    internal static let profileViewController = SceneType<ProfileViewController>(storyboard: Profile.self, identifier: "ProfileViewController")
+  }
   internal enum Settings: StoryboardType {
     internal static let storyboardName = "Settings"
 
