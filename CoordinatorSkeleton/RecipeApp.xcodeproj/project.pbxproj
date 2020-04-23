@@ -25,6 +25,7 @@
 		C45A59E424519C6300F68A06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E324519C6300F68A06 /* ProfileViewController.swift */; };
 		C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */; };
 		C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */; };
+		C45A59EA2451B2AE00F68A06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E92451B2AE00F68A06 /* User.swift */; };
 		C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */; };
 		C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F3232F9E04001EEB3D /* ViewController.swift */; };
 		C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DFE8F5232F9E04001EEB3D /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		C45A59E324519C6300F68A06 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		C45A59E92451B2AE00F68A06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C4DFE8EE232F9E04001EEB3D /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DFE8F3232F9E04001EEB3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				C44E848A244DEFA900D97E32 /* CollectionItem.swift */,
+				C45A59E92451B2AE00F68A06 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
+				C45A59EA2451B2AE00F68A06 /* User.swift in Sources */,
 				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
 				C4DFE939232FD87A001EEB3D /* HomeContract.swift in Sources */,
 				C44E8485244DD99300D97E32 /* Router.swift in Sources */,

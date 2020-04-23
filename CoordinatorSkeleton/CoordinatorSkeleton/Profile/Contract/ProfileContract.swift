@@ -13,11 +13,11 @@ protocol ProfileCoordinatorProtocol: class {
 }
 
 protocol ProfilePresenterProtocol: class {
-    
+    func passCurrentUser()
 }
 
 protocol ProfileViewProtocol: class {
-    
+    func getCurrentUser(user: User)
 }
 
 protocol ProfileInteractorProtocol: class {
