@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 protocol AppCoordinatorProtocol: class {
+    func showSignUp()
     func showHome()
 }
 
@@ -22,12 +23,21 @@ class AppCoordinator: Coordinator {
     }
     
     override func start() {
-        showHome()
+        showSignUp()
     }
 }
 
 
 extension AppCoordinator: AppCoordinatorProtocol {
+    func showSignUp() {
+        removeAllChildCoordinators()
+        navigationController.viewControllers.removeAll()
+        let signupCoordinator = SignupCoordinator(navigationController: navigationController)
+        navigationController.isNavigationBarHidden = true
+        signupCoordinator.start()
+        addChildCoordinator(signupCoordinator)
+    }
+    
     func showHome() {
         removeAllChildCoordinators()
         navigationController.viewControllers.removeAll()

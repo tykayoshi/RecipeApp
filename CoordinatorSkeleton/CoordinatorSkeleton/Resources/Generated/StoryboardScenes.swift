@@ -37,6 +37,11 @@ internal enum StoryboardScene {
 
     internal static let settingsViewController = SceneType<SettingsViewController>(storyboard: Settings.self, identifier: "SettingsViewController")
   }
+  internal enum Signup: StoryboardType {
+    internal static let storyboardName = "Signup"
+
+    internal static let signupViewController = SceneType<SignupViewController>(storyboard: Signup.self, identifier: "SignupViewController")
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
 
