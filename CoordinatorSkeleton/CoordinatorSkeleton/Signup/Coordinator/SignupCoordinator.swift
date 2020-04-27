@@ -31,9 +31,23 @@ class SignupCoordinator: Coordinator {
 
         navigationController.setViewControllers([signupViewController], animated: false)
     }
+    
+    func presentRegisterName() {
+        let registerNameController = RegisterNameViewController.makeFromStoryboard()
+        let interactor = RegisterNameInteractor()
+        let presenter = RegisterNamePresenter(view: registerNameController, interactor: interactor, coordinator: self)
+        
+        registerNameController.presenter = presenter
+        
+        navigationController.pushViewController(registerNameController, animated: true)
+    }
+    
 }
 
 extension SignupCoordinator: SignupCoordinatorProtocol {
-    
+    func showRegisterName() {
+        // Show Register Name View
+        self.presentRegisterName()
+    }
 }
 

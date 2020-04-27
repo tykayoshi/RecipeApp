@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register Name View Controller-->
         <scene sceneID="Vjd-v2-lXp">
             <objects>
-                <viewController id="1vh-Jr-mA0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterNameViewController" id="1vh-Jr-mA0" customClass="RegisterNameViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrO-6X-Jxy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <color key="textColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="JS7-1K-GZL" customClass="RATextField" customModule="RecipeApp" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="JS7-1K-GZL" customClass="RATextField" customModule="RecipeApp" customModuleProvider="target">
                                 <rect key="frame" x="25" y="193" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="yAg-zI-ua0"/>
@@ -41,7 +41,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-VC-hyr" customClass="RATextField" customModule="RecipeApp" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-VC-hyr" customClass="RATextField" customModule="RecipeApp" customModuleProvider="target">
                                 <rect key="frame" x="25" y="268" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EmS-Kq-az6"/>

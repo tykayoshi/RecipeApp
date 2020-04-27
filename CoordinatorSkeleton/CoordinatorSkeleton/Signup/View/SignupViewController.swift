@@ -17,10 +17,14 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func signupButtonPressed(_ sender: Any) {
+        presenter.signupButtonPressed()
+    }
+    
 }
 
 extension SignupViewController: SignupViewProtocol {
-    
+
 }
 
 extension SignupViewController {

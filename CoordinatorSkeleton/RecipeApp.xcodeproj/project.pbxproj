@@ -36,6 +36,9 @@
 		C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D452456FA180063D721 /* SignupInteractor.swift */; };
 		C4C89D482456FA2D0063D721 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D472456FA2D0063D721 /* SignupPresenter.swift */; };
 		C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D4A2456FCC30063D721 /* RAButton.swift */; };
+		C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */; };
+		C4C89D5224573FAD0063D721 /* RegisterNameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D5124573FAD0063D721 /* RegisterNameInteractor.swift */; };
+		C4C89D5424573FD20063D721 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D5324573FD20063D721 /* RegisterNamePresenter.swift */; };
 		C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */; };
 		C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F3232F9E04001EEB3D /* ViewController.swift */; };
 		C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DFE8F5232F9E04001EEB3D /* Main.storyboard */; };
@@ -103,6 +106,9 @@
 		C4C89D452456FA180063D721 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
 		C4C89D472456FA2D0063D721 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		C4C89D4A2456FCC30063D721 /* RAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAButton.swift; sourceTree = "<group>"; };
+		C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNameContract.swift; path = CoordinatorSkeleton/Signup/View/RegisterNameContract.swift; sourceTree = SOURCE_ROOT; };
+		C4C89D5124573FAD0063D721 /* RegisterNameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNameInteractor.swift; path = CoordinatorSkeleton/Signup/View/RegisterNameInteractor.swift; sourceTree = SOURCE_ROOT; };
+		C4C89D5324573FD20063D721 /* RegisterNamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNamePresenter.swift; path = CoordinatorSkeleton/Signup/View/RegisterNamePresenter.swift; sourceTree = SOURCE_ROOT; };
 		C4DFE8EE232F9E04001EEB3D /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DFE8F3232F9E04001EEB3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +163,6 @@
 		1B297800245722A800C2CC23 /* RegisterName */ = {
 			isa = PBXGroup;
 			children = (
-				1B2978052457231900C2CC23 /* Coordinator */,
 				1B2978042457231700C2CC23 /* Contract */,
 				1B2978032457231600C2CC23 /* Interactor */,
 				1B2978022457231400C2CC23 /* Presenter */,
@@ -178,6 +183,7 @@
 		1B2978022457231400C2CC23 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				C4C89D5324573FD20063D721 /* RegisterNamePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 		1B2978032457231600C2CC23 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				C4C89D5124573FAD0063D721 /* RegisterNameInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -192,15 +199,9 @@
 		1B2978042457231700C2CC23 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */,
 			);
 			path = Contract;
-			sourceTree = "<group>";
-		};
-		1B2978052457231900C2CC23 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		C44C5C3C24473103003B7825 /* Resources */ = {
@@ -713,6 +714,7 @@
 				C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */,
 				C45A59E424519C6300F68A06 /* ProfileViewController.swift in Sources */,
 				C4C89D482456FA2D0063D721 /* SignupPresenter.swift in Sources */,
+				C4C89D5424573FD20063D721 /* RegisterNamePresenter.swift in Sources */,
 				C4DFE92C232FC3EC001EEB3D /* TabBarController+Extension.swift in Sources */,
 				C45A59D62450586400F68A06 /* SetttingsCoordinator.swift in Sources */,
 				C44E848B244DEFA900D97E32 /* CollectionItem.swift in Sources */,
@@ -724,8 +726,10 @@
 				C4DFE937232FD852001EEB3D /* HomeViewController.swift in Sources */,
 				C4DFE92E232FC4AF001EEB3D /* HomeCoordinator.swift in Sources */,
 				C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */,
+				C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */,
+				C4C89D5224573FAD0063D721 /* RegisterNameInteractor.swift in Sources */,
 				C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */,
 				C45A59E024519BFB00F68A06 /* ProfileInteractor.swift in Sources */,
 				C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */,

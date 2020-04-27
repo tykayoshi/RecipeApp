@@ -9,11 +9,11 @@
 import Foundation
 
 protocol SignupCoordinatorProtocol: class {
-    
+    func showRegisterName()
 }
 
 protocol SignupPresenterProtocol: class {
-    
+    func signupButtonPressed()
 }
 
 protocol SignupViewProtocol: class {
@@ -23,4 +23,3 @@ protocol SignupViewProtocol: class {
 protocol SignupInteractorProtocol: class {
     
 }
-

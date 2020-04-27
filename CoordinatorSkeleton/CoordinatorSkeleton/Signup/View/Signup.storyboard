@@ -37,6 +37,9 @@
                                         <color key="value" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signupButtonPressed:" destination="ERK-Yq-hhN" eventType="touchUpInside" id="8ai-FW-mWG"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHZ-h0-hVU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="750"/>
