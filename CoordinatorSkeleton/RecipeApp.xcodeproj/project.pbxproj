@@ -32,6 +32,7 @@
 		C4C89D442456F95E0063D721 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D432456F95E0063D721 /* SignupCoordinator.swift */; };
 		C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D452456FA180063D721 /* SignupInteractor.swift */; };
 		C4C89D482456FA2D0063D721 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D472456FA2D0063D721 /* SignupPresenter.swift */; };
+		C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D4A2456FCC30063D721 /* RAButton.swift */; };
 		C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */; };
 		C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F3232F9E04001EEB3D /* ViewController.swift */; };
 		C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DFE8F5232F9E04001EEB3D /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 		C4C89D432456F95E0063D721 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
 		C4C89D452456FA180063D721 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
 		C4C89D472456FA2D0063D721 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
+		C4C89D4A2456FCC30063D721 /* RAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAButton.swift; sourceTree = "<group>"; };
 		C4DFE8EE232F9E04001EEB3D /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DFE8F3232F9E04001EEB3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -357,6 +359,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		C4C89D492456FC730063D721 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D4A2456FCC30063D721 /* RAButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		C4DFE8E5232F9E04001EEB3D = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +390,7 @@
 		C4DFE8F0232F9E04001EEB3D /* CoordinatorSkeleton */ = {
 			isa = PBXGroup;
 			children = (
+				C4C89D492456FC730063D721 /* Components */,
 				C44C5C3C24473103003B7825 /* Resources */,
 				C4DFE92A232FC3DE001EEB3D /* Extensions */,
 				C4C89D372456F52E0063D721 /* Signup */,
@@ -629,6 +640,7 @@
 				C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */,
 				C45A59D02450567F00F68A06 /* SettingsInteractor.swift in Sources */,
 				C4DFE93B232FD98F001EEB3D /* HomeInteractor.swift in Sources */,
+				C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */,
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
