@@ -26,6 +26,12 @@
 		C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */; };
 		C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */; };
 		C45A59EA2451B2AE00F68A06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E92451B2AE00F68A06 /* User.swift */; };
+		C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3D2456F5810063D721 /* SignupContract.swift */; };
+		C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3F2456F5C00063D721 /* SignupViewController.swift */; };
+		C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C89D412456F5C90063D721 /* Signup.storyboard */; };
+		C4C89D442456F95E0063D721 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D432456F95E0063D721 /* SignupCoordinator.swift */; };
+		C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D452456FA180063D721 /* SignupInteractor.swift */; };
+		C4C89D482456FA2D0063D721 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D472456FA2D0063D721 /* SignupPresenter.swift */; };
 		C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */; };
 		C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F3232F9E04001EEB3D /* ViewController.swift */; };
 		C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DFE8F5232F9E04001EEB3D /* Main.storyboard */; };
@@ -83,6 +89,12 @@
 		C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		C45A59E92451B2AE00F68A06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C4C89D3D2456F5810063D721 /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
+		C4C89D3F2456F5C00063D721 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		C4C89D412456F5C90063D721 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		C4C89D432456F95E0063D721 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		C4C89D452456FA180063D721 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
+		C4C89D472456FA2D0063D721 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		C4DFE8EE232F9E04001EEB3D /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DFE8F3232F9E04001EEB3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +304,59 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C4C89D372456F52E0063D721 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D3C2456F5460063D721 /* Coordinator */,
+				C4C89D3B2456F5410063D721 /* Contract */,
+				C4C89D3A2456F53E0063D721 /* Interactor */,
+				C4C89D392456F53C0063D721 /* Presenter */,
+				C4C89D382456F5390063D721 /* View */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		C4C89D382456F5390063D721 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D3F2456F5C00063D721 /* SignupViewController.swift */,
+				C4C89D412456F5C90063D721 /* Signup.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4C89D392456F53C0063D721 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D472456FA2D0063D721 /* SignupPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C4C89D3A2456F53E0063D721 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D452456FA180063D721 /* SignupInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C4C89D3B2456F5410063D721 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D3D2456F5810063D721 /* SignupContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		C4C89D3C2456F5460063D721 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D432456F95E0063D721 /* SignupCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		C4DFE8E5232F9E04001EEB3D = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +382,7 @@
 			children = (
 				C44C5C3C24473103003B7825 /* Resources */,
 				C4DFE92A232FC3DE001EEB3D /* Extensions */,
+				C4C89D372456F52E0063D721 /* Signup */,
 				C4DFE927232FC37E001EEB3D /* Home */,
 				C45A59D72451993200F68A06 /* Profile */,
 				C45A59C42450552000F68A06 /* Settings */,
@@ -527,6 +593,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */,
 				C45A59E224519C1000F68A06 /* Profile.storyboard in Resources */,
 				C4DFE8FF232F9E05001EEB3D /* LaunchScreen.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
@@ -568,8 +635,12 @@
 				C45A59EA2451B2AE00F68A06 /* User.swift in Sources */,
 				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
 				C4DFE939232FD87A001EEB3D /* HomeContract.swift in Sources */,
+				C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */,
+				C4C89D442456F95E0063D721 /* SignupCoordinator.swift in Sources */,
 				C44E8485244DD99300D97E32 /* Router.swift in Sources */,
+				C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */,
 				C45A59E424519C6300F68A06 /* ProfileViewController.swift in Sources */,
+				C4C89D482456FA2D0063D721 /* SignupPresenter.swift in Sources */,
 				C4DFE92C232FC3EC001EEB3D /* TabBarController+Extension.swift in Sources */,
 				C45A59D62450586400F68A06 /* SetttingsCoordinator.swift in Sources */,
 				C44E848B244DEFA900D97E32 /* CollectionItem.swift in Sources */,
@@ -580,6 +651,7 @@
 				C44E8487244DE2F000D97E32 /* ServiceLayer.swift in Sources */,
 				C4DFE937232FD852001EEB3D /* HomeViewController.swift in Sources */,
 				C4DFE92E232FC4AF001EEB3D /* HomeCoordinator.swift in Sources */,
+				C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */,
 				C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */,
