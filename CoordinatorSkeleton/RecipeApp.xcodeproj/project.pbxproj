@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B2978072457234E00C2CC23 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978062457234E00C2CC23 /* RegisterNameViewController.swift */; };
-		1B297809245723C500C2CC23 /* RegisterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B297808245723C500C2CC23 /* RegisterName.storyboard */; };
 		1B29780B245725F200C2CC23 /* RATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780A245725F200C2CC23 /* RATextField.swift */; };
+		1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B29780E24572DC800C2CC23 /* RegisterName.storyboard */; };
+		1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */; };
 		C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */; };
 		C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */; };
 		C44E8485244DD99300D97E32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E8484244DD99300D97E32 /* Router.swift */; };
@@ -74,9 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B2978062457234E00C2CC23 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNameViewController.swift; path = ../../../../../../../RegisterNameViewController.swift; sourceTree = "<group>"; };
-		1B297808245723C500C2CC23 /* RegisterName.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = RegisterName.storyboard; path = ../../../../../../../RegisterName.storyboard; sourceTree = "<group>"; };
 		1B29780A245725F200C2CC23 /* RATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RATextField.swift; sourceTree = "<group>"; };
+		1B29780E24572DC800C2CC23 /* RegisterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterName.storyboard; sourceTree = "<group>"; };
+		1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
 		C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		C44E8484244DD99300D97E32 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 		1B2978012457231100C2CC23 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1B2978062457234E00C2CC23 /* RegisterNameViewController.swift */,
-				1B297808245723C500C2CC23 /* RegisterName.storyboard */,
+				1B29780E24572DC800C2CC23 /* RegisterName.storyboard */,
+				1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -663,9 +663,9 @@
 			files = (
 				C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */,
 				C45A59E224519C1000F68A06 /* Profile.storyboard in Resources */,
-				1B297809245723C500C2CC23 /* RegisterName.storyboard in Resources */,
 				C4DFE8FF232F9E05001EEB3D /* LaunchScreen.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
+				1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
 				C45A59CC245055E800F68A06 /* Settings.storyboard in Resources */,
@@ -694,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C45A59C3244F0FCB00F68A06 /* UserManager.swift in Sources */,
+				1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */,
 				C4DFE924232FA0B4001EEB3D /* Coordinator.swift in Sources */,
 				C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */,
 				C45A59D02450567F00F68A06 /* SettingsInteractor.swift in Sources */,
@@ -701,7 +702,6 @@
 				C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */,
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
-				1B2978072457234E00C2CC23 /* RegisterNameViewController.swift in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
 				C45A59EA2451B2AE00F68A06 /* User.swift in Sources */,
 				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
