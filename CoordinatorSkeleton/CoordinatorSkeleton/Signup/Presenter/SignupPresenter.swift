@@ -23,4 +23,9 @@ class SignupPresenter: SignupPresenterProtocol {
         self.coordinator = coordinator
     }
     
+    func signupButtonPressed() {
+        // Tell Coordinator I've been pressed
+        // Show whatever view you need to show
+        coordinator?.showRegisterName()
+    }
 }
