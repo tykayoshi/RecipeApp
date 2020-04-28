@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WT-Fo-O7g">
-                                <rect key="frame" x="25" y="94" width="131" height="44"/>
+                                <rect key="frame" x="25" y="109" width="131" height="44"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="37"/>
                                 <color key="textColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="JS7-1K-GZL" customClass="RATextField" customModule="RecipeApp" customModuleProvider="target">
-                                <rect key="frame" x="25" y="193" width="364" height="50"/>
+                                <rect key="frame" x="25" y="185" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="yAg-zI-ua0"/>
                                 </constraints>
@@ -40,9 +40,12 @@
                                         <real key="value" value="9"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="1vh-Jr-mA0" id="IF4-JX-iry"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-VC-hyr" customClass="RATextField" customModule="RecipeApp" customModuleProvider="target">
-                                <rect key="frame" x="25" y="268" width="364" height="50"/>
+                                <rect key="frame" x="25" y="260" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EmS-Kq-az6"/>
                                 </constraints>
@@ -59,6 +62,9 @@
                                         <real key="value" value="9"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="1vh-Jr-mA0" id="JbT-dc-EyH"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I5-cC-HTt" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                 <rect key="frame" x="35" y="767" width="344" height="55"/>
@@ -76,12 +82,12 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IG-sj-Ugg">
-                                <rect key="frame" x="20" y="44" width="50" height="50"/>
+                                <rect key="frame" x="25" y="69" width="15" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0pc-S5-bA9"/>
-                                    <constraint firstAttribute="width" constant="50" id="EMB-Oq-FRO"/>
+                                    <constraint firstAttribute="height" constant="15" id="8bm-xJ-rMs"/>
+                                    <constraint firstAttribute="width" constant="15" id="C6X-Dy-bsr"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="sunrise" catalog="system"/>
+                                <state key="normal" title="Button" image="BackIcon"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="1vh-Jr-mA0" eventType="touchUpInside" id="jb1-QQ-VFe"/>
                                 </connections>
@@ -90,15 +96,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="zqK-b1-gIP" firstAttribute="trailing" secondItem="JS7-1K-GZL" secondAttribute="trailing" constant="25" id="0Pj-Qg-RdM"/>
-                            <constraint firstItem="JS7-1K-GZL" firstAttribute="top" secondItem="3WT-Fo-O7g" secondAttribute="bottom" constant="55" id="0Yr-Gd-3VL"/>
+                            <constraint firstItem="JS7-1K-GZL" firstAttribute="top" secondItem="3WT-Fo-O7g" secondAttribute="bottom" constant="32" id="0Yr-Gd-3VL"/>
                             <constraint firstItem="hRr-VC-hyr" firstAttribute="centerX" secondItem="xrO-6X-Jxy" secondAttribute="centerX" id="8D0-R5-gr6"/>
-                            <constraint firstItem="2IG-sj-Ugg" firstAttribute="leading" secondItem="zqK-b1-gIP" secondAttribute="leading" constant="20" id="HBe-0T-q9q"/>
-                            <constraint firstItem="zqK-b1-gIP" firstAttribute="bottom" secondItem="0I5-cC-HTt" secondAttribute="bottom" constant="40" id="MIB-A6-6c4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0I5-cC-HTt" secondAttribute="bottom" constant="40" id="B7C-73-khG"/>
+                            <constraint firstItem="3WT-Fo-O7g" firstAttribute="top" secondItem="2IG-sj-Ugg" secondAttribute="bottom" constant="25" id="EX0-dE-BJt"/>
                             <constraint firstItem="JS7-1K-GZL" firstAttribute="leading" secondItem="zqK-b1-gIP" secondAttribute="leading" constant="25" id="Q0h-uU-4jv"/>
                             <constraint firstItem="zqK-b1-gIP" firstAttribute="trailing" secondItem="hRr-VC-hyr" secondAttribute="trailing" constant="25" id="S4X-JC-6xs"/>
-                            <constraint firstItem="3WT-Fo-O7g" firstAttribute="top" secondItem="zqK-b1-gIP" secondAttribute="top" constant="50" id="UX2-SI-Ucb"/>
+                            <constraint firstItem="2IG-sj-Ugg" firstAttribute="top" secondItem="zqK-b1-gIP" secondAttribute="top" constant="25" id="U31-k7-C26"/>
+                            <constraint firstItem="2IG-sj-Ugg" firstAttribute="leading" secondItem="zqK-b1-gIP" secondAttribute="leading" constant="25" id="XBY-xp-3GT"/>
                             <constraint firstItem="hRr-VC-hyr" firstAttribute="top" secondItem="JS7-1K-GZL" secondAttribute="bottom" constant="25" id="aq8-wk-p1X"/>
-                            <constraint firstItem="2IG-sj-Ugg" firstAttribute="top" secondItem="zqK-b1-gIP" secondAttribute="top" id="cB1-aK-W5W"/>
                             <constraint firstItem="0I5-cC-HTt" firstAttribute="leading" secondItem="zqK-b1-gIP" secondAttribute="leading" constant="35" id="dkx-Zr-bxw"/>
                             <constraint firstItem="zqK-b1-gIP" firstAttribute="trailing" secondItem="0I5-cC-HTt" secondAttribute="trailing" constant="35" id="rua-j2-7HR"/>
                             <constraint firstItem="JS7-1K-GZL" firstAttribute="centerX" secondItem="xrO-6X-Jxy" secondAttribute="centerX" id="sJy-57-wzX"/>
@@ -107,6 +113,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zqK-b1-gIP"/>
                     </view>
+                    <connections>
+                        <outlet property="AgeTextField" destination="hRr-VC-hyr" id="aOE-cf-qAk"/>
+                        <outlet property="BottomConstraint" destination="B7C-73-khG" id="9td-vW-yxI"/>
+                        <outlet property="NameTextField" destination="JS7-1K-GZL" id="zey-IS-DNh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0o-i9-qE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,6 +125,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sunrise" catalog="system" width="64" height="48"/>
+        <image name="BackIcon" width="50" height="50"/>
     </resources>
 </document>
