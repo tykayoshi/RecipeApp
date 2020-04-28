@@ -23,7 +23,7 @@ class AppCoordinator: Coordinator {
     }
     
     override func start() {
-        showSignUp()
+        showHome()
     }
 }
 
