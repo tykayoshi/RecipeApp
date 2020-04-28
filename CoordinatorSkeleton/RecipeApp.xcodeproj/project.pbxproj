@@ -26,6 +26,7 @@
 		C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */; };
 		C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */; };
 		C45A59EA2451B2AE00F68A06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E92451B2AE00F68A06 /* User.swift */; };
+		C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC0A672458435800D40612 /* UIImageView+Extension.swift */; };
 		C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3D2456F5810063D721 /* SignupContract.swift */; };
 		C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3F2456F5C00063D721 /* SignupViewController.swift */; };
 		C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C89D412456F5C90063D721 /* Signup.storyboard */; };
@@ -90,6 +91,7 @@
 		C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		C45A59E92451B2AE00F68A06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C4AC0A672458435800D40612 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		C4C89D3D2456F5810063D721 /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		C4C89D3F2456F5C00063D721 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C4C89D412456F5C90063D721 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				C4DFE92B232FC3EC001EEB3D /* TabBarController+Extension.swift */,
+				C4AC0A672458435800D40612 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -665,6 +668,7 @@
 				C4DFE92E232FC4AF001EEB3D /* HomeCoordinator.swift in Sources */,
 				C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
+				C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */,
 				C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */,
 				C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */,
 				C45A59E024519BFB00F68A06 /* ProfileInteractor.swift in Sources */,

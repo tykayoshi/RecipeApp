@@ -27,9 +27,12 @@ class ProfileViewController: UIViewController {
     var currentUser: User?
     var sections: [ProfileSections] = []
     var options: [ProfileOptions] = []
+    @IBOutlet weak var profileImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileImageView.makeRounded()
         
         options = [.name, .age, .dietaryRequirements, .essentialList]
         
