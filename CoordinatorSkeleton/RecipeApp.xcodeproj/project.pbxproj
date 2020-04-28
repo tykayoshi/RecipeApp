@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B29780B245725F200C2CC23 /* RATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780A245725F200C2CC23 /* RATextField.swift */; };
+		1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B29780E24572DC800C2CC23 /* RegisterName.storyboard */; };
+		1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */; };
 		C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */; };
 		C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */; };
 		C44E8485244DD99300D97E32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E8484244DD99300D97E32 /* Router.swift */; };
@@ -26,6 +29,7 @@
 		C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */; };
 		C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */; };
 		C45A59EA2451B2AE00F68A06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E92451B2AE00F68A06 /* User.swift */; };
+		C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC0A672458435800D40612 /* UIImageView+Extension.swift */; };
 		C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3D2456F5810063D721 /* SignupContract.swift */; };
 		C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3F2456F5C00063D721 /* SignupViewController.swift */; };
 		C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C89D412456F5C90063D721 /* Signup.storyboard */; };
@@ -33,6 +37,9 @@
 		C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D452456FA180063D721 /* SignupInteractor.swift */; };
 		C4C89D482456FA2D0063D721 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D472456FA2D0063D721 /* SignupPresenter.swift */; };
 		C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D4A2456FCC30063D721 /* RAButton.swift */; };
+		C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */; };
+		C4C89D5224573FAD0063D721 /* RegisterNameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D5124573FAD0063D721 /* RegisterNameInteractor.swift */; };
+		C4C89D5424573FD20063D721 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D5324573FD20063D721 /* RegisterNamePresenter.swift */; };
 		C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */; };
 		C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFE8F3232F9E04001EEB3D /* ViewController.swift */; };
 		C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DFE8F5232F9E04001EEB3D /* Main.storyboard */; };
@@ -71,6 +78,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B29780A245725F200C2CC23 /* RATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RATextField.swift; sourceTree = "<group>"; };
+		1B29780E24572DC800C2CC23 /* RegisterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterName.storyboard; sourceTree = "<group>"; };
+		1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
 		C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		C44E8484244DD99300D97E32 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -90,6 +100,7 @@
 		C45A59E524519D7E00F68A06 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		C45A59E92451B2AE00F68A06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C4AC0A672458435800D40612 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		C4C89D3D2456F5810063D721 /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		C4C89D3F2456F5C00063D721 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C4C89D412456F5C90063D721 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
@@ -97,6 +108,9 @@
 		C4C89D452456FA180063D721 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
 		C4C89D472456FA2D0063D721 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		C4C89D4A2456FCC30063D721 /* RAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAButton.swift; sourceTree = "<group>"; };
+		C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNameContract.swift; path = CoordinatorSkeleton/Signup/View/RegisterNameContract.swift; sourceTree = SOURCE_ROOT; };
+		C4C89D5124573FAD0063D721 /* RegisterNameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNameInteractor.swift; path = CoordinatorSkeleton/Signup/View/RegisterNameInteractor.swift; sourceTree = SOURCE_ROOT; };
+		C4C89D5324573FD20063D721 /* RegisterNamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNamePresenter.swift; path = CoordinatorSkeleton/Signup/View/RegisterNamePresenter.swift; sourceTree = SOURCE_ROOT; };
 		C4DFE8EE232F9E04001EEB3D /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DFE8F3232F9E04001EEB3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +162,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B297800245722A800C2CC23 /* RegisterName */ = {
+			isa = PBXGroup;
+			children = (
+				1B2978042457231700C2CC23 /* Contract */,
+				1B2978032457231600C2CC23 /* Interactor */,
+				1B2978022457231400C2CC23 /* Presenter */,
+				1B2978012457231100C2CC23 /* View */,
+			);
+			path = RegisterName;
+			sourceTree = "<group>";
+		};
+		1B2978012457231100C2CC23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B29780E24572DC800C2CC23 /* RegisterName.storyboard */,
+				1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B2978022457231400C2CC23 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D5324573FD20063D721 /* RegisterNamePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1B2978032457231600C2CC23 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D5124573FAD0063D721 /* RegisterNameInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1B2978042457231700C2CC23 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
 		C44C5C3C24473103003B7825 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +367,7 @@
 		C4C89D372456F52E0063D721 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				1B297800245722A800C2CC23 /* RegisterName */,
 				C4C89D3C2456F5460063D721 /* Coordinator */,
 				C4C89D3B2456F5410063D721 /* Contract */,
 				C4C89D3A2456F53E0063D721 /* Interactor */,
@@ -363,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				C4C89D4A2456FCC30063D721 /* RAButton.swift */,
+				1B29780A245725F200C2CC23 /* RATextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -455,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				C4DFE92B232FC3EC001EEB3D /* TabBarController+Extension.swift */,
+				C4AC0A672458435800D40612 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -608,6 +669,7 @@
 				C45A59E224519C1000F68A06 /* Profile.storyboard in Resources */,
 				C4DFE8FF232F9E05001EEB3D /* LaunchScreen.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
+				1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
 				C45A59CC245055E800F68A06 /* Settings.storyboard in Resources */,
@@ -636,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C45A59C3244F0FCB00F68A06 /* UserManager.swift in Sources */,
+				1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */,
 				C4DFE924232FA0B4001EEB3D /* Coordinator.swift in Sources */,
 				C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */,
 				C45A59D02450567F00F68A06 /* SettingsInteractor.swift in Sources */,
@@ -648,11 +711,13 @@
 				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
 				C4DFE939232FD87A001EEB3D /* HomeContract.swift in Sources */,
 				C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */,
+				1B29780B245725F200C2CC23 /* RATextField.swift in Sources */,
 				C4C89D442456F95E0063D721 /* SignupCoordinator.swift in Sources */,
 				C44E8485244DD99300D97E32 /* Router.swift in Sources */,
 				C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */,
 				C45A59E424519C6300F68A06 /* ProfileViewController.swift in Sources */,
 				C4C89D482456FA2D0063D721 /* SignupPresenter.swift in Sources */,
+				C4C89D5424573FD20063D721 /* RegisterNamePresenter.swift in Sources */,
 				C4DFE92C232FC3EC001EEB3D /* TabBarController+Extension.swift in Sources */,
 				C45A59D62450586400F68A06 /* SetttingsCoordinator.swift in Sources */,
 				C44E848B244DEFA900D97E32 /* CollectionItem.swift in Sources */,
@@ -664,8 +729,11 @@
 				C4DFE937232FD852001EEB3D /* HomeViewController.swift in Sources */,
 				C4DFE92E232FC4AF001EEB3D /* HomeCoordinator.swift in Sources */,
 				C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */,
+				C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
+				C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */,
 				C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */,
+				C4C89D5224573FAD0063D721 /* RegisterNameInteractor.swift in Sources */,
 				C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */,
 				C45A59E024519BFB00F68A06 /* ProfileInteractor.swift in Sources */,
 				C4DFE8F2232F9E04001EEB3D /* AppDelegate.swift in Sources */,
