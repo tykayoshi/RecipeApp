@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="36" id="adi-dT-ZoD"/>
                                     <constraint firstAttribute="width" constant="57" id="tlj-Qe-XI6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Edit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
