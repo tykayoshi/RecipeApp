@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RegisterNamePresenterProtocol: class {
-
+    func backButtonPressed()
 }
 
 protocol RegisterNameViewProtocol: class {

@@ -75,17 +75,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IG-sj-Ugg">
+                                <rect key="frame" x="20" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0pc-S5-bA9"/>
+                                    <constraint firstAttribute="width" constant="50" id="EMB-Oq-FRO"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="sunrise" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="1vh-Jr-mA0" eventType="touchUpInside" id="jb1-QQ-VFe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="zqK-b1-gIP" firstAttribute="trailing" secondItem="JS7-1K-GZL" secondAttribute="trailing" constant="25" id="0Pj-Qg-RdM"/>
                             <constraint firstItem="JS7-1K-GZL" firstAttribute="top" secondItem="3WT-Fo-O7g" secondAttribute="bottom" constant="55" id="0Yr-Gd-3VL"/>
                             <constraint firstItem="hRr-VC-hyr" firstAttribute="centerX" secondItem="xrO-6X-Jxy" secondAttribute="centerX" id="8D0-R5-gr6"/>
+                            <constraint firstItem="2IG-sj-Ugg" firstAttribute="leading" secondItem="zqK-b1-gIP" secondAttribute="leading" constant="20" id="HBe-0T-q9q"/>
                             <constraint firstItem="zqK-b1-gIP" firstAttribute="bottom" secondItem="0I5-cC-HTt" secondAttribute="bottom" constant="40" id="MIB-A6-6c4"/>
                             <constraint firstItem="JS7-1K-GZL" firstAttribute="leading" secondItem="zqK-b1-gIP" secondAttribute="leading" constant="25" id="Q0h-uU-4jv"/>
                             <constraint firstItem="zqK-b1-gIP" firstAttribute="trailing" secondItem="hRr-VC-hyr" secondAttribute="trailing" constant="25" id="S4X-JC-6xs"/>
                             <constraint firstItem="3WT-Fo-O7g" firstAttribute="top" secondItem="zqK-b1-gIP" secondAttribute="top" constant="50" id="UX2-SI-Ucb"/>
                             <constraint firstItem="hRr-VC-hyr" firstAttribute="top" secondItem="JS7-1K-GZL" secondAttribute="bottom" constant="25" id="aq8-wk-p1X"/>
+                            <constraint firstItem="2IG-sj-Ugg" firstAttribute="top" secondItem="zqK-b1-gIP" secondAttribute="top" id="cB1-aK-W5W"/>
                             <constraint firstItem="0I5-cC-HTt" firstAttribute="leading" secondItem="zqK-b1-gIP" secondAttribute="leading" constant="35" id="dkx-Zr-bxw"/>
                             <constraint firstItem="zqK-b1-gIP" firstAttribute="trailing" secondItem="0I5-cC-HTt" secondAttribute="trailing" constant="35" id="rua-j2-7HR"/>
                             <constraint firstItem="JS7-1K-GZL" firstAttribute="centerX" secondItem="xrO-6X-Jxy" secondAttribute="centerX" id="sJy-57-wzX"/>
@@ -100,4 +113,7 @@
             <point key="canvasLocation" x="105.79710144927537" y="57.589285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sunrise" catalog="system" width="64" height="48"/>
+    </resources>
 </document>

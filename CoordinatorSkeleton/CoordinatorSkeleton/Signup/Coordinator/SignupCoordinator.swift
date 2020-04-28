@@ -49,5 +49,9 @@ extension SignupCoordinator: SignupCoordinatorProtocol {
         // Show Register Name View
         self.presentRegisterName()
     }
+    
+    func popBackScreen() {
+        navigationController.popViewController(animated: true)
+    }
 }
 

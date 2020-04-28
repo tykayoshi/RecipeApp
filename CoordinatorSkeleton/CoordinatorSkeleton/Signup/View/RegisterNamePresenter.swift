@@ -9,7 +9,7 @@
 import Foundation
 
 class RegisterNamePresenter: RegisterNamePresenterProtocol {
-    
+
     weak var view: RegisterNameViewProtocol?
     var interactor: RegisterNameInteractorProtocol
     weak var coordinator: SignupCoordinatorProtocol?
@@ -21,6 +21,10 @@ class RegisterNamePresenter: RegisterNamePresenterProtocol {
         self.view = view
         self.interactor = interactor
         self.coordinator = coordinator
+    }
+    
+    func backButtonPressed() {
+        coordinator?.popBackScreen()
     }
     
 }

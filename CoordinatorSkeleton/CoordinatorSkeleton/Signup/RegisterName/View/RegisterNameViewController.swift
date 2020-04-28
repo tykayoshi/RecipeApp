@@ -16,6 +16,10 @@ class RegisterNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        presenter.backButtonPressed()
+    }
 }
 
 extension RegisterNameViewController: RegisterNameViewProtocol {

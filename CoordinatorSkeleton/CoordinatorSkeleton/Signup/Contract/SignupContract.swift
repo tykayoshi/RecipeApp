@@ -10,6 +10,7 @@ import Foundation
 
 protocol SignupCoordinatorProtocol: class {
     func showRegisterName()
+    func popBackScreen()
 }
 
 protocol SignupPresenterProtocol: class {
