@@ -15,6 +15,9 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(UserManager.shared.userName)
+        print(UserManager.shared.userAge)
     }
     
     @IBAction func signupButtonPressed(_ sender: Any) {

@@ -45,6 +45,10 @@ class SignupCoordinator: Coordinator {
 }
 
 extension SignupCoordinator: SignupCoordinatorProtocol {
+    func showDietaryRequirements(currentUser: UserManager) {
+        print("current user details \(currentUser.userAge) + \(currentUser.userName)")
+    }
+    
     func showRegisterName() {
         // Show Register Name View
         self.presentRegisterName()

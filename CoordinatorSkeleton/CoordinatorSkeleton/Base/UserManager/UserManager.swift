@@ -28,6 +28,25 @@ class UserManager {
             userDefaults.set(newValue, forKey: "foodPref")
         }
     }
+    
+    var userName: String? {
+        get {
+            return userDefaults.string(forKey: "userName")
+        }
+        set (newValue) {
+            userDefaults.set(newValue, forKey: "userName")
+        }
+    }
+    
+    var userAge: String? {
+        get {
+            return userDefaults.string(forKey: "userAge")
+        }
+        set (newValue) {
+            userDefaults.set(newValue, forKey: "userAge")
+        }
+    }
+    
 }
 
 // Test User Defaults
