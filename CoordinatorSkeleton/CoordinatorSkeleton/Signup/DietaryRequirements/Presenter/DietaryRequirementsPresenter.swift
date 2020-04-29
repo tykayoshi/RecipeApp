@@ -23,4 +23,7 @@ class DietaryRequirementsPresenter: DietaryRequirementsPresenterProtocol {
         
     }
     
+    func backButtonPressed() {
+        coordinator?.popBackScreen()
+    }
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 protocol DietaryRequirementsPresenterProtocol: class {
+    func backButtonPressed()
     
 }
 
