@@ -25,7 +25,7 @@ class RegisterNameViewController: UIViewController {
         
         nextButton.isEnabled = false
         nextButton.alpha = 0.5
-        
+                
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(with:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(with:)), name: UIResponder.keyboardWillHideNotification, object: nil)

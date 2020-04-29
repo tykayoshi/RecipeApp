@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="MKF-pt-k48">
+            <objects>
+                <viewController id="kwZ-ee-c3D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Am-Vj-2s1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dietary Requirements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebz-zP-CFW">
+                                <rect key="frame" x="25" y="109" width="338.5" height="43.5"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="37"/>
+                                <color key="textColor" red="0.1803921568627451" green="0.25098039215686274" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know how we can filter your recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbQ-bc-JMC">
+                                <rect key="frame" x="25" y="162.5" width="323.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVJ-7B-XHE" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                <rect key="frame" x="35" y="767" width="344" height="55"/>
+                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ejl-EA-4cI"/>
+                                </constraints>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-wj-rhQ" userLabel="Back">
+                                <rect key="frame" x="25" y="69" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="ca2-xj-Ggd"/>
+                                    <constraint firstAttribute="height" constant="15" id="kaS-oG-dzg"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BackIcon"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="GVY-da-T0p" userLabel="DietaryOptions">
+                                <rect key="frame" x="32" y="233" width="350" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xts-Xv-5L5" userLabel="Stack1">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="180"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak7-tV-shq" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="0vP-7q-Mdh"/>
+                                                    <constraint firstAttribute="height" constant="40" id="GYt-GQ-8Gt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Vegetarian">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulb-s1-bAi" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70" width="100" height="40"/>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="JRL-Qm-CzX"/>
+                                                    <constraint firstAttribute="height" constant="40" id="X3p-4F-vE1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Vegan">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATG-wW-Hsd" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="140" width="100" height="40"/>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="eYk-bW-gc8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Gluten-Free">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8YG-ng-cGr" userLabel="Stack2">
+                                        <rect key="frame" x="125" y="0.0" width="100" height="180"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJB-vh-TKP" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="eeg-1T-l4e"/>
+                                                    <constraint firstAttribute="width" constant="100" id="uui-Y7-dCW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Dairy-Free">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-EH-Ytf" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70" width="100" height="40"/>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="bsZ-By-76z"/>
+                                                    <constraint firstAttribute="width" constant="100" id="cj4-ZB-xRI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Nut-Free">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmK-hH-Ryi" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="140" width="100" height="40"/>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="kxy-UD-AWq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Halal">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mmu-h5-J4u" userLabel="Stack3">
+                                        <rect key="frame" x="250" y="0.0" width="100" height="180"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeq-t2-g9x" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="8dA-PG-qJ9"/>
+                                                    <constraint firstAttribute="height" constant="40" id="YC9-W2-exq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Pork-Free">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcT-NS-ref" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70" width="100" height="40"/>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Bs4-cH-KNS"/>
+                                                    <constraint firstAttribute="height" constant="40" id="SbK-rh-eFH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Beef-Free">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKt-1N-m0S" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="140" width="100" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="i9O-Ks-dSq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GVY-da-T0p" firstAttribute="centerX" secondItem="7Am-Vj-2s1" secondAttribute="centerX" id="BnE-FQ-drK"/>
+                            <constraint firstItem="q7T-c5-l3S" firstAttribute="bottom" secondItem="SVJ-7B-XHE" secondAttribute="bottom" constant="40" id="Gn3-tP-WXq"/>
+                            <constraint firstItem="ebz-zP-CFW" firstAttribute="top" secondItem="CQ6-wj-rhQ" secondAttribute="bottom" constant="25" id="Hz2-hq-tVM"/>
+                            <constraint firstItem="SVJ-7B-XHE" firstAttribute="centerX" secondItem="7Am-Vj-2s1" secondAttribute="centerX" id="IPn-2i-EwT"/>
+                            <constraint firstItem="CQ6-wj-rhQ" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="25" id="NVL-Wf-9tH"/>
+                            <constraint firstItem="bbQ-bc-JMC" firstAttribute="top" secondItem="ebz-zP-CFW" secondAttribute="bottom" constant="10" id="ahG-P6-w2T"/>
+                            <constraint firstItem="bbQ-bc-JMC" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="25" id="fJG-cg-fnO"/>
+                            <constraint firstItem="GVY-da-T0p" firstAttribute="top" secondItem="bbQ-bc-JMC" secondAttribute="bottom" constant="50" id="fve-I3-YXt"/>
+                            <constraint firstItem="SVJ-7B-XHE" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="35" id="jJP-Kf-S8X"/>
+                            <constraint firstItem="CQ6-wj-rhQ" firstAttribute="top" secondItem="q7T-c5-l3S" secondAttribute="top" constant="25" id="tbs-Dq-lyK"/>
+                            <constraint firstItem="q7T-c5-l3S" firstAttribute="trailing" secondItem="SVJ-7B-XHE" secondAttribute="trailing" constant="35" id="xay-Km-Ihx"/>
+                            <constraint firstItem="ebz-zP-CFW" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="25" id="z65-c8-D6N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q7T-c5-l3S"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ubr-ib-Wjb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackIcon" width="50" height="50"/>
+    </resources>
+</document>

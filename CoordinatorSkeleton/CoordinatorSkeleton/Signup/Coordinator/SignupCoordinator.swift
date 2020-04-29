@@ -53,7 +53,6 @@ class SignupCoordinator: Coordinator {
         // When clicking next, add dietary requirements array to currentUser
         // Move current user to next screen (essential items)
     }
-    
 }
 
 extension SignupCoordinator: SignupCoordinatorProtocol {
