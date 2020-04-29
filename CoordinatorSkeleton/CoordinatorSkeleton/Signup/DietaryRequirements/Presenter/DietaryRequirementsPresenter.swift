@@ -15,6 +15,8 @@ class DietaryRequirementsPresenter: DietaryRequirementsPresenterProtocol {
     weak var coordinator: SignupCoordinatorProtocol?
     var currentUser = UserManager.shared
     
+    var dietaryReq: [String] = []
+    
     init(view: DietaryRequirementsViewProtocol, interactor: DietaryRequirementsInteractorProtocol, coordinator: SignupCoordinatorProtocol, currentUser: UserManager) {
         self.view = view
         self.interactor = interactor
@@ -25,5 +27,14 @@ class DietaryRequirementsPresenter: DietaryRequirementsPresenterProtocol {
     
     func backButtonPressed() {
         coordinator?.popBackScreen()
+    }
+    
+    func nextButtonPressed(){
+        currentUser.dietaryReq = dietaryReq
+        print(currentUser.dietaryReq)
+    }
+    
+    func dietaryPressed(option: String){
+        dietaryReq.append(option)
     }
 }

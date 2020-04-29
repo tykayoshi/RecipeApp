@@ -21,15 +21,6 @@ class UserManager {
             , age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
     }
     
-    var foodPref: String? {
-        get {
-            return userDefaults.string(forKey: "foodPref")
-        }
-        set (newValue) {
-            userDefaults.set(newValue, forKey: "foodPref")
-        }
-    }
-    
     var userName: String? {
         get {
             return userDefaults.string(forKey: "userName")
@@ -45,6 +36,15 @@ class UserManager {
         }
         set (newValue) {
             userDefaults.set(newValue, forKey: "userAge")
+        }
+    }
+    
+    var dietaryReq: [String]? {
+        get {
+            return userDefaults.stringArray(forKey: "dietaryReq")
+        }
+        set (newValue) {
+            userDefaults.set(newValue, forKey: "dietaryReq")
         }
     }
     

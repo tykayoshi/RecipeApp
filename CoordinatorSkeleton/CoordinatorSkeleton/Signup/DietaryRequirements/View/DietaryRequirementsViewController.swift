@@ -11,6 +11,15 @@ import UIKit
 
 class DietaryRequirementsViewController: UIViewController {
     
+    @IBOutlet weak var vegitarian: RAButton!
+    @IBOutlet weak var vegan: RAButton!
+    @IBOutlet weak var glutenFree: RAButton!
+    @IBOutlet weak var dairyFree: RAButton!
+    @IBOutlet weak var nutFree: RAButton!
+    @IBOutlet weak var halal: RAButton!
+    @IBOutlet weak var porkFree: RAButton!
+    @IBOutlet weak var beefFree: RAButton!
+    
     var presenter: DietaryRequirementsPresenterProtocol!
     
     override func viewDidLoad() {
@@ -19,7 +28,43 @@ class DietaryRequirementsViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         presenter.backButtonPressed()
     }
+
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        presenter.nextButtonPressed()
+    }
     
+    //MARK: Function/Actions for dietary option buttons
+    @IBAction func vegitarianPressed(_ sender: Any) {
+        presenter.dietaryPressed(option: "Vegetarian")
+    }
+    
+    @IBAction func veganPressed(_ sender: Any) {
+        presenter.dietaryPressed(option: "Vegan")
+    }
+    
+    @IBAction func glutenFreePressed(_ sender: Any) {
+        presenter.dietaryPressed(option: "Gluten-Free")
+    }
+    
+    @IBAction func dairyFreePressed(_ sender: Any) {
+        presenter.dietaryPressed(option: "Diary-Free")
+    }
+    
+    @IBAction func nutFreePressed(_ sender: Any) {
+        presenter.dietaryPressed(option: "Nut-Free")
+    }
+    
+    @IBAction func halalPressed(_ sender: Any) {
+        presenter.dietaryPressed(option: "Halal")
+    }
+    
+    @IBAction func porkFreePressed(_ sender: Any) {
+        presenter.dietaryPressed(option: "Pork-Free")
+    }
+    
+    @IBAction func beefFreePressed(_ sender: Any) {
+        presenter.dietaryPressed(option: "Beef-Free")
+    }
 }
 
 extension DietaryRequirementsViewController: DietaryRequirementsViewProtocol {

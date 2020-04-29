@@ -28,21 +28,6 @@
                                 <color key="textColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVJ-7B-XHE" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
-                                <rect key="frame" x="35" y="767" width="344" height="55"/>
-                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="ejl-EA-4cI"/>
-                                </constraints>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="9"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-wj-rhQ" userLabel="Back">
                                 <rect key="frame" x="25" y="69" width="15" height="15"/>
                                 <constraints>
@@ -76,6 +61,9 @@
                                                         <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="vegitarianPressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="YbB-pN-MF1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulb-s1-bAi" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70" width="100" height="40"/>
@@ -93,6 +81,9 @@
                                                         <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="veganPressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="ZNG-af-WnX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATG-wW-Hsd" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="140" width="100" height="40"/>
@@ -109,6 +100,9 @@
                                                         <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="glutenFreePressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="obw-VL-aIq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -131,6 +125,9 @@
                                                         <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dairyFreePressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="cRD-W7-cn2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-EH-Ytf" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70" width="100" height="40"/>
@@ -148,6 +145,9 @@
                                                         <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nutFreePressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="TZI-8W-EnA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmK-hH-Ryi" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="140" width="100" height="40"/>
@@ -164,6 +164,9 @@
                                                         <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="halalPressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="wVb-0w-Tad"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -186,6 +189,9 @@
                                                         <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="porkFreePressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="KUU-i9-uiS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcT-NS-ref" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70" width="100" height="40"/>
@@ -203,6 +209,9 @@
                                                         <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="beefFreePressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="FVG-Iy-ckM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKt-1N-m0S" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="140" width="100" height="40"/>
@@ -224,28 +233,57 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc5-4s-4o5" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                <rect key="frame" x="35" y="767" width="344" height="55"/>
+                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="bgg-aL-ifF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="kwZ-ee-c3D" eventType="touchUpInside" id="shv-NH-QdC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="vc5-4s-4o5" firstAttribute="centerX" secondItem="7Am-Vj-2s1" secondAttribute="centerX" id="AqG-ew-tpr"/>
                             <constraint firstItem="GVY-da-T0p" firstAttribute="centerX" secondItem="7Am-Vj-2s1" secondAttribute="centerX" id="BnE-FQ-drK"/>
-                            <constraint firstItem="q7T-c5-l3S" firstAttribute="bottom" secondItem="SVJ-7B-XHE" secondAttribute="bottom" constant="40" id="Gn3-tP-WXq"/>
                             <constraint firstItem="ebz-zP-CFW" firstAttribute="top" secondItem="CQ6-wj-rhQ" secondAttribute="bottom" constant="25" id="Hz2-hq-tVM"/>
-                            <constraint firstItem="SVJ-7B-XHE" firstAttribute="centerX" secondItem="7Am-Vj-2s1" secondAttribute="centerX" id="IPn-2i-EwT"/>
                             <constraint firstItem="CQ6-wj-rhQ" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="25" id="NVL-Wf-9tH"/>
+                            <constraint firstItem="vc5-4s-4o5" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="35" id="Zlv-VR-Xhz"/>
                             <constraint firstItem="bbQ-bc-JMC" firstAttribute="top" secondItem="ebz-zP-CFW" secondAttribute="bottom" constant="10" id="ahG-P6-w2T"/>
+                            <constraint firstItem="q7T-c5-l3S" firstAttribute="trailing" secondItem="vc5-4s-4o5" secondAttribute="trailing" constant="35" id="ctb-J7-kYz"/>
                             <constraint firstItem="bbQ-bc-JMC" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="25" id="fJG-cg-fnO"/>
                             <constraint firstItem="GVY-da-T0p" firstAttribute="top" secondItem="bbQ-bc-JMC" secondAttribute="bottom" constant="50" id="fve-I3-YXt"/>
-                            <constraint firstItem="SVJ-7B-XHE" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="35" id="jJP-Kf-S8X"/>
+                            <constraint firstItem="q7T-c5-l3S" firstAttribute="bottom" secondItem="vc5-4s-4o5" secondAttribute="bottom" constant="40" id="g5S-M8-YbV"/>
                             <constraint firstItem="CQ6-wj-rhQ" firstAttribute="top" secondItem="q7T-c5-l3S" secondAttribute="top" constant="25" id="tbs-Dq-lyK"/>
-                            <constraint firstItem="q7T-c5-l3S" firstAttribute="trailing" secondItem="SVJ-7B-XHE" secondAttribute="trailing" constant="35" id="xay-Km-Ihx"/>
                             <constraint firstItem="ebz-zP-CFW" firstAttribute="leading" secondItem="q7T-c5-l3S" secondAttribute="leading" constant="25" id="z65-c8-D6N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q7T-c5-l3S"/>
                     </view>
+                    <connections>
+                        <outlet property="beefFree" destination="wcT-NS-ref" id="jBw-LY-euq"/>
+                        <outlet property="dairyFree" destination="hJB-vh-TKP" id="Z2U-6y-QY9"/>
+                        <outlet property="glutenFree" destination="ATG-wW-Hsd" id="FVX-Mp-dEz"/>
+                        <outlet property="halal" destination="dmK-hH-Ryi" id="qbb-Rv-4tg"/>
+                        <outlet property="nutFree" destination="5Yw-EH-Ytf" id="EPR-X2-OKl"/>
+                        <outlet property="porkFree" destination="yeq-t2-g9x" id="v5z-xV-l8f"/>
+                        <outlet property="vegan" destination="Ulb-s1-bAi" id="Q0E-Kz-9pm"/>
+                        <outlet property="vegitarian" destination="ak7-tV-shq" id="rgz-91-H6F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ubr-ib-Wjb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118.84057971014494" y="99.776785714285708"/>
+            <point key="canvasLocation" x="228" y="-82"/>
         </scene>
     </scenes>
     <resources>
