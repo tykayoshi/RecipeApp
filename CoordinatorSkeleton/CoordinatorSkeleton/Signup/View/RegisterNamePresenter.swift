@@ -41,6 +41,7 @@ class RegisterNamePresenter: RegisterNamePresenterProtocol {
     
     func nextButtonPressed() {
         coordinator?.showDietaryRequirements(currentUser: currentUser)
+        
     }
     
 }

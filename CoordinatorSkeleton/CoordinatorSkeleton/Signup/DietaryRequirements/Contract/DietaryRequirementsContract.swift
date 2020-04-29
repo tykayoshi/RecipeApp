@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+protocol DietaryRequirementsPresenterProtocol: class {
+    
+}
+
+protocol DietaryRequirementsViewProtocol: class {
+    
+}
+
+protocol DietaryRequirementsInteractorProtocol: class {
+    
+}
+

@@ -7,3 +7,25 @@
 //
 
 import Foundation
+import UIKit
+
+class DietaryRequirementsViewController: UIViewController {
+    
+    var presenter: DietaryRequirementsPresenterProtocol!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
+
+extension DietaryRequirementsViewController: DietaryRequirementsViewProtocol {
+    
+}
+
+extension DietaryRequirementsViewController {
+    static func makeFromStoryboard() -> DietaryRequirementsViewController {
+        let viewController = StoryboardScene.DietaryRequirements.dietaryRequirementsViewController.instantiate()
+        return viewController
+    }
+}
