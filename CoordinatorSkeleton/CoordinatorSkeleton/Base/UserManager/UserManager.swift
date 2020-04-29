@@ -17,7 +17,7 @@ class UserManager {
     
     init(userDefaults: UserDefaults = UserDefaults.standard) {
         self.userDefaults = userDefaults
-        self.currentUser = User(name: "User Name From API", age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
+        self.currentUser = User(name: userName!, age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
     }
     
     var foodPref: String? {
