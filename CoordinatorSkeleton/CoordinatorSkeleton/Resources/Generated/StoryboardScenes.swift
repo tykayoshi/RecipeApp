@@ -12,6 +12,11 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
+  internal enum DietaryRequirements: StoryboardType {
+    internal static let storyboardName = "DietaryRequirements"
+
+    internal static let dietaryRequirementsViewController = SceneType<DietaryRequirementsViewController>(storyboard: DietaryRequirements.self, identifier: "DietaryRequirementsViewController")
+  }
   internal enum Home: StoryboardType {
     internal static let storyboardName = "Home"
 

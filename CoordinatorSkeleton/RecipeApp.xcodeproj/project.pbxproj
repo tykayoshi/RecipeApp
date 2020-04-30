@@ -10,6 +10,11 @@
 		1B29780B245725F200C2CC23 /* RATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780A245725F200C2CC23 /* RATextField.swift */; };
 		1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B29780E24572DC800C2CC23 /* RegisterName.storyboard */; };
 		1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */; };
+		C3F41DA7245996D700B9EC46 /* DietaryRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DA6245996D700B9EC46 /* DietaryRequirementsViewController.swift */; };
+		C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F41DA8245996F100B9EC46 /* DietaryRequirements.storyboard */; };
+		C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */; };
+		C3F41DAD2459976300B9EC46 /* DietaryRequirementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAC2459976300B9EC46 /* DietaryRequirementsInteractor.swift */; };
+		C3F41DAF2459979200B9EC46 /* DietaryRequirementsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAE2459979200B9EC46 /* DietaryRequirementsContract.swift */; };
 		C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */; };
 		C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */; };
 		C44E8485244DD99300D97E32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E8484244DD99300D97E32 /* Router.swift */; };
@@ -81,6 +86,11 @@
 		1B29780A245725F200C2CC23 /* RATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RATextField.swift; sourceTree = "<group>"; };
 		1B29780E24572DC800C2CC23 /* RegisterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterName.storyboard; sourceTree = "<group>"; };
 		1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		C3F41DA6245996D700B9EC46 /* DietaryRequirementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsViewController.swift; sourceTree = "<group>"; };
+		C3F41DA8245996F100B9EC46 /* DietaryRequirements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DietaryRequirements.storyboard; sourceTree = "<group>"; };
+		C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsPresenter.swift; sourceTree = "<group>"; };
+		C3F41DAC2459976300B9EC46 /* DietaryRequirementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsInteractor.swift; sourceTree = "<group>"; };
+		C3F41DAE2459979200B9EC46 /* DietaryRequirementsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsContract.swift; sourceTree = "<group>"; };
 		C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
 		C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		C44E8484244DD99300D97E32 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -204,6 +214,50 @@
 				C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		C3F41DA12459968500B9EC46 /* DietaryRequirements */ = {
+			isa = PBXGroup;
+			children = (
+				C3F41DA5245996B500B9EC46 /* View */,
+				C3F41DA4245996AD00B9EC46 /* Presenter */,
+				C3F41DA3245996A400B9EC46 /* Interactor */,
+				C3F41DA22459969B00B9EC46 /* Contract */,
+			);
+			path = DietaryRequirements;
+			sourceTree = "<group>";
+		};
+		C3F41DA22459969B00B9EC46 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				C3F41DAE2459979200B9EC46 /* DietaryRequirementsContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		C3F41DA3245996A400B9EC46 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C3F41DAC2459976300B9EC46 /* DietaryRequirementsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C3F41DA4245996AD00B9EC46 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C3F41DA5245996B500B9EC46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3F41DA6245996D700B9EC46 /* DietaryRequirementsViewController.swift */,
+				C3F41DA8245996F100B9EC46 /* DietaryRequirements.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C44C5C3C24473103003B7825 /* Resources */ = {
@@ -367,6 +421,7 @@
 		C4C89D372456F52E0063D721 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				C3F41DA12459968500B9EC46 /* DietaryRequirements */,
 				1B297800245722A800C2CC23 /* RegisterName */,
 				C4C89D3C2456F5460063D721 /* Coordinator */,
 				C4C89D3B2456F5410063D721 /* Contract */,
@@ -668,6 +723,7 @@
 				C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */,
 				C45A59E224519C1000F68A06 /* Profile.storyboard in Resources */,
 				C4DFE8FF232F9E05001EEB3D /* LaunchScreen.storyboard in Resources */,
+				C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
 				1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
@@ -704,12 +760,16 @@
 				C45A59D02450567F00F68A06 /* SettingsInteractor.swift in Sources */,
 				C4DFE93B232FD98F001EEB3D /* HomeInteractor.swift in Sources */,
 				C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */,
+				C3F41DA7245996D700B9EC46 /* DietaryRequirementsViewController.swift in Sources */,
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
+				C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */,
+				C3F41DAF2459979200B9EC46 /* DietaryRequirementsContract.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
 				C45A59EA2451B2AE00F68A06 /* User.swift in Sources */,
 				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
 				C4DFE939232FD87A001EEB3D /* HomeContract.swift in Sources */,
+				C3F41DAD2459976300B9EC46 /* DietaryRequirementsInteractor.swift in Sources */,
 				C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */,
 				1B29780B245725F200C2CC23 /* RATextField.swift in Sources */,
 				C4C89D442456F95E0063D721 /* SignupCoordinator.swift in Sources */,

@@ -17,17 +17,37 @@ class UserManager {
     
     init(userDefaults: UserDefaults = UserDefaults.standard) {
         self.userDefaults = userDefaults
-        self.currentUser = User(name: "User Name From API", age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
+        self.currentUser = User(name: userName!
+            , age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
     }
     
-    var foodPref: String? {
+    var userName: String? {
         get {
-            return userDefaults.string(forKey: "foodPref")
+            return userDefaults.string(forKey: "userName")
         }
         set (newValue) {
-            userDefaults.set(newValue, forKey: "foodPref")
+            userDefaults.set(newValue, forKey: "userName")
         }
     }
+    
+    var userAge: String? {
+        get {
+            return userDefaults.string(forKey: "userAge")
+        }
+        set (newValue) {
+            userDefaults.set(newValue, forKey: "userAge")
+        }
+    }
+    
+    var dietaryReq: [String]? {
+        get {
+            return userDefaults.stringArray(forKey: "dietaryReq")
+        }
+        set (newValue) {
+            userDefaults.set(newValue, forKey: "dietaryReq")
+        }
+    }
+    
 }
 
 // Test User Defaults

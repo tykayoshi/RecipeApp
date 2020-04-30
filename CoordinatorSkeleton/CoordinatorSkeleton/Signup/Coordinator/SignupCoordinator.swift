@@ -42,9 +42,23 @@ class SignupCoordinator: Coordinator {
         navigationController.pushViewController(registerNameController, animated: true)
     }
     
+    func presentDietaryRequirements(currentUser: UserManager) {
+        let dietaryRequirementsController = DietaryRequirementsViewController.makeFromStoryboard()
+        let interactor = DietaryRequirementsInteractor()
+        let presenter = DietaryRequirementsPresenter(view: dietaryRequirementsController, interactor: interactor, coordinator: self, currentUser: currentUser)
+        
+        dietaryRequirementsController.presenter = presenter
+        
+        navigationController.pushViewController(dietaryRequirementsController, animated: true)
+        
+    }
 }
 
 extension SignupCoordinator: SignupCoordinatorProtocol {
+    func showDietaryRequirements(currentUser: UserManager) {
+        self.presentDietaryRequirements(currentUser: currentUser)
+    }
+    
     func showRegisterName() {
         // Show Register Name View
         self.presentRegisterName()
