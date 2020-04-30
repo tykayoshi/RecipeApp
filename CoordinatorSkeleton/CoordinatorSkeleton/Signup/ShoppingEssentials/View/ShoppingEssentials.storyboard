@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shopping Essentials View Controller-->
+        <scene sceneID="GXM-0r-ZLt">
+            <objects>
+                <viewController storyboardIdentifier="ShoppingEssentialsViewController" id="YCt-aV-YqM" customClass="ShoppingEssentialsViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rm5-xk-enC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sD-BN-oeN">
+                                <rect key="frame" x="25" y="69" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="dj5-V1-4aC"/>
+                                    <constraint firstAttribute="height" constant="15" id="u29-8A-n97"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BackIcon"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="YCt-aV-YqM" eventType="touchUpInside" id="sOR-yX-4Lw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping Essentials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juV-AF-j2V">
+                                <rect key="frame" x="25" y="109" width="315" height="44"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="37"/>
+                                <color key="textColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeJ-eN-fb8">
+                                <rect key="frame" x="25" y="163" width="304" height="41"/>
+                                <string key="text">So you can get a personal shopping list 
+add your shopping must haves </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvL-WC-v3c" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                <rect key="frame" x="35" y="767" width="344" height="55"/>
+                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="nYU-v7-ZUN"/>
+                                </constraints>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3i1-tc-SfQ" firstAttribute="trailing" secondItem="EvL-WC-v3c" secondAttribute="trailing" constant="35" id="3yt-tL-Ur6"/>
+                            <constraint firstItem="yeJ-eN-fb8" firstAttribute="leading" secondItem="3i1-tc-SfQ" secondAttribute="leading" constant="25" id="98k-TC-1tV"/>
+                            <constraint firstItem="EvL-WC-v3c" firstAttribute="leading" secondItem="3i1-tc-SfQ" secondAttribute="leading" constant="35" id="Cb4-PB-BZ8"/>
+                            <constraint firstItem="0sD-BN-oeN" firstAttribute="leading" secondItem="3i1-tc-SfQ" secondAttribute="leading" constant="25" id="Etd-UK-yCr"/>
+                            <constraint firstItem="EvL-WC-v3c" firstAttribute="centerX" secondItem="Rm5-xk-enC" secondAttribute="centerX" id="GKg-J8-Tre"/>
+                            <constraint firstItem="juV-AF-j2V" firstAttribute="top" secondItem="0sD-BN-oeN" secondAttribute="bottom" constant="25" id="Lhn-5c-rqM"/>
+                            <constraint firstItem="3i1-tc-SfQ" firstAttribute="bottom" secondItem="EvL-WC-v3c" secondAttribute="bottom" constant="40" id="RBW-HK-lVy"/>
+                            <constraint firstItem="yeJ-eN-fb8" firstAttribute="top" secondItem="juV-AF-j2V" secondAttribute="bottom" constant="10" id="r9g-v6-wEe"/>
+                            <constraint firstItem="0sD-BN-oeN" firstAttribute="top" secondItem="3i1-tc-SfQ" secondAttribute="top" constant="25" id="rer-Tb-5f0"/>
+                            <constraint firstItem="juV-AF-j2V" firstAttribute="leading" secondItem="3i1-tc-SfQ" secondAttribute="leading" constant="25" id="xdg-UR-vT8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3i1-tc-SfQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gE-VB-Npc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68.115942028985515" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackIcon" width="50" height="50"/>
+    </resources>
+</document>

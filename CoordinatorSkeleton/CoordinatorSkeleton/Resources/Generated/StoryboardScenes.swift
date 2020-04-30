@@ -47,6 +47,11 @@ internal enum StoryboardScene {
 
     internal static let settingsViewController = SceneType<SettingsViewController>(storyboard: Settings.self, identifier: "SettingsViewController")
   }
+  internal enum ShoppingEssentials: StoryboardType {
+    internal static let storyboardName = "ShoppingEssentials"
+
+    internal static let shoppingEssentialsViewController = SceneType<ShoppingEssentialsViewController>(storyboard: ShoppingEssentials.self, identifier: "ShoppingEssentialsViewController")
+  }
   internal enum Signup: StoryboardType {
     internal static let storyboardName = "Signup"
 

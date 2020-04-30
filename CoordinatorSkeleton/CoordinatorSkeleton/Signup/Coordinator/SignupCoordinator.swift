@@ -52,6 +52,16 @@ class SignupCoordinator: Coordinator {
         navigationController.pushViewController(dietaryRequirementsController, animated: true)
         
     }
+    
+    func presentShoppingEssentials(currentUser: UserManager){
+        let shoppingEssentialsController = ShoppingEssentialsViewController.makeFromStoryboard()
+        let interactor = ShoppingEssentialsInteractor()
+        let presenter = ShoppingEssentialsPresenter(view: shoppingEssentialsController, interactor: interactor, coordinator: self, currentUser: currentUser)
+        
+        shoppingEssentialsController.presenter = presenter
+        
+        navigationController.pushViewController(shoppingEssentialsController, animated: true)
+    }
 }
 
 extension SignupCoordinator: SignupCoordinatorProtocol {
@@ -62,6 +72,10 @@ extension SignupCoordinator: SignupCoordinatorProtocol {
     func showRegisterName() {
         // Show Register Name View
         self.presentRegisterName()
+    }
+    
+    func showShoppingEssentials(currentUser: UserManager){
+        self.presentShoppingEssentials(currentUser: currentUser)
     }
     
     func popBackScreen() {
