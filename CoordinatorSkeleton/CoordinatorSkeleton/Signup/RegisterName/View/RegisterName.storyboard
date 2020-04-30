@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="50" id="EmS-Kq-az6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="3"/>
@@ -66,7 +66,7 @@
                                     <outlet property="delegate" destination="1vh-Jr-mA0" id="JbT-dc-EyH"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I5-cC-HTt" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I5-cC-HTt" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                 <rect key="frame" x="35" y="767" width="344" height="55"/>
                                 <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -80,6 +80,9 @@
                                         <real key="value" value="9"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="1vh-Jr-mA0" eventType="touchUpInside" id="1A4-k4-zKb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IG-sj-Ugg">
                                 <rect key="frame" x="25" y="69" width="15" height="15"/>
@@ -114,9 +117,10 @@
                         <viewLayoutGuide key="safeArea" id="zqK-b1-gIP"/>
                     </view>
                     <connections>
-                        <outlet property="AgeTextField" destination="hRr-VC-hyr" id="aOE-cf-qAk"/>
-                        <outlet property="BottomConstraint" destination="B7C-73-khG" id="9td-vW-yxI"/>
-                        <outlet property="NameTextField" destination="JS7-1K-GZL" id="zey-IS-DNh"/>
+                        <outlet property="ageTextField" destination="hRr-VC-hyr" id="aOE-cf-qAk"/>
+                        <outlet property="bottomConstraint" destination="B7C-73-khG" id="9td-vW-yxI"/>
+                        <outlet property="nameTextField" destination="JS7-1K-GZL" id="zey-IS-DNh"/>
+                        <outlet property="nextButton" destination="0I5-cC-HTt" id="QuB-vW-zsc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0o-i9-qE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

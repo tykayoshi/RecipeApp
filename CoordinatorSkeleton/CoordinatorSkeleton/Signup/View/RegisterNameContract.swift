@@ -10,10 +10,12 @@ import Foundation
 
 protocol RegisterNamePresenterProtocol: class {
     func backButtonPressed()
+    func nextButtonPressed()
+    func editingEndedWithDetails(userName: String, userAge: String)
 }
 
 protocol RegisterNameViewProtocol: class {
-    
+    func isNextButtonEnabled(isEnabled: Bool)
 }
 
 protocol RegisterNameInteractorProtocol: class {
