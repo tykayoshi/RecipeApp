@@ -11,7 +11,8 @@ import UIKit
 
 class DietaryRequirementsViewController: UIViewController {
     
-    @IBOutlet weak var vegitarian: RAButton!
+    
+    @IBOutlet weak var vegetarian: RAButton!
     @IBOutlet weak var vegan: RAButton!
     @IBOutlet weak var glutenFree: RAButton!
     @IBOutlet weak var dairyFree: RAButton!
@@ -24,6 +25,7 @@ class DietaryRequirementsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(vegetarian.isSelected)
     }
     @IBAction func backButtonPressed(_ sender: Any) {
         presenter.backButtonPressed()
@@ -34,8 +36,16 @@ class DietaryRequirementsViewController: UIViewController {
     }
     
     //MARK: Function/Actions for dietary option buttons
-    @IBAction func vegitarianPressed(_ sender: Any) {
-        presenter.dietaryPressed(option: "Vegetarian")
+    
+    @IBAction func vegetarianPressed(_ sender: Any) {
+        if vegetarian.isSelected == false{
+            vegetarian.isSelected = true
+            presenter.dietaryPressed(option: "Vegetarian")
+        }
+        else{
+            vegetarian.isSelected = false
+            presenter.removeDietary(option: "Vegetarian")
+        }
     }
     
     @IBAction func veganPressed(_ sender: Any) {

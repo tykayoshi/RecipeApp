@@ -12,7 +12,7 @@ protocol DietaryRequirementsPresenterProtocol: class {
     func backButtonPressed()
     func nextButtonPressed()
     func dietaryPressed(option: String)
-    
+    func removeDietary(option: String)
 }
 
 protocol DietaryRequirementsViewProtocol: class {

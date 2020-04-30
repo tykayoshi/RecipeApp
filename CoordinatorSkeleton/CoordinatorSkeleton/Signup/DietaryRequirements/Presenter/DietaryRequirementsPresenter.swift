@@ -37,4 +37,10 @@ class DietaryRequirementsPresenter: DietaryRequirementsPresenterProtocol {
     func dietaryPressed(option: String){
         dietaryReq.append(option)
     }
+    
+    func removeDietary(option: String){
+        if let index = dietaryReq.index(of: option) {
+            dietaryReq.remove(at: index)
+        }
+    }
 }
