@@ -43,15 +43,6 @@ class SignupCoordinator: Coordinator {
     }
     
     func presentDietaryRequirements(currentUser: UserManager) {
-        // Create VIPER modules for dietary requirements screens, contract, presenter, view, etc...
-        // in presentDietaryRequirements() push to the dietary requirements view
-        // Don't forget to have the user in the presenter as we are passing this object
-        
-        // Create the view with auto layout etc..
-        // Create buttons for each dietary requirement
-        // When a user clicks a button in the view, tell the presenter it's been clicked and add it to a dietary requirements array.
-        // When clicking next, add dietary requirements array to currentUser
-        // Move current user to next screen (essential items)
         let dietaryRequirementsController = DietaryRequirementsViewController.makeFromStoryboard()
         let interactor = DietaryRequirementsInteractor()
         let presenter = DietaryRequirementsPresenter(view: dietaryRequirementsController, interactor: interactor, coordinator: self, currentUser: currentUser)
