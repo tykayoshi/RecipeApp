@@ -23,18 +23,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neU-tF-fxT">
+                        <rect key="frame" x="290" y="9.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="AhE-zy-Til"/>
+                            <constraint firstAttribute="height" constant="25" id="nvp-m5-ZwY"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="deleteIcon"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="8YF-AK-wox" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="4mf-bB-PTH"/>
+                    <constraint firstAttribute="trailing" secondItem="neU-tF-fxT" secondAttribute="trailing" constant="5" id="4wp-J9-xOd"/>
                     <constraint firstAttribute="bottom" secondItem="8YF-AK-wox" secondAttribute="bottom" constant="11" id="E42-Of-Iyy"/>
+                    <constraint firstAttribute="bottom" secondItem="neU-tF-fxT" secondAttribute="bottom" constant="9.5" id="NlF-Bf-8hh"/>
+                    <constraint firstItem="neU-tF-fxT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RfT-Il-KZf"/>
                     <constraint firstItem="8YF-AK-wox" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ePX-uZ-WOx"/>
+                    <constraint firstItem="neU-tF-fxT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9.5" id="hcU-Hl-ReK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="shoppingLabel" destination="8YF-AK-wox" id="CSU-uu-nro"/>
             </connections>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="deleteIcon" width="90" height="90"/>
+    </resources>
 </document>

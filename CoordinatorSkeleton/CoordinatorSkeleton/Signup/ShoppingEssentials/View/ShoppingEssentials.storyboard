@@ -41,21 +41,6 @@ add your shopping must haves </string>
                                 <color key="textColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvL-WC-v3c" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
-                                <rect key="frame" x="35" y="767" width="344" height="55"/>
-                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="nYU-v7-ZUN"/>
-                                </constraints>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="9"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-WO-s1J" userLabel="AddEssentials">
                                 <rect key="frame" x="25" y="228.5" width="364" height="34"/>
                                 <subviews>
@@ -115,6 +100,21 @@ add your shopping must haves </string>
                                     <outlet property="delegate" destination="YCt-aV-YqM" id="giu-GX-HTa"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvL-WC-v3c" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                <rect key="frame" x="35" y="767" width="344" height="55"/>
+                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="nYU-v7-ZUN"/>
+                                </constraints>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -126,7 +126,6 @@ add your shopping must haves </string>
                             <constraint firstItem="0sD-BN-oeN" firstAttribute="leading" secondItem="3i1-tc-SfQ" secondAttribute="leading" constant="25" id="Etd-UK-yCr"/>
                             <constraint firstItem="EvL-WC-v3c" firstAttribute="centerX" secondItem="Rm5-xk-enC" secondAttribute="centerX" id="GKg-J8-Tre"/>
                             <constraint firstItem="juV-AF-j2V" firstAttribute="top" secondItem="0sD-BN-oeN" secondAttribute="bottom" constant="25" id="Lhn-5c-rqM"/>
-                            <constraint firstItem="3i1-tc-SfQ" firstAttribute="bottom" secondItem="EvL-WC-v3c" secondAttribute="bottom" constant="40" id="RBW-HK-lVy"/>
                             <constraint firstItem="3i1-tc-SfQ" firstAttribute="bottom" secondItem="Omt-yF-AwG" secondAttribute="bottom" constant="125" id="TFS-t0-dQo"/>
                             <constraint firstItem="3i1-tc-SfQ" firstAttribute="trailing" secondItem="ICs-WO-s1J" secondAttribute="trailing" constant="25" id="TOf-PU-woB"/>
                             <constraint firstItem="ICs-WO-s1J" firstAttribute="leading" secondItem="3i1-tc-SfQ" secondAttribute="leading" constant="25" id="Z9K-7k-0QU"/>
@@ -135,11 +134,14 @@ add your shopping must haves </string>
                             <constraint firstItem="ICs-WO-s1J" firstAttribute="top" secondItem="yeJ-eN-fb8" secondAttribute="bottom" constant="25" id="puo-Gt-9kd"/>
                             <constraint firstItem="yeJ-eN-fb8" firstAttribute="top" secondItem="juV-AF-j2V" secondAttribute="bottom" constant="10" id="r9g-v6-wEe"/>
                             <constraint firstItem="0sD-BN-oeN" firstAttribute="top" secondItem="3i1-tc-SfQ" secondAttribute="top" constant="25" id="rer-Tb-5f0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="EvL-WC-v3c" secondAttribute="bottom" constant="40" id="uwr-Ul-IUq"/>
                             <constraint firstItem="juV-AF-j2V" firstAttribute="leading" secondItem="3i1-tc-SfQ" secondAttribute="leading" constant="25" id="xdg-UR-vT8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3i1-tc-SfQ"/>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="uwr-Ul-IUq" id="3Bx-oe-hgS"/>
+                        <outlet property="essentialsTextField" destination="IeK-wR-39B" id="fvr-iK-FUy"/>
                         <outlet property="tableView" destination="Omt-yF-AwG" id="d18-ah-gCs"/>
                     </connections>
                 </viewController>
