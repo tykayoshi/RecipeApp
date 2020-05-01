@@ -40,6 +40,8 @@
 		C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */; };
 		C45A59EA2451B2AE00F68A06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A59E92451B2AE00F68A06 /* User.swift */; };
 		C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC0A672458435800D40612 /* UIImageView+Extension.swift */; };
+		C4AC0AA0245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC0A9E245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift */; };
+		C4AC0AA1245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC0A9F245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib */; };
 		C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3D2456F5810063D721 /* SignupContract.swift */; };
 		C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3F2456F5C00063D721 /* SignupViewController.swift */; };
 		C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C89D412456F5C90063D721 /* Signup.storyboard */; };
@@ -121,6 +123,8 @@
 		C45A59E724519E5000F68A06 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		C45A59E92451B2AE00F68A06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C4AC0A672458435800D40612 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		C4AC0A9E245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingEssentialsTableViewCell.swift; sourceTree = "<group>"; };
+		C4AC0A9F245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingEssentialsTableViewCell.xib; sourceTree = "<group>"; };
 		C4C89D3D2456F5810063D721 /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		C4C89D3F2456F5C00063D721 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C4C89D412456F5C90063D721 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		1B13F185245B26B10079FC8B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4AC0A9D245C3D1700D40612 /* Cells */,
 				1B13F18F245B27400079FC8B /* ShoppingEssentialsViewController.swift */,
 				1B13F191245B274D0079FC8B /* ShoppingEssentials.storyboard */,
 			);
@@ -470,6 +475,15 @@
 				C45A59E324519C6300F68A06 /* ProfileViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C4AC0A9D245C3D1700D40612 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C4AC0A9E245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift */,
+				C4AC0A9F245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C4C89D372456F52E0063D721 /* Signup */ = {
@@ -782,6 +796,7 @@
 				C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
 				1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */,
+				C4AC0AA1245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
 				C45A59CC245055E800F68A06 /* Settings.storyboard in Resources */,
@@ -851,6 +866,7 @@
 				C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */,
+				C4AC0AA0245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift in Sources */,
 				C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */,
 				C4C89D5224573FAD0063D721 /* RegisterNameInteractor.swift in Sources */,
 				C45A59E624519D7E00F68A06 /* ProfilePresenter.swift in Sources */,
