@@ -74,6 +74,9 @@ add your shopping must haves </string>
                                                 <real key="value" value="9"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="YCt-aV-YqM" eventType="touchUpInside" id="hXy-Eg-rZl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

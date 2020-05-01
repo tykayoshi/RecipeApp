@@ -26,4 +26,8 @@ class ShoppingEssentialsPresenter: ShoppingEssentialsPresenterProtocol {
     func backButtonPressed(){
         coordinator?.popBackScreen()
     }
+    
+    func addButtonPressed(itemName: String) {
+        print(itemName)
+    }
 }

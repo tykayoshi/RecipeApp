@@ -10,6 +10,7 @@ import Foundation
 
 protocol ShoppingEssentialsPresenterProtocol: class {
     func backButtonPressed()
+    func addButtonPressed(itemName: String)
 }
 
 protocol ShoppingEssentialsViewProtocol: class {

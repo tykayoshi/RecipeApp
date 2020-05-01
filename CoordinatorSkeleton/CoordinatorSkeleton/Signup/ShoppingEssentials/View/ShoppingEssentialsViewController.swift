@@ -64,6 +64,13 @@ class ShoppingEssentialsViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         presenter.backButtonPressed()
     }
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        let itemName = essentialsTextField.text
+        print(itemName)
+        presenter.addButtonPressed(itemName: itemName!)
+    }
+    
 }
 
 extension ShoppingEssentialsViewController: ShoppingEssentialsViewProtocol {
