@@ -48,6 +48,15 @@ class UserManager {
         }
     }
     
+    var essentialList: [String]? {
+        get {
+            return userDefaults.stringArray(forKey: "essentialList")
+        }
+        set (newValue) {
+            userDefaults.set(newValue, forKey: "essentialList")
+        }
+    }
+    
 }
 
 // Test User Defaults

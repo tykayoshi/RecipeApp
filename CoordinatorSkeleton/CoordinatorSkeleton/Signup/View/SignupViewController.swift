@@ -19,6 +19,7 @@ class SignupViewController: UIViewController {
         print(UserManager.shared.userName)
         print(UserManager.shared.userAge)
         print(UserManager.shared.dietaryReq)
+        print(UserManager.shared.essentialList)
     }
     
     @IBAction func signupButtonPressed(_ sender: Any) {
