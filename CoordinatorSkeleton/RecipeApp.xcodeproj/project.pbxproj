@@ -15,6 +15,8 @@
 		C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */; };
 		C3F41DAD2459976300B9EC46 /* DietaryRequirementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAC2459976300B9EC46 /* DietaryRequirementsInteractor.swift */; };
 		C3F41DAF2459979200B9EC46 /* DietaryRequirementsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAE2459979200B9EC46 /* DietaryRequirementsContract.swift */; };
+		C433D4072460428A003A8957 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433D4052460428A003A8957 /* SettingsTableViewCell.swift */; };
+		C433D4082460428A003A8957 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433D4062460428A003A8957 /* SettingsTableViewCell.xib */; };
 		C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */; };
 		C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */; };
 		C44E8485244DD99300D97E32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E8484244DD99300D97E32 /* Router.swift */; };
@@ -91,6 +93,8 @@
 		C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsPresenter.swift; sourceTree = "<group>"; };
 		C3F41DAC2459976300B9EC46 /* DietaryRequirementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsInteractor.swift; sourceTree = "<group>"; };
 		C3F41DAE2459979200B9EC46 /* DietaryRequirementsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsContract.swift; sourceTree = "<group>"; };
+		C433D4052460428A003A8957 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		C433D4062460428A003A8957 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
 		C44C5C3F244731EF003B7825 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		C44E8484244DD99300D97E32 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -260,6 +264,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C433D40424604213003A8957 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C433D4052460428A003A8957 /* SettingsTableViewCell.swift */,
+				C433D4062460428A003A8957 /* SettingsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C44C5C3C24473103003B7825 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +372,7 @@
 		C45A59CA245055CD00F68A06 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C433D40424604213003A8957 /* Cells */,
 				C45A59CB245055E800F68A06 /* Settings.storyboard */,
 				C45A59D3245056A900F68A06 /* SettingsViewController.swift */,
 			);
@@ -728,6 +742,7 @@
 				1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
+				C433D4082460428A003A8957 /* SettingsTableViewCell.xib in Resources */,
 				C45A59CC245055E800F68A06 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,6 +788,7 @@
 				C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */,
 				1B29780B245725F200C2CC23 /* RATextField.swift in Sources */,
 				C4C89D442456F95E0063D721 /* SignupCoordinator.swift in Sources */,
+				C433D4072460428A003A8957 /* SettingsTableViewCell.swift in Sources */,
 				C44E8485244DD99300D97E32 /* Router.swift in Sources */,
 				C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */,
 				C45A59E424519C6300F68A06 /* ProfileViewController.swift in Sources */,

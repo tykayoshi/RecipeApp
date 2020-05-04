@@ -24,9 +24,13 @@ class SettingsViewController: UIViewController {
     var presenter: SettingsPresenterProtocol!
     var sections: [SettingSections] = []
     var options: [SettingOption] = []
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let settingsNib = UINib(nibName: String(describing: SettingsTableViewCell.self), bundle: nil)
+        tableView?.register(settingsNib, forCellReuseIdentifier: String(describing: SettingsTableViewCell.self))
         
         options = [.option1, .option2, .option3]
         
@@ -59,23 +63,27 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cellSet = tableView.dequeueReusableCell(withIdentifier: "cellSet", for: indexPath) as! UITableViewCell
+    let cellSet = tableView.dequeueReusableCell(withIdentifier: String(describing: SettingsTableViewCell.self), for: indexPath) as! SettingsTableViewCell
     
-    switch sections[indexPath.section] {
-    case let .setting(rows: options):
-        let rowTitle = options[indexPath.row]
-        switch rowTitle {
-        case .option1:
-            cellSet.textLabel?.text = "Option1"
-        case .option2:
-            cellSet.textLabel?.text = "Option2"
-        case .option3:
-            cellSet.textLabel?.text = "Option3"
-        }
+//    switch sections[indexPath.section] {
+//    case let .setting(rows: options):
+//        let rowTitle = options[indexPath.row]
+//        switch rowTitle {
+//        case .option1:
+//            cellSet.textLabel?.text = "Option1"
+//        case .option2:
+//            cellSet.textLabel?.text = "Option2"
+//        case .option3:
+//            cellSet.textLabel?.text = "Option3"
+//        }
+//    }
+    
+        return cellSet
     }
     
-    return cellSet
-}
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
 }
 
 
