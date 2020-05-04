@@ -43,4 +43,10 @@ class ShoppingEssentialsPresenter: ShoppingEssentialsPresenterProtocol {
             print(essentials)
         }
     }
+    
+    func nextButtonPressed() {
+        currentUser.essentialList = essentials
+        print(currentUser.essentialList)
+        print("END OF REGISTRATION")
+    }
 }

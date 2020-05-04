@@ -76,6 +76,10 @@ class ShoppingEssentialsViewController: UIViewController {
 
     }
     
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        presenter.nextButtonPressed()
+    }
+    
     func textFieldShouldClear(_ textField: UITextField) {
       textField.text!.removeAll()
     }

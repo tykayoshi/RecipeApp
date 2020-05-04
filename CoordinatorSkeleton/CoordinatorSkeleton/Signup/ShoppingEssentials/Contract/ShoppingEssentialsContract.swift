@@ -12,6 +12,7 @@ protocol ShoppingEssentialsPresenterProtocol: class {
     func backButtonPressed()
     func addButtonPressed(itemName: String)
     func removeEssential(itemName: String)
+    func nextButtonPressed()
 }
 
 protocol ShoppingEssentialsViewProtocol: class {
