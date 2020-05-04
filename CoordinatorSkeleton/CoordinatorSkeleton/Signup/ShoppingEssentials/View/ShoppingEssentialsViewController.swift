@@ -69,10 +69,18 @@ class ShoppingEssentialsViewController: UIViewController {
     
     @IBAction func addButtonPressed(_ sender: Any) {
         let itemName = essentialsTextField.text
-        presenter.addButtonPressed(itemName: itemName!)
+        if (itemName?.isEmpty == false) {
+            presenter.addButtonPressed(itemName: itemName!)
+            textFieldShouldClear(essentialsTextField)
+        }
+
     }
     
+    func textFieldShouldClear(_ textField: UITextField) {
+      textField.text!.removeAll()
+    }
 }
+
 
 extension ShoppingEssentialsViewController: ShoppingEssentialsViewProtocol {
     func getEssentialsList(essentialsList: [String]) {
