@@ -15,8 +15,7 @@ protocol ShoppingEssentialsPresenterProtocol: class {
 }
 
 protocol ShoppingEssentialsViewProtocol: class {
-    func getEssentialsList(essentialsList: [String]) 
-    
+    func getEssentialsList(essentialsList: [String])
 }
 
 protocol ShoppingEssentialsInteractorProtocol: class {

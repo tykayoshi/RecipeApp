@@ -39,6 +39,7 @@ class ShoppingEssentialsPresenter: ShoppingEssentialsPresenterProtocol {
     func removeEssential(itemName: String){
         if let index = essentials.index(of: itemName) {
             essentials.remove(at: index)
+            view?.getEssentialsList(essentialsList: essentials)
             print(essentials)
         }
     }

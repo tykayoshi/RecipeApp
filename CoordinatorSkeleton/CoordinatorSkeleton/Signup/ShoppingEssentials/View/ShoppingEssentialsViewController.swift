@@ -79,8 +79,6 @@ extension ShoppingEssentialsViewController: ShoppingEssentialsViewProtocol {
         self.essentialsList = essentialsList
         tableView.reloadData()
     }
-    
-    
 }
 
 
@@ -93,8 +91,15 @@ extension ShoppingEssentialsViewController: UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingEssentialsTableViewCell.self), for: indexPath) as! ShoppingEssentialsTableViewCell
     
         cell.shoppingLabel.text = essentialsList[indexPath.row]
+        cell.delegate = self
         
         return cell
+    }
+}
+
+extension ShoppingEssentialsViewController: ShoppingListCellProtocol {
+    func removeEssential(itemName: String) {
+        presenter.removeEssential(itemName: itemName)
     }
 }
 

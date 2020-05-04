@@ -8,9 +8,13 @@
 
 import UIKit
 
-class ShoppingEssentialsTableViewCell: UITableViewCell {
-    var presenter: ShoppingEssentialsPresenterProtocol!
+protocol ShoppingListCellProtocol: class {
+    func removeEssential(itemName: String)
+}
 
+class ShoppingEssentialsTableViewCell: UITableViewCell {
+    
+    weak var delegate: ShoppingListCellProtocol?
     @IBOutlet weak var shoppingLabel: UILabel!
     
     override func awakeFromNib() {
@@ -19,6 +23,7 @@ class ShoppingEssentialsTableViewCell: UITableViewCell {
     }
 
     @IBAction func removeEssential(_ sender: Any) {
-        presenter.removeEssential(itemName: shoppingLabel.text!)
+        guard let itemName = shoppingLabel.text else { return }
+        delegate?.removeEssential(itemName: itemName)
     }
 }
