@@ -14,9 +14,10 @@ enum SettingSections {
 }
 
 enum SettingOption {
-    case option1
-    case option2
-    case option3
+    case about
+    case terms
+    case about2
+    case terms2
 }
 
 class SettingsViewController: UIViewController {
@@ -32,7 +33,7 @@ class SettingsViewController: UIViewController {
         let settingsNib = UINib(nibName: String(describing: SettingsTableViewCell.self), bundle: nil)
         tableView?.register(settingsNib, forCellReuseIdentifier: String(describing: SettingsTableViewCell.self))
         
-        options = [.option1, .option2, .option3]
+        options = [.about, .terms, .about2, .terms2]
         
         sections = [.setting(rows: options)]
       
@@ -62,24 +63,31 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
 
     
 
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cellSet = tableView.dequeueReusableCell(withIdentifier: String(describing: SettingsTableViewCell.self), for: indexPath) as! SettingsTableViewCell
-    
-//    switch sections[indexPath.section] {
-//    case let .setting(rows: options):
-//        let rowTitle = options[indexPath.row]
-//        switch rowTitle {
-//        case .option1:
-//            cellSet.textLabel?.text = "Option1"
-//        case .option2:
-//            cellSet.textLabel?.text = "Option2"
-//        case .option3:
-//            cellSet.textLabel?.text = "Option3"
-//        }
-//    }
-    
-        return cellSet
-    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SettingsTableViewCell.self), for: indexPath) as! SettingsTableViewCell
+        
+        cell.selectionStyle = .none
+        
+        switch sections[indexPath.section] {
+        case let .setting(rows: options):
+            let rowTitle = options[indexPath.row]
+            switch rowTitle {
+            case .about:
+                cell.settingsImg.image = UIImage(named: "about")
+                cell.settingsTitle.text = "About"
+            case .terms:
+                cell.settingsImg.image = UIImage(named: "terms")
+                cell.settingsTitle.text = "Terms and Conditions"
+            case .about2:
+                cell.settingsImg.image = UIImage(named: "about2")
+                cell.settingsTitle.text = "About2"
+            case .terms2:
+                cell.settingsImg.image = UIImage(named: "terms2")
+                cell.settingsTitle.text = "Terms and Conditions2"
+            }
+        }
+            return cell
+        }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
