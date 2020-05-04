@@ -31,7 +31,7 @@ class DietaryRequirementsPresenter: DietaryRequirementsPresenterProtocol {
     
     func nextButtonPressed(){
         currentUser.dietaryReq = dietaryReq
-        print(currentUser.dietaryReq)
+        coordinator?.showShoppingEssentials(currentUser: currentUser)
     }
     
     func dietaryPressed(option: String){
