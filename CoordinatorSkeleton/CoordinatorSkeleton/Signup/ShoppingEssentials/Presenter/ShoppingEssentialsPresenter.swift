@@ -15,6 +15,8 @@ class ShoppingEssentialsPresenter: ShoppingEssentialsPresenterProtocol {
     weak var coordinator: SignupCoordinatorProtocol?
     var currentUser = UserManager.shared
     
+    var essentials: [String] = []
+    
     init(view: ShoppingEssentialsViewProtocol, interactor: ShoppingEssentialsInteractorProtocol, coordinator: SignupCoordinatorProtocol, currentUser: UserManager) {
         self.view = view
         self.interactor = interactor
@@ -28,6 +30,16 @@ class ShoppingEssentialsPresenter: ShoppingEssentialsPresenterProtocol {
     }
     
     func addButtonPressed(itemName: String) {
-        print(itemName)
+        essentials.append(itemName)
+        view?.getEssentialsList(essentialsList: essentials)
+        print(essentials)
+    }
+    
+    
+    func removeEssential(itemName: String){
+        if let index = essentials.index(of: itemName) {
+            essentials.remove(at: index)
+            print(essentials)
+        }
     }
 }

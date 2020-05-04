@@ -15,6 +15,8 @@ class ShoppingEssentialsViewController: UIViewController {
     @IBOutlet weak var essentialsTextField: RATextField!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    var essentialsList: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,26 +69,30 @@ class ShoppingEssentialsViewController: UIViewController {
     
     @IBAction func addButtonPressed(_ sender: Any) {
         let itemName = essentialsTextField.text
-        print(itemName)
         presenter.addButtonPressed(itemName: itemName!)
     }
     
 }
 
 extension ShoppingEssentialsViewController: ShoppingEssentialsViewProtocol {
+    func getEssentialsList(essentialsList: [String]) {
+        self.essentialsList = essentialsList
+        tableView.reloadData()
+    }
+    
     
 }
 
 
 extension ShoppingEssentialsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return essentialsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingEssentialsTableViewCell.self), for: indexPath) as! ShoppingEssentialsTableViewCell
     
-        cell.shoppingLabel.text = "Shopping"
+        cell.shoppingLabel.text = essentialsList[indexPath.row]
         
         return cell
     }

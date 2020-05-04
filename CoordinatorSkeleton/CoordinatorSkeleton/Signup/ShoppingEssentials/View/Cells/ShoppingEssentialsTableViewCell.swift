@@ -9,6 +9,7 @@
 import UIKit
 
 class ShoppingEssentialsTableViewCell: UITableViewCell {
+    var presenter: ShoppingEssentialsPresenterProtocol!
 
     @IBOutlet weak var shoppingLabel: UILabel!
     
@@ -17,4 +18,7 @@ class ShoppingEssentialsTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    @IBAction func removeEssential(_ sender: Any) {
+        presenter.removeEssential(itemName: shoppingLabel.text!)
+    }
 }

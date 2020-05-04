@@ -30,6 +30,9 @@
                             <constraint firstAttribute="height" constant="25" id="nvp-m5-ZwY"/>
                         </constraints>
                         <state key="normal" title="Button" image="deleteIcon"/>
+                        <connections>
+                            <action selector="removeEssential:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gzy-GJ-Rld"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

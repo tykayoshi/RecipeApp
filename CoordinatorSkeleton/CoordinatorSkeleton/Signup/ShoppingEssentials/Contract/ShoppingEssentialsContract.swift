@@ -11,9 +11,11 @@ import Foundation
 protocol ShoppingEssentialsPresenterProtocol: class {
     func backButtonPressed()
     func addButtonPressed(itemName: String)
+    func removeEssential(itemName: String)
 }
 
 protocol ShoppingEssentialsViewProtocol: class {
+    func getEssentialsList(essentialsList: [String]) 
     
 }
 
