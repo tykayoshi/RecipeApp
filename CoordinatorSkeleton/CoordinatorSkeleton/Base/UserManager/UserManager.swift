@@ -17,7 +17,7 @@ class UserManager {
     
     init(userDefaults: UserDefaults = UserDefaults.standard) {
         self.userDefaults = userDefaults
-        self.currentUser = User(name: userName!
+        self.currentUser = User(name: "name"
             , age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
     }
     
