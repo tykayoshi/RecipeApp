@@ -21,6 +21,15 @@ class UserManager {
             , age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
     }
     
+    var hasCompletedSignup: Bool? {
+        get {
+            return userDefaults.bool(forKey: "hasCompletedSignup")
+        }
+        set (newValue) {
+            userDefaults.set(newValue, forKey: "hasCompletedSignup")
+        }
+    }
+    
     var userName: String? {
         get {
             return userDefaults.string(forKey: "userName")
