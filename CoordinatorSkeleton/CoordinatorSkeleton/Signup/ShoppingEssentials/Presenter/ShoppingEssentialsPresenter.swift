@@ -48,5 +48,6 @@ class ShoppingEssentialsPresenter: ShoppingEssentialsPresenterProtocol {
         currentUser.essentialList = essentials
         print(currentUser.essentialList)
         print("END OF REGISTRATION")
+        currentUser.hasCompletedSignup = true
     }
 }
