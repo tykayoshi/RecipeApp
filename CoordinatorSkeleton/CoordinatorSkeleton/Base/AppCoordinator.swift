@@ -17,13 +17,20 @@ protocol AppCoordinatorProtocol: class {
 class AppCoordinator: Coordinator {
     
     fileprivate let navigationController: UINavigationController
+    fileprivate let userManager = UserManager.shared
     
     init(with navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     override func start() {
-        showSignUp()
+        if !userManager.hasCompletedSignup! {
+            print("showSignUp")
+            showSignUp()
+        } else {
+            print("showHome")
+            showHome()
+        }
     }
 }
 
