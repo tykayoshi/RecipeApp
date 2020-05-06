@@ -15,6 +15,7 @@
 		1B29780B245725F200C2CC23 /* RATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780A245725F200C2CC23 /* RATextField.swift */; };
 		1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B29780E24572DC800C2CC23 /* RegisterName.storyboard */; };
 		1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */; };
+		1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */; };
 		C3F41DA7245996D700B9EC46 /* DietaryRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DA6245996D700B9EC46 /* DietaryRequirementsViewController.swift */; };
 		C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F41DA8245996F100B9EC46 /* DietaryRequirements.storyboard */; };
 		C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */; };
@@ -100,6 +101,7 @@
 		1B29780A245725F200C2CC23 /* RATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RATextField.swift; sourceTree = "<group>"; };
 		1B29780E24572DC800C2CC23 /* RegisterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterName.storyboard; sourceTree = "<group>"; };
 		1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		C3F41DA6245996D700B9EC46 /* DietaryRequirementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsViewController.swift; sourceTree = "<group>"; };
 		C3F41DA8245996F100B9EC46 /* DietaryRequirements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DietaryRequirements.storyboard; sourceTree = "<group>"; };
 		C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsPresenter.swift; sourceTree = "<group>"; };
@@ -654,6 +656,7 @@
 			children = (
 				C4DFE92B232FC3EC001EEB3D /* TabBarController+Extension.swift */,
 				C4AC0A672458435800D40612 /* UIImageView+Extension.swift */,
+				1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */,
 				1B13F18E245B27320079FC8B /* ShoppingEssentialsPresenter.swift in Sources */,
 				C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */,
+				1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */,
 				C4AC0AA0245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift in Sources */,

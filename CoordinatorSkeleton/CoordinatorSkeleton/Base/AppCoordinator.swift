@@ -24,13 +24,15 @@ class AppCoordinator: Coordinator {
     }
     
     override func start() {
-        if !userManager.hasCompletedSignup! {
-            print("showSignUp")
-            showSignUp()
-        } else {
-            print("showHome")
-            showHome()
-        }
+//        if !userManager.hasCompletedSignup! {
+//            print("showSignUp")
+//            showSignUp()
+//        } else {
+//            print("showHome")
+//            showHome()
+//        }
+        
+        showHome()
     }
 }
 

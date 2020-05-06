@@ -39,6 +39,7 @@ class HomeCoordinator: Coordinator {
         homeViewController.presenter = presenter
         
         navigationController.setViewControllers([homeViewController], animated: false)
+        navigationController.isNavigationBarHidden = true
         tabBarCoordinator.add(viewController: navigationController)
     }
 }

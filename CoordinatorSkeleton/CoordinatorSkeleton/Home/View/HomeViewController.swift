@@ -12,9 +12,18 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var presenter: HomePresenterProtocol!
+
+    @IBOutlet weak var buttonMeal: UIButton!
+    @IBOutlet weak var buttonSalad: UIButton!
+    @IBOutlet weak var buttonDrink: UIButton!
+    @IBOutlet weak var buttonDessert: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonMeal.alignImageAndTitleVertically()
+        buttonDrink.alignImageAndTitleVertically()
+        buttonSalad.alignImageAndTitleVertically()
+        buttonDessert.alignImageAndTitleVertically()
     }
     
 }

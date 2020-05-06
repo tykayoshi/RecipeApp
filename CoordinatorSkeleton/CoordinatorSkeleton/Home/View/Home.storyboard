@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,29 +16,206 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8N-a5-q33">
-                                <rect key="frame" x="184" y="437.5" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-Tt-rCB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="373"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV1-pz-4JW">
+                                        <rect key="frame" x="354" y="75" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="CBt-VE-8eV"/>
+                                            <constraint firstAttribute="width" constant="35" id="v8K-xR-Ucc"/>
+                                        </constraints>
+                                        <state key="normal" image="searchIcon"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fht-k7-hL7">
+                                        <rect key="frame" x="25" y="143.5" width="75.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8o4-mB-LLI">
+                                        <rect key="frame" x="25" y="75" width="92.5" height="43.5"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="37"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JV1-pz-4JW" secondAttribute="trailing" constant="25" id="AIb-mP-HEK"/>
+                                    <constraint firstItem="8o4-mB-LLI" firstAttribute="top" secondItem="vRe-Tt-rCB" secondAttribute="top" constant="75" id="JOe-V3-qL2"/>
+                                    <constraint firstItem="Fht-k7-hL7" firstAttribute="leading" secondItem="vRe-Tt-rCB" secondAttribute="leading" constant="25" id="PRs-dP-qUu"/>
+                                    <constraint firstItem="Fht-k7-hL7" firstAttribute="top" secondItem="8o4-mB-LLI" secondAttribute="bottom" constant="25" id="dUh-0Q-reP"/>
+                                    <constraint firstItem="8o4-mB-LLI" firstAttribute="leading" secondItem="vRe-Tt-rCB" secondAttribute="leading" constant="25" id="gXN-38-MHs"/>
+                                    <constraint firstItem="JV1-pz-4JW" firstAttribute="top" secondItem="vRe-Tt-rCB" secondAttribute="top" constant="75" id="hzm-dN-Woy"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6tM-pn-eef">
+                                <rect key="frame" x="17" y="543" width="380" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-48-6M2" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="8PK-PK-ik4"/>
+                                        </constraints>
+                                        <state key="normal" title="Meal" image="catMeal">
+                                            <color key="titleColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-mr-zje" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Zr0-xv-4Gl"/>
+                                        </constraints>
+                                        <state key="normal" title="Salad" image="catSalad">
+                                            <color key="titleColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-tj-JBx" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                        <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="o6S-kn-fB7"/>
+                                        </constraints>
+                                        <state key="normal" title="Drink" image="catDrink">
+                                            <color key="titleColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6E-iu-jS1" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Zbf-uM-cHi"/>
+                                        </constraints>
+                                        <state key="normal" title="Treats" image="catDessert">
+                                            <color key="titleColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="awz-Nf-Y9X"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZz-6d-NCj">
+                                <rect key="frame" x="25" y="499" width="95" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-Hg-5sZ" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                <rect key="frame" x="35" y="733" width="344" height="50"/>
+                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dc2-e8-vF3"/>
+                                </constraints>
+                                <state key="normal" title="Add A Recipe">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjM-v9-R1q" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                <rect key="frame" x="35" y="663" width="344" height="50"/>
+                                <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JxR-09-7ed"/>
+                                </constraints>
+                                <state key="normal" title="Browse All Recipes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="K8N-a5-q33" firstAttribute="centerY" secondItem="VdM-fR-DDb" secondAttribute="centerY" id="7zt-fs-diz"/>
-                            <constraint firstItem="K8N-a5-q33" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="eBJ-tR-gHA"/>
+                            <constraint firstItem="NMS-Hg-5sZ" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="2mL-Bo-A6f"/>
+                            <constraint firstItem="RZz-6d-NCj" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" constant="25" id="A9v-sM-jZh"/>
+                            <constraint firstItem="NMS-Hg-5sZ" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" constant="35" id="Ajh-d3-Ot2"/>
+                            <constraint firstItem="vRe-Tt-rCB" firstAttribute="trailing" secondItem="e3q-SX-VLn" secondAttribute="trailing" id="Fyw-zy-2B3"/>
+                            <constraint firstItem="6tM-pn-eef" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="IIX-Jm-V7I"/>
+                            <constraint firstItem="vRe-Tt-rCB" firstAttribute="top" secondItem="VdM-fR-DDb" secondAttribute="top" id="MyJ-Vl-0jL"/>
+                            <constraint firstItem="e3q-SX-VLn" firstAttribute="bottom" secondItem="NMS-Hg-5sZ" secondAttribute="bottom" constant="30" id="Qq9-81-i8g"/>
+                            <constraint firstItem="IjM-v9-R1q" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" constant="35" id="VGv-ZN-yQD"/>
+                            <constraint firstItem="e3q-SX-VLn" firstAttribute="bottom" secondItem="vRe-Tt-rCB" secondAttribute="bottom" constant="440" id="Wbn-IP-bYx"/>
+                            <constraint firstItem="vRe-Tt-rCB" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" id="amN-sr-WPc"/>
+                            <constraint firstItem="IjM-v9-R1q" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="bLf-ab-6kX"/>
+                            <constraint firstItem="IjM-v9-R1q" firstAttribute="top" secondItem="6tM-pn-eef" secondAttribute="bottom" constant="40" id="eg7-lv-POq"/>
+                            <constraint firstItem="e3q-SX-VLn" firstAttribute="trailing" secondItem="IjM-v9-R1q" secondAttribute="trailing" constant="35" id="foC-GI-cHB"/>
+                            <constraint firstItem="NMS-Hg-5sZ" firstAttribute="top" secondItem="IjM-v9-R1q" secondAttribute="bottom" constant="20" id="kRY-BD-iLX"/>
+                            <constraint firstItem="e3q-SX-VLn" firstAttribute="trailing" secondItem="NMS-Hg-5sZ" secondAttribute="trailing" constant="35" id="peD-rC-ngm"/>
+                            <constraint firstItem="6tM-pn-eef" firstAttribute="top" secondItem="RZz-6d-NCj" secondAttribute="bottom" constant="20" id="s0S-LD-XSw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e3q-SX-VLn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="DLg-MJ-I9s"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonDessert" destination="d6E-iu-jS1" id="STc-av-Mgt"/>
+                        <outlet property="buttonDrink" destination="nfl-tj-JBx" id="mYX-Zx-CER"/>
+                        <outlet property="buttonMeal" destination="kxy-48-6M2" id="znl-Nd-Ne7"/>
+                        <outlet property="buttonSalad" destination="Xtp-mr-zje" id="Fua-2L-NzX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WC9-02-Tcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="117"/>
+            <point key="canvasLocation" x="-16" y="43"/>
         </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="catDessert" width="35" height="35"/>
+        <image name="catDrink" width="35" height="35"/>
+        <image name="catMeal" width="30" height="30"/>
+        <image name="catSalad" width="35" height="35"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="searchIcon" width="120" height="120"/>
     </resources>
 </document>
