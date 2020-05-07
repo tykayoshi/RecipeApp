@@ -21,6 +21,9 @@
 		C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */; };
 		C3F41DAD2459976300B9EC46 /* DietaryRequirementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAC2459976300B9EC46 /* DietaryRequirementsInteractor.swift */; };
 		C3F41DAF2459979200B9EC46 /* DietaryRequirementsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAE2459979200B9EC46 /* DietaryRequirementsContract.swift */; };
+		C3F41DF124630B1200B9EC46 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DF024630B1200B9EC46 /* Recipe.swift */; };
+		C3F41DF52464191900B9EC46 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DF32464191900B9EC46 /* CarouselCollectionViewCell.swift */; };
+		C3F41DF62464191900B9EC46 /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F41DF42464191900B9EC46 /* CarouselCollectionViewCell.xib */; };
 		C433D4072460428A003A8957 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433D4052460428A003A8957 /* SettingsTableViewCell.swift */; };
 		C433D4082460428A003A8957 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433D4062460428A003A8957 /* SettingsTableViewCell.xib */; };
 		C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */; };
@@ -107,6 +110,9 @@
 		C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsPresenter.swift; sourceTree = "<group>"; };
 		C3F41DAC2459976300B9EC46 /* DietaryRequirementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsInteractor.swift; sourceTree = "<group>"; };
 		C3F41DAE2459979200B9EC46 /* DietaryRequirementsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsContract.swift; sourceTree = "<group>"; };
+		C3F41DF024630B1200B9EC46 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		C3F41DF32464191900B9EC46 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3F41DF42464191900B9EC46 /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
 		C433D4052460428A003A8957 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		C433D4062460428A003A8957 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		C44C5C3E244731EF003B7825 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
@@ -325,6 +331,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C3F41DF2246418A400B9EC46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C3F41DF32464191900B9EC46 /* CarouselCollectionViewCell.swift */,
+				C3F41DF42464191900B9EC46 /* CarouselCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C433D40424604213003A8957 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +380,7 @@
 			children = (
 				C44E848A244DEFA900D97E32 /* CollectionItem.swift */,
 				C45A59E92451B2AE00F68A06 /* User.swift */,
+				C3F41DF024630B1200B9EC46 /* Recipe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -696,6 +712,7 @@
 		C4DFE933232FD7A0001EEB3D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C3F41DF2246418A400B9EC46 /* Cells */,
 				C4DFE934232FD822001EEB3D /* Home.storyboard */,
 				C4DFE936232FD852001EEB3D /* HomeViewController.swift */,
 			);
@@ -813,6 +830,7 @@
 				C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
 				1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */,
+				C3F41DF62464191900B9EC46 /* CarouselCollectionViewCell.xib in Resources */,
 				C4AC0AA1245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
@@ -854,6 +872,7 @@
 				C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */,
 				C3F41DAF2459979200B9EC46 /* DietaryRequirementsContract.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
+				C3F41DF124630B1200B9EC46 /* Recipe.swift in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
 				C45A59EA2451B2AE00F68A06 /* User.swift in Sources */,
 				1B13F18A245B27000079FC8B /* ShoppingEssentialsContract.swift in Sources */,
@@ -881,6 +900,7 @@
 				C4DFE937232FD852001EEB3D /* HomeViewController.swift in Sources */,
 				C4DFE92E232FC4AF001EEB3D /* HomeCoordinator.swift in Sources */,
 				C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */,
+				C3F41DF52464191900B9EC46 /* CarouselCollectionViewCell.swift in Sources */,
 				1B13F18E245B27320079FC8B /* ShoppingEssentialsPresenter.swift in Sources */,
 				C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */,
 				1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */,
