@@ -16,14 +16,17 @@ class HomeCoordinator: Coordinator {
     let tabBarController: UITabBarController
     let tabBarCoordinator: TabBarCoordinatorProtocol
     let navigationController: UINavigationController
+    var currentUser = UserManager.shared
+    
     
     init(tabBarController: UITabBarController,
          tabBarCoordinator: TabBarCoordinatorProtocol,
-         navigationController: UINavigationController) {
+         navigationController: UINavigationController, currentUser: UserManager) {
         
         self.tabBarController = tabBarController
         self.tabBarCoordinator = tabBarCoordinator
         self.navigationController = navigationController
+        self.currentUser = currentUser
     }
     
     deinit {
@@ -34,7 +37,7 @@ class HomeCoordinator: Coordinator {
         let homeViewController = HomeViewController.makeFromStoryboard()
         
         let interactor = HomeInteractor()
-        let presenter = HomePresenter(view: homeViewController, interactor: interactor, coordinator: self)
+        let presenter = HomePresenter(view: homeViewController, interactor: interactor, coordinator: self, currentUser: currentUser)
         
         homeViewController.presenter = presenter
         

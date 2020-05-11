@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SignupCoordinator: Coordinator {
+class SignupCoordinator: Coordinator, HomeCoordinatorProtocol {
     
     let navigationController: UINavigationController
     
@@ -62,6 +62,16 @@ class SignupCoordinator: Coordinator {
         
         navigationController.pushViewController(shoppingEssentialsController, animated: true)
     }
+    
+    func presentHome(currentUser: UserManager){
+        let homeController = HomeViewController.makeFromStoryboard()
+        let interactor = HomeInteractor()
+        let presenter = HomePresenter(view: homeController, interactor: interactor, coordinator: self, currentUser: currentUser)
+        
+        homeController.presenter = presenter
+        
+        navigationController.pushViewController(homeController, animated: true)
+    }
 }
 
 extension SignupCoordinator: SignupCoordinatorProtocol {
@@ -76,6 +86,10 @@ extension SignupCoordinator: SignupCoordinatorProtocol {
     
     func showShoppingEssentials(currentUser: UserManager){
         self.presentShoppingEssentials(currentUser: currentUser)
+    }
+    
+    func showHome(currentUser: UserManager){
+        self.presentHome(currentUser: currentUser)
     }
     
     func popBackScreen() {

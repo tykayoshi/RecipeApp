@@ -13,13 +13,15 @@ class HomePresenter: HomePresenterProtocol {
     weak var view: HomeViewProtocol?
     var interactor: HomeInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
+    var currentUser = UserManager.shared
     
     init(view: HomeViewProtocol,
          interactor: HomeInteractorProtocol,
-         coordinator: HomeCoordinatorProtocol) {
+         coordinator: HomeCoordinatorProtocol, currentUser: UserManager) {
         
         self.view = view
         self.interactor = interactor
         self.coordinator = coordinator
+        self.currentUser = currentUser
     }
 }

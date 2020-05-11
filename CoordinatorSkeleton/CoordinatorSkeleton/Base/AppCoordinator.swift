@@ -24,15 +24,13 @@ class AppCoordinator: Coordinator {
     }
     
     override func start() {
-//        if !userManager.hasCompletedSignup! {
-//            print("showSignUp")
-//            showSignUp()
-//        } else {
-//            print("showHome")
-//            showHome()
-//        }
-        
-        showHome()
+        if !userManager.hasCompletedSignup! {
+            print("showSignUp")
+            showSignUp()
+        } else {
+            print("showHome")
+            showHome()
+        }
     }
 }
 
@@ -50,7 +48,7 @@ extension AppCoordinator: AppCoordinatorProtocol {
     func showHome() {
         removeAllChildCoordinators()
         navigationController.viewControllers.removeAll()
-        let homeCoordinator = TabBarCoordinator(navigationController: navigationController, appCoordinator: self)
+        let homeCoordinator = TabBarCoordinator(navigationController: navigationController, appCoordinator: self, currentUser: userManager)
         navigationController.isNavigationBarHidden = true
         homeCoordinator.start()
         addChildCoordinator(homeCoordinator)
