@@ -11,21 +11,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CarouselCollectionViewCell" customModule="RecipeApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="205"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="205"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pumpkin" translatesAutoresizingMaskIntoConstraints="NO" id="iyd-fc-9vu">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="139"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iyd-fc-9vu">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="140"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="300" id="IGJ-CM-ckn"/>
-                            <constraint firstAttribute="height" constant="139" id="nJh-sk-xog"/>
+                            <constraint firstAttribute="height" constant="140" id="nJh-sk-xog"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8G-gj-Dcj">
-                        <rect key="frame" x="0.0" y="139" width="300" height="66"/>
+                        <rect key="frame" x="0.0" y="140" width="300" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqU-vz-rvO">
                                 <rect key="frame" x="8" y="8" width="44.5" height="20.5"/>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jT1-4g-XaP" userLabel="RecipeInfo">
-                                <rect key="frame" x="10" y="36" width="290" height="25"/>
+                                <rect key="frame" x="10" y="40" width="290" height="25"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xzi-1B-5DA" userLabel="Time">
                                         <rect key="frame" x="0.0" y="0.0" width="96.5" height="25"/>
@@ -105,7 +105,7 @@
                             <constraint firstItem="MqU-vz-rvO" firstAttribute="top" secondItem="Y8G-gj-Dcj" secondAttribute="top" constant="8" id="Mh3-yH-YdU"/>
                             <constraint firstItem="jT1-4g-XaP" firstAttribute="leading" secondItem="Y8G-gj-Dcj" secondAttribute="leading" constant="10" id="TMh-Nv-RmN"/>
                             <constraint firstAttribute="bottom" secondItem="jT1-4g-XaP" secondAttribute="bottom" constant="5" id="Te7-EX-j9S"/>
-                            <constraint firstAttribute="height" constant="66" id="o4V-bN-uY0"/>
+                            <constraint firstAttribute="height" constant="70" id="o4V-bN-uY0"/>
                             <constraint firstAttribute="trailing" secondItem="q9P-5l-SLA" secondAttribute="trailing" constant="8" id="t3E-u7-vk9"/>
                             <constraint firstItem="q9P-5l-SLA" firstAttribute="top" secondItem="Y8G-gj-Dcj" secondAttribute="top" constant="8" id="t6b-fr-fDQ"/>
                             <constraint firstItem="MqU-vz-rvO" firstAttribute="leading" secondItem="Y8G-gj-Dcj" secondAttribute="leading" constant="8" id="zV5-Bh-gjv"/>
@@ -131,6 +131,18 @@
                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                     <real key="value" value="1"/>
                 </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="0.0" height="5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" red="0.88235294119999996" green="0.34509803919999998" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="0.90000000000000002"/>
+                </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="difficultyLabel" destination="iIn-bc-dsB" id="hen-ZE-9VT"/>
@@ -146,7 +158,6 @@
     <resources>
         <image name="diffuculty" width="100" height="100"/>
         <image name="person" width="100" height="100"/>
-        <image name="pumpkin" width="720" height="480"/>
         <image name="time" width="100" height="100"/>
     </resources>
 </document>

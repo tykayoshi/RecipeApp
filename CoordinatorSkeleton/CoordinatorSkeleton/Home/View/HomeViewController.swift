@@ -12,7 +12,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var presenter: HomePresenterProtocol!
-    var recipes: [Recipe] = [Recipe(name:"Pumpkin Pie", timeToCook: "2hrs", difficulty: "hard", image: "pumpkin", people: 2), Recipe(name:"Potato Smiles", timeToCook: "1hrs", difficulty: "easy", image: "smiles", people: 3), Recipe(name:"Buffalo Wings", timeToCook: "1.5hrs", difficulty: "medium", image: "bWings", people: 4)]
+    var recipes: [Recipe] = [Recipe(name:"Pumpkin Pie", timeToCook: "2hrs", difficulty: "hard", image: "pumpkin", people: 2), Recipe(name:"Potato Smiles", timeToCook: "1hrs", difficulty: "easy", image: "smilies", people: 3), Recipe(name:"Buffalo Wings", timeToCook: "1.5hrs", difficulty: "medium", image: "wings", people: 4)]
 
     @IBOutlet weak var buttonMeal: UIButton!
     @IBOutlet weak var buttonSalad: UIButton!
@@ -62,6 +62,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCollectionViewCell", for: indexPath) as! CarouselCollectionViewCell
     
         cell.recipeNameLbl.text = recipes[indexPath.item].name
+        cell.recipeTypeLbl.text = "Meal"
+        cell.timeLabel.text = recipes[indexPath.item].timeToCook
+        cell.recipeImage.image = UIImage(named: recipes[indexPath.item].image)
+        cell.personLabel.text = String(recipes[indexPath.item].people)
+        cell.difficultyLabel.text = recipes[indexPath.item].difficulty
     
         return cell
     }
