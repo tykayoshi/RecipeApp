@@ -12,7 +12,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var presenter: HomePresenterProtocol!
-    var recipes: [Recipe] = [Recipe(name:"Pumpkin Pie", timeToCook: "2hrs", difficulty: "hard", image: "pumpkin", people: 2), Recipe(name:"Potato Smiles", timeToCook: "1hrs", difficulty: "easy", image: "smiles", people: 3), Recipe(name:"Buffalo Wings", timeToCook: "1.5hrs", difficulty: "medium", image: "bWings", people: 4) ]
+    var recipes: [Recipe] = [Recipe(name:"Pumpkin Pie", timeToCook: "2hrs", difficulty: "hard", image: "pumpkin", people: 2), Recipe(name:"Potato Smiles", timeToCook: "1hrs", difficulty: "easy", image: "smiles", people: 3), Recipe(name:"Buffalo Wings", timeToCook: "1.5hrs", difficulty: "medium", image: "bWings", people: 4)]
 
     @IBOutlet weak var buttonMeal: UIButton!
     @IBOutlet weak var buttonSalad: UIButton!
@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         let cellHeight = floor(screenSize.height * cellScale)
         let insetX = (view.bounds.width - cellWidth) / 2.0
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        layout.itemSize = CGSize(width: 300, height: cellHeight)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX)
         
         buttonMeal.alignImageAndTitleVertically()
@@ -62,18 +62,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCollectionViewCell", for: indexPath) as! CarouselCollectionViewCell
     
         cell.recipeNameLbl.text = recipes[indexPath.item].name
-        
-//        cell.delegate = self
     
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if !once {
-            let indexToScrollTo = IndexPath(item: 1, section: 0)
-            self.collectionView.scrollToItem(at: indexToScrollTo, at: .left, animated: false)
-            once = true
-        }
+//        if !once {
+//            let indexToScrollTo = IndexPath(item: 1, section: 0)
+//            self.collectionView.scrollToItem(at: indexToScrollTo, at: .left, animated: false)
+//            once = true
+//        }
     }
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -89,6 +87,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpace - scrollView.contentInset.left, y: scrollView.contentInset.top)
         
         targetContentOffset.pointee = offset
+        
+        print("cellWidthWithSpace \(cellWidthIncludingSpace)")
+        print("offset \(offset)")
+        print("index \(index)")
+        print("roundedIndex \(roundedIndex)")
     }
 
 }
