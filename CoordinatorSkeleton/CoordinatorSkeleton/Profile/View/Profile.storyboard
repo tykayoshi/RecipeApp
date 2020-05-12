@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WmT-O9-uS4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="373"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.78431372549019607" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -33,17 +33,17 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpP-nK-ebQ">
-                                <rect key="frame" x="20" y="104" width="191" height="73"/>
+                                <rect key="frame" x="20" y="85" width="191" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="191" id="N1c-2A-OD5"/>
                                     <constraint firstAttribute="height" constant="73" id="Zy8-Lw-cyc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FcU-fG-WRY">
-                                <rect key="frame" x="30" y="510" width="354" height="303"/>
+                                <rect key="frame" x="30" y="513" width="354" height="300"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="weg-VB-Agn">
                                     <rect key="frame" x="0.0" y="99.5" width="354" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,7 +81,7 @@
                                 </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikachu" translatesAutoresizingMaskIntoConstraints="NO" id="Wpx-ls-pJJ">
-                                <rect key="frame" x="107" y="230" width="200" height="200"/>
+                                <rect key="frame" x="107" y="233" width="200" height="200"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="2iO-2a-XpJ"/>
@@ -97,8 +97,8 @@
                             <constraint firstItem="FcU-fG-WRY" firstAttribute="centerX" secondItem="7wI-MF-l5O" secondAttribute="centerX" id="GjO-bM-rOv"/>
                             <constraint firstItem="FcU-fG-WRY" firstAttribute="bottom" secondItem="rb0-oC-9c3" secondAttribute="bottom" id="Lxl-Us-DIW"/>
                             <constraint firstItem="FcU-fG-WRY" firstAttribute="top" secondItem="Wpx-ls-pJJ" secondAttribute="bottom" constant="80" id="Nsa-kg-Qr3"/>
-                            <constraint firstItem="cpP-nK-ebQ" firstAttribute="top" secondItem="rb0-oC-9c3" secondAttribute="top" constant="60" id="erd-dR-9Q4"/>
-                            <constraint firstItem="Wpx-ls-pJJ" firstAttribute="top" secondItem="cpP-nK-ebQ" secondAttribute="bottom" constant="53" id="f5a-cO-mim"/>
+                            <constraint firstItem="cpP-nK-ebQ" firstAttribute="top" secondItem="7wI-MF-l5O" secondAttribute="top" constant="85" id="erd-dR-9Q4"/>
+                            <constraint firstItem="Wpx-ls-pJJ" firstAttribute="top" secondItem="cpP-nK-ebQ" secondAttribute="bottom" constant="75" id="f5a-cO-mim"/>
                             <constraint firstItem="Wpx-ls-pJJ" firstAttribute="centerX" secondItem="7wI-MF-l5O" secondAttribute="centerX" id="faq-I1-dKw"/>
                             <constraint firstItem="cpP-nK-ebQ" firstAttribute="leading" secondItem="rb0-oC-9c3" secondAttribute="leading" constant="20" id="hhx-WD-fZH"/>
                             <constraint firstItem="FcU-fG-WRY" firstAttribute="leading" secondItem="rb0-oC-9c3" secondAttribute="leading" constant="30" id="p8a-jm-NtV"/>

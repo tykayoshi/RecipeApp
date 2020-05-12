@@ -12,6 +12,7 @@ protocol SignupCoordinatorProtocol: class {
     func showRegisterName()
     func showDietaryRequirements(currentUser: UserManager)
     func showShoppingEssentials(currentUser: UserManager)
+    func showHome()
     func popBackScreen()
 }
 

@@ -18,14 +18,17 @@ class TabBarCoordinator: Coordinator {
     fileprivate weak var tabBarController: UITabBarController!
     fileprivate weak var appCoordinator: AppCoordinatorProtocol?
     fileprivate let navigationController: UINavigationController
+    fileprivate var currentUser = UserManager.shared
+
     
     init(navigationController: UINavigationController,
          appCoordinator: AppCoordinatorProtocol,
-         tabBarController: UITabBarController = UITabBarController()) {
+         tabBarController: UITabBarController = UITabBarController(), currentUser:UserManager) {
         
         self.tabBarController = tabBarController
         self.navigationController = navigationController
         self.appCoordinator = appCoordinator
+        self.currentUser = currentUser
     }
     
     deinit {
@@ -40,7 +43,7 @@ class TabBarCoordinator: Coordinator {
         // Home
         let homeCoodinator = HomeCoordinator(tabBarController: tabBarController,
                                              tabBarCoordinator: self,
-                                             navigationController: UINavigationController())
+                                             navigationController: UINavigationController(), currentUser: currentUser)
         addChildCoordinator(homeCoodinator)
         homeCoodinator.start()
         

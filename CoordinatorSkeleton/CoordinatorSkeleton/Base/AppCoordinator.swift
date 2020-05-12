@@ -39,7 +39,7 @@ extension AppCoordinator: AppCoordinatorProtocol {
     func showSignUp() {
         removeAllChildCoordinators()
         navigationController.viewControllers.removeAll()
-        let signupCoordinator = SignupCoordinator(navigationController: navigationController)
+        let signupCoordinator = SignupCoordinator(navigationController: navigationController, appCoordinator: self)
         navigationController.isNavigationBarHidden = true
         signupCoordinator.start()
         addChildCoordinator(signupCoordinator)
@@ -48,7 +48,7 @@ extension AppCoordinator: AppCoordinatorProtocol {
     func showHome() {
         removeAllChildCoordinators()
         navigationController.viewControllers.removeAll()
-        let homeCoordinator = TabBarCoordinator(navigationController: navigationController, appCoordinator: self)
+        let homeCoordinator = TabBarCoordinator(navigationController: navigationController, appCoordinator: self, currentUser: userManager)
         navigationController.isNavigationBarHidden = true
         homeCoordinator.start()
         addChildCoordinator(homeCoordinator)
