@@ -49,6 +49,6 @@ class ShoppingEssentialsPresenter: ShoppingEssentialsPresenterProtocol {
         print(currentUser.essentialList)
         print("END OF REGISTRATION")
         currentUser.hasCompletedSignup = true
-        coordinator?.showHome(currentUser: currentUser)
+        coordinator?.showHome()
     }
 }

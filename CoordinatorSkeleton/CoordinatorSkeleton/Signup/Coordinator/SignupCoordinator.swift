@@ -9,13 +9,16 @@
 import Foundation
 import UIKit
 
-class SignupCoordinator: Coordinator, HomeCoordinatorProtocol {
+class SignupCoordinator: Coordinator {
     
     let navigationController: UINavigationController
+    let appCoordinator: AppCoordinatorProtocol
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, appCoordinator: AppCoordinatorProtocol) {
         self.navigationController = navigationController
+        self.appCoordinator = appCoordinator
     }
+    
     
     deinit {
         print("deallocing \(self)")
@@ -63,14 +66,8 @@ class SignupCoordinator: Coordinator, HomeCoordinatorProtocol {
         navigationController.pushViewController(shoppingEssentialsController, animated: true)
     }
     
-    func presentHome(currentUser: UserManager){
-        let homeController = HomeViewController.makeFromStoryboard()
-        let interactor = HomeInteractor()
-        let presenter = HomePresenter(view: homeController, interactor: interactor, coordinator: self, currentUser: currentUser)
-        
-        homeController.presenter = presenter
-        
-        navigationController.pushViewController(homeController, animated: true)
+    func presentHome() {
+        appCoordinator.showHome()
     }
 }
 
@@ -88,8 +85,8 @@ extension SignupCoordinator: SignupCoordinatorProtocol {
         self.presentShoppingEssentials(currentUser: currentUser)
     }
     
-    func showHome(currentUser: UserManager){
-        self.presentHome(currentUser: currentUser)
+    func showHome(){
+        self.presentHome()
     }
     
     func popBackScreen() {

@@ -39,7 +39,7 @@ extension AppCoordinator: AppCoordinatorProtocol {
     func showSignUp() {
         removeAllChildCoordinators()
         navigationController.viewControllers.removeAll()
-        let signupCoordinator = SignupCoordinator(navigationController: navigationController)
+        let signupCoordinator = SignupCoordinator(navigationController: navigationController, appCoordinator: self)
         navigationController.isNavigationBarHidden = true
         signupCoordinator.start()
         addChildCoordinator(signupCoordinator)

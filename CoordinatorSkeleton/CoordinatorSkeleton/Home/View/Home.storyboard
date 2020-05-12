@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -251,6 +251,7 @@
                             <constraint firstItem="NMS-Hg-5sZ" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" constant="35" id="Ajh-d3-Ot2"/>
                             <constraint firstItem="vRe-Tt-rCB" firstAttribute="trailing" secondItem="e3q-SX-VLn" secondAttribute="trailing" id="Fyw-zy-2B3"/>
                             <constraint firstItem="6tM-pn-eef" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="IIX-Jm-V7I"/>
+                            <constraint firstItem="nBP-w8-oxe" firstAttribute="top" secondItem="Fht-k7-hL7" secondAttribute="bottom" constant="46.5" id="Ibk-CM-p9E"/>
                             <constraint firstItem="nBP-w8-oxe" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" id="Kg8-Nu-qvz"/>
                             <constraint firstItem="vRe-Tt-rCB" firstAttribute="top" secondItem="VdM-fR-DDb" secondAttribute="top" id="MyJ-Vl-0jL"/>
                             <constraint firstItem="e3q-SX-VLn" firstAttribute="bottom" secondItem="NMS-Hg-5sZ" secondAttribute="bottom" constant="30" id="Qq9-81-i8g"/>
@@ -287,7 +288,7 @@
         <image name="catDrink" width="35" height="35"/>
         <image name="catMeal" width="30" height="30"/>
         <image name="catSalad" width="35" height="35"/>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="searchIcon" width="120" height="120"/>
     </resources>
 </document>

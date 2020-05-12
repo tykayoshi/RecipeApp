@@ -92,11 +92,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpace - scrollView.contentInset.left, y: scrollView.contentInset.top)
         
         targetContentOffset.pointee = offset
-        
-        print("cellWidthWithSpace \(cellWidthIncludingSpace)")
-        print("offset \(offset)")
-        print("index \(index)")
-        print("roundedIndex \(roundedIndex)")
     }
 
 }
