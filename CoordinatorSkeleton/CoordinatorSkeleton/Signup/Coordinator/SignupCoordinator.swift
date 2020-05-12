@@ -12,10 +12,13 @@ import UIKit
 class SignupCoordinator: Coordinator {
     
     let navigationController: UINavigationController
+    let appCoordinator: AppCoordinatorProtocol
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, appCoordinator: AppCoordinatorProtocol) {
         self.navigationController = navigationController
+        self.appCoordinator = appCoordinator
     }
+    
     
     deinit {
         print("deallocing \(self)")
@@ -62,6 +65,10 @@ class SignupCoordinator: Coordinator {
         
         navigationController.pushViewController(shoppingEssentialsController, animated: true)
     }
+    
+    func presentHome() {
+        appCoordinator.showHome()
+    }
 }
 
 extension SignupCoordinator: SignupCoordinatorProtocol {
@@ -76,6 +83,10 @@ extension SignupCoordinator: SignupCoordinatorProtocol {
     
     func showShoppingEssentials(currentUser: UserManager){
         self.presentShoppingEssentials(currentUser: currentUser)
+    }
+    
+    func showHome(){
+        self.presentHome()
     }
     
     func popBackScreen() {
