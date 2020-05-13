@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,22 +21,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="373"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV1-pz-4JW">
-                                        <rect key="frame" x="354" y="85" width="35" height="35"/>
+                                        <rect key="frame" x="354" y="50" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="CBt-VE-8eV"/>
                                             <constraint firstAttribute="width" constant="35" id="v8K-xR-Ucc"/>
                                         </constraints>
                                         <state key="normal" image="searchIcon"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fht-k7-hL7">
-                                        <rect key="frame" x="25" y="173.5" width="75.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8o4-mB-LLI">
+                                        <rect key="frame" x="25" y="50" width="75" height="35"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8o4-mB-LLI">
-                                        <rect key="frame" x="25" y="85" width="92.5" height="43.5"/>
-                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fht-k7-hL7">
+                                        <rect key="frame" x="24.999999999999996" y="95" width="63.666666666666657" height="19.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -44,22 +44,23 @@
                                 <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="JV1-pz-4JW" secondAttribute="trailing" constant="25" id="AIb-mP-HEK"/>
-                                    <constraint firstItem="8o4-mB-LLI" firstAttribute="top" secondItem="vRe-Tt-rCB" secondAttribute="top" constant="85" id="JOe-V3-qL2"/>
-                                    <constraint firstItem="Fht-k7-hL7" firstAttribute="leading" secondItem="vRe-Tt-rCB" secondAttribute="leading" constant="25" id="PRs-dP-qUu"/>
-                                    <constraint firstItem="Fht-k7-hL7" firstAttribute="top" secondItem="8o4-mB-LLI" secondAttribute="bottom" constant="45" id="dUh-0Q-reP"/>
+                                    <constraint firstItem="8o4-mB-LLI" firstAttribute="top" secondItem="vRe-Tt-rCB" secondAttribute="top" constant="50" id="JOe-V3-qL2"/>
+                                    <constraint firstItem="Fht-k7-hL7" firstAttribute="top" secondItem="8o4-mB-LLI" secondAttribute="bottom" constant="10" id="NTG-hf-hhK"/>
+                                    <constraint firstItem="Fht-k7-hL7" firstAttribute="leading" secondItem="8o4-mB-LLI" secondAttribute="leading" id="WPe-Ce-grv"/>
                                     <constraint firstItem="8o4-mB-LLI" firstAttribute="leading" secondItem="vRe-Tt-rCB" secondAttribute="leading" constant="25" id="gXN-38-MHs"/>
-                                    <constraint firstItem="JV1-pz-4JW" firstAttribute="top" secondItem="vRe-Tt-rCB" secondAttribute="top" constant="85" id="hzm-dN-Woy"/>
+                                    <constraint firstItem="JV1-pz-4JW" firstAttribute="top" secondItem="vRe-Tt-rCB" secondAttribute="top" constant="50" id="hzm-dN-Woy"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6tM-pn-eef">
-                                <rect key="frame" x="17" y="543" width="380" height="80"/>
+                                <rect key="frame" x="17" y="573" width="380" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-48-6M2" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="8PK-PK-ik4"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Meal" image="catMeal">
                                             <color key="titleColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -85,11 +86,12 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-mr-zje" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
-                                        <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="100" y="0.0" width="80" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Zr0-xv-4Gl"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Salad" image="catSalad">
                                             <color key="titleColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -115,11 +117,12 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-tj-JBx" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
-                                        <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="200" y="0.0" width="80" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="o6S-kn-fB7"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Drink" image="catDrink">
                                             <color key="titleColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -145,11 +148,12 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6E-iu-jS1" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
-                                        <rect key="frame" x="300" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="300" y="0.0" width="80" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Zbf-uM-cHi"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Treats" image="catDessert">
                                             <color key="titleColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -176,11 +180,11 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="awz-Nf-Y9X"/>
+                                    <constraint firstAttribute="height" constant="70" id="awz-Nf-Y9X"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZz-6d-NCj">
-                                <rect key="frame" x="25" y="499" width="95" height="24"/>
+                                <rect key="frame" x="25" y="529" width="95" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -216,11 +220,8 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nBP-w8-oxe">
-                                <rect key="frame" x="0.0" y="244" width="414" height="210"/>
+                                <rect key="frame" x="0.0" y="114.33333333333334" width="414" height="414.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="210" id="kfa-FJ-Cxo"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="20" id="jis-tz-J6W">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -245,13 +246,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="IjM-v9-R1q" firstAttribute="top" secondItem="6tM-pn-eef" secondAttribute="bottom" constant="20" id="1J5-fr-zw9"/>
                             <constraint firstItem="NMS-Hg-5sZ" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="2mL-Bo-A6f"/>
                             <constraint firstItem="nBP-w8-oxe" firstAttribute="trailing" secondItem="e3q-SX-VLn" secondAttribute="trailing" id="5ZN-ki-66R"/>
                             <constraint firstItem="RZz-6d-NCj" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" constant="25" id="A9v-sM-jZh"/>
+                            <constraint firstItem="RZz-6d-NCj" firstAttribute="top" secondItem="nBP-w8-oxe" secondAttribute="bottom" id="Ac9-t2-tUn"/>
                             <constraint firstItem="NMS-Hg-5sZ" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" constant="35" id="Ajh-d3-Ot2"/>
+                            <constraint firstItem="nBP-w8-oxe" firstAttribute="top" secondItem="Fht-k7-hL7" secondAttribute="bottom" id="C9q-Vf-Bwr"/>
                             <constraint firstItem="vRe-Tt-rCB" firstAttribute="trailing" secondItem="e3q-SX-VLn" secondAttribute="trailing" id="Fyw-zy-2B3"/>
+                            <constraint firstItem="6tM-pn-eef" firstAttribute="top" secondItem="RZz-6d-NCj" secondAttribute="bottom" constant="20" id="ICL-ki-0x7"/>
                             <constraint firstItem="6tM-pn-eef" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="IIX-Jm-V7I"/>
-                            <constraint firstItem="nBP-w8-oxe" firstAttribute="top" secondItem="Fht-k7-hL7" secondAttribute="bottom" constant="46.5" id="Ibk-CM-p9E"/>
                             <constraint firstItem="nBP-w8-oxe" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" id="Kg8-Nu-qvz"/>
                             <constraint firstItem="vRe-Tt-rCB" firstAttribute="top" secondItem="VdM-fR-DDb" secondAttribute="top" id="MyJ-Vl-0jL"/>
                             <constraint firstItem="e3q-SX-VLn" firstAttribute="bottom" secondItem="NMS-Hg-5sZ" secondAttribute="bottom" constant="30" id="Qq9-81-i8g"/>
@@ -259,12 +263,9 @@
                             <constraint firstItem="e3q-SX-VLn" firstAttribute="bottom" secondItem="vRe-Tt-rCB" secondAttribute="bottom" constant="440" id="Wbn-IP-bYx"/>
                             <constraint firstItem="vRe-Tt-rCB" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" id="amN-sr-WPc"/>
                             <constraint firstItem="IjM-v9-R1q" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="bLf-ab-6kX"/>
-                            <constraint firstItem="IjM-v9-R1q" firstAttribute="top" secondItem="6tM-pn-eef" secondAttribute="bottom" constant="40" id="eg7-lv-POq"/>
                             <constraint firstItem="e3q-SX-VLn" firstAttribute="trailing" secondItem="IjM-v9-R1q" secondAttribute="trailing" constant="35" id="foC-GI-cHB"/>
                             <constraint firstItem="NMS-Hg-5sZ" firstAttribute="top" secondItem="IjM-v9-R1q" secondAttribute="bottom" constant="20" id="kRY-BD-iLX"/>
-                            <constraint firstItem="RZz-6d-NCj" firstAttribute="top" secondItem="nBP-w8-oxe" secondAttribute="bottom" constant="45" id="nxQ-aN-Oka"/>
                             <constraint firstItem="e3q-SX-VLn" firstAttribute="trailing" secondItem="NMS-Hg-5sZ" secondAttribute="trailing" constant="35" id="peD-rC-ngm"/>
-                            <constraint firstItem="6tM-pn-eef" firstAttribute="top" secondItem="RZz-6d-NCj" secondAttribute="bottom" constant="20" id="s0S-LD-XSw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e3q-SX-VLn"/>
                     </view>
@@ -288,7 +289,7 @@
         <image name="catDrink" width="35" height="35"/>
         <image name="catMeal" width="30" height="30"/>
         <image name="catSalad" width="35" height="35"/>
-        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="house" catalog="system" width="128" height="110"/>
         <image name="searchIcon" width="120" height="120"/>
     </resources>
 </document>
