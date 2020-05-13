@@ -24,4 +24,9 @@ class HomePresenter: HomePresenterProtocol {
         self.coordinator = coordinator
         self.currentUser = currentUser
     }
+    
+    func BrowseAllRecipesBtnPressed() {
+        print("pressed browse all")
+        coordinator?.showRecipeList()
+    }
 }

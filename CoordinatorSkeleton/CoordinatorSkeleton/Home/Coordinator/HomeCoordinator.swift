@@ -11,7 +11,7 @@ import UIKit
 
 // test commit
 
-class HomeCoordinator: Coordinator {
+class HomeCoordinator: Coordinator, RecipeListCoordinatorProtocol {
     
     let tabBarController: UITabBarController
     let tabBarCoordinator: TabBarCoordinatorProtocol
@@ -45,8 +45,18 @@ class HomeCoordinator: Coordinator {
         navigationController.isNavigationBarHidden = true
         tabBarCoordinator.add(viewController: navigationController)
     }
+    
+    func presentRecipeList() {
+        let recipeListController = RecipeListViewController.makeFromStoryboard()
+        let interactor = RecipeListInteractor()
+        let presenter = RecipeListPresenter(view: recipeListController, interactor: interactor, coordinator: self)
+        
+        
+    }
 }
 
 extension HomeCoordinator: HomeCoordinatorProtocol {
-    
+    func showRecipeList() {
+        self.presentRecipeList()
+    }
 }

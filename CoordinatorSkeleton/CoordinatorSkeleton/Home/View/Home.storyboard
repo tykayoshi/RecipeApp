@@ -218,6 +218,9 @@
                                         <real key="value" value="9"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="BrowseAllRecipesBtn:" destination="3ha-sC-HzU" eventType="touchUpInside" id="NLV-Rx-Zbs"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nBP-w8-oxe">
                                 <rect key="frame" x="0.0" y="114.33333333333334" width="414" height="414.66666666666663"/>

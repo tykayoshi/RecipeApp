@@ -16,6 +16,13 @@
 		1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B29780E24572DC800C2CC23 /* RegisterName.storyboard */; };
 		1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */; };
 		1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */; };
+		C30F6B65246C245300906AAF /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6B64246C245300906AAF /* RecipeListViewController.swift */; };
+		C30F6B67246C246800906AAF /* RecipeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30F6B66246C246800906AAF /* RecipeList.storyboard */; };
+		C30F6B6D246C270800906AAF /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6B6B246C270800906AAF /* RecipeTableViewCell.swift */; };
+		C30F6B6E246C270800906AAF /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30F6B6C246C270800906AAF /* RecipeTableViewCell.xib */; };
+		C3F07D33246C462200794371 /* RecipeListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F07D32246C462200794371 /* RecipeListInteractor.swift */; };
+		C3F07D35246C466900794371 /* RecipeListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F07D34246C466900794371 /* RecipeListContract.swift */; };
+		C3F07D37246C476000794371 /* RecipeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F07D36246C476000794371 /* RecipeListPresenter.swift */; };
 		C3F41DA7245996D700B9EC46 /* DietaryRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DA6245996D700B9EC46 /* DietaryRequirementsViewController.swift */; };
 		C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F41DA8245996F100B9EC46 /* DietaryRequirements.storyboard */; };
 		C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */; };
@@ -105,6 +112,13 @@
 		1B29780E24572DC800C2CC23 /* RegisterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterName.storyboard; sourceTree = "<group>"; };
 		1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		C30F6B64246C245300906AAF /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		C30F6B66246C246800906AAF /* RecipeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeList.storyboard; sourceTree = "<group>"; };
+		C30F6B6B246C270800906AAF /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		C30F6B6C246C270800906AAF /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		C3F07D32246C462200794371 /* RecipeListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListInteractor.swift; sourceTree = "<group>"; };
+		C3F07D34246C466900794371 /* RecipeListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListContract.swift; sourceTree = "<group>"; };
+		C3F07D36246C476000794371 /* RecipeListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenter.swift; sourceTree = "<group>"; };
 		C3F41DA6245996D700B9EC46 /* DietaryRequirementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsViewController.swift; sourceTree = "<group>"; };
 		C3F41DA8245996F100B9EC46 /* DietaryRequirements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DietaryRequirements.storyboard; sourceTree = "<group>"; };
 		C3F41DAA2459972600B9EC46 /* DietaryRequirementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryRequirementsPresenter.swift; sourceTree = "<group>"; };
@@ -285,6 +299,68 @@
 				C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		C30F6B5E246C240100906AAF /* RecipeList */ = {
+			isa = PBXGroup;
+			children = (
+				C30F6B63246C243000906AAF /* View */,
+				C30F6B62246C242900906AAF /* Presenter */,
+				C30F6B61246C242100906AAF /* Interactor */,
+				C30F6B60246C241A00906AAF /* Contract */,
+				C30F6B5F246C241100906AAF /* Coordinator */,
+			);
+			path = RecipeList;
+			sourceTree = "<group>";
+		};
+		C30F6B5F246C241100906AAF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C30F6B60246C241A00906AAF /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				C3F07D34246C466900794371 /* RecipeListContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		C30F6B61246C242100906AAF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C3F07D32246C462200794371 /* RecipeListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C30F6B62246C242900906AAF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C3F07D36246C476000794371 /* RecipeListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C30F6B63246C243000906AAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C30F6B68246C268E00906AAF /* Cell */,
+				C30F6B64246C245300906AAF /* RecipeListViewController.swift */,
+				C30F6B66246C246800906AAF /* RecipeList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C30F6B68246C268E00906AAF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C30F6B6B246C270800906AAF /* RecipeTableViewCell.swift */,
+				C30F6B6C246C270800906AAF /* RecipeTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C3F41DA12459968500B9EC46 /* DietaryRequirements */ = {
@@ -658,6 +734,7 @@
 		C4DFE927232FC37E001EEB3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C30F6B5E246C240100906AAF /* RecipeList */,
 				C4DFE931232FD796001EEB3D /* Coordinator */,
 				C4DFE92F232FD78B001EEB3D /* Contract */,
 				C4DFE930232FD791001EEB3D /* Interactor */,
@@ -826,6 +903,7 @@
 				C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */,
 				1B13F192245B274D0079FC8B /* ShoppingEssentials.storyboard in Resources */,
 				C45A59E224519C1000F68A06 /* Profile.storyboard in Resources */,
+				C30F6B6E246C270800906AAF /* RecipeTableViewCell.xib in Resources */,
 				C4DFE8FF232F9E05001EEB3D /* LaunchScreen.storyboard in Resources */,
 				C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
@@ -835,6 +913,7 @@
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
 				C433D4082460428A003A8957 /* SettingsTableViewCell.xib in Resources */,
+				C30F6B67246C246800906AAF /* RecipeList.storyboard in Resources */,
 				C45A59CC245055E800F68A06 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -867,6 +946,7 @@
 				C45A59D02450567F00F68A06 /* SettingsInteractor.swift in Sources */,
 				C4DFE93B232FD98F001EEB3D /* HomeInteractor.swift in Sources */,
 				C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */,
+				C3F07D35246C466900794371 /* RecipeListContract.swift in Sources */,
 				C3F41DA7245996D700B9EC46 /* DietaryRequirementsViewController.swift in Sources */,
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
 				C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */,
@@ -874,6 +954,7 @@
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
 				C3F41DF124630B1200B9EC46 /* Recipe.swift in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
+				C3F07D37246C476000794371 /* RecipeListPresenter.swift in Sources */,
 				C45A59EA2451B2AE00F68A06 /* User.swift in Sources */,
 				1B13F18A245B27000079FC8B /* ShoppingEssentialsContract.swift in Sources */,
 				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
@@ -885,16 +966,19 @@
 				C433D4072460428A003A8957 /* SettingsTableViewCell.swift in Sources */,
 				C44E8485244DD99300D97E32 /* Router.swift in Sources */,
 				C4C89D462456FA180063D721 /* SignupInteractor.swift in Sources */,
+				C3F07D33246C462200794371 /* RecipeListInteractor.swift in Sources */,
 				C45A59E424519C6300F68A06 /* ProfileViewController.swift in Sources */,
 				C4C89D482456FA2D0063D721 /* SignupPresenter.swift in Sources */,
 				C4C89D5424573FD20063D721 /* RegisterNamePresenter.swift in Sources */,
 				C4DFE92C232FC3EC001EEB3D /* TabBarController+Extension.swift in Sources */,
 				C45A59D62450586400F68A06 /* SetttingsCoordinator.swift in Sources */,
 				C44E848B244DEFA900D97E32 /* CollectionItem.swift in Sources */,
+				C30F6B6D246C270800906AAF /* RecipeTableViewCell.swift in Sources */,
 				1B13F190245B27400079FC8B /* ShoppingEssentialsViewController.swift in Sources */,
 				C4DFE929232FC38B001EEB3D /* TabBarCoordinator.swift in Sources */,
 				C45A59D4245056A900F68A06 /* SettingsViewController.swift in Sources */,
 				C45A59DE24519ADC00F68A06 /* ProfileContract.swift in Sources */,
+				C30F6B65246C245300906AAF /* RecipeListViewController.swift in Sources */,
 				C4DFE926232FA208001EEB3D /* AppCoordinator.swift in Sources */,
 				C44E8487244DE2F000D97E32 /* ServiceLayer.swift in Sources */,
 				C4DFE937232FD852001EEB3D /* HomeViewController.swift in Sources */,
@@ -1089,13 +1173,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NXQ795GAN6;
+				DEVELOPMENT_TEAM = 86DRV5RU2K;
 				INFOPLIST_FILE = CoordinatorSkeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ilkay.CoordinatorSkeleton;
+				PRODUCT_BUNDLE_IDENTIFIER = Natalie.CoordinatorSkeleton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1107,13 +1191,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NXQ795GAN6;
+				DEVELOPMENT_TEAM = 86DRV5RU2K;
 				INFOPLIST_FILE = CoordinatorSkeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ilkay.CoordinatorSkeleton;
+				PRODUCT_BUNDLE_IDENTIFIER = Natalie.CoordinatorSkeleton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
