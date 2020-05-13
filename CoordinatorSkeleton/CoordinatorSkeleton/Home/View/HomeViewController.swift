@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = floor(screenSize.width * cellScale)
-        let cellHeight = floor(screenSize.height * cellScale)
+        let cellHeight = 210
         let insetX = (view.bounds.width - cellWidth) / 2.0
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: 300, height: cellHeight)
@@ -41,6 +41,8 @@ class HomeViewController: UIViewController {
         
         let CarouselNib = UINib(nibName: String(describing: CarouselCollectionViewCell.self), bundle: nil)
         collectionView?.register(CarouselNib, forCellWithReuseIdentifier: String(describing: CarouselCollectionViewCell.self))
+        
+        print("cellHeight \(cellHeight)")
     }
     
 }
