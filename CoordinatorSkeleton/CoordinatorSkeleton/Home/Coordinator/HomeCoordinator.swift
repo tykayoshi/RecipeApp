@@ -47,10 +47,13 @@ class HomeCoordinator: Coordinator, RecipeListCoordinatorProtocol {
     }
     
     func presentRecipeList() {
-        let recipeListController = RecipeListViewController.makeFromStoryboard()
+        let recipeListViewController = RecipeListViewController.makeFromStoryboard()
         let interactor = RecipeListInteractor()
-        let presenter = RecipeListPresenter(view: recipeListController, interactor: interactor, coordinator: self)
+        let presenter = RecipeListPresenter(view: recipeListViewController, interactor: interactor, coordinator: self)
         
+        recipeListViewController.presenter = presenter
+        
+        navigationController.pushViewController(recipeListViewController, animated: true)
         
     }
 }
