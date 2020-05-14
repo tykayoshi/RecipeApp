@@ -16,11 +16,16 @@ class RecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var personLbl: UILabel!
     @IBOutlet weak var difficultyLbl: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var recipeDetailView: UIView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        recipeImage.curveEdges()
+        recipeDetailView.curveEdges()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

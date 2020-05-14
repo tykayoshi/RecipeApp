@@ -34,38 +34,32 @@ extension RecipeListViewController: RecipeListViewProtocol {
 extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return recipes.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return recipes.count
-        return 1
+        return recipes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RecipeTableViewCell.self), for: indexPath) as! RecipeTableViewCell
+        
+        let recipe = recipes[indexPath.row]
     
-        cell.recipeNameLbl.text = recipes[indexPath.section].name
+        cell.recipeNameLbl.text = recipe.name
         cell.recipeTypeLbl.text = "Meal"
-        cell.timeLbl.text = recipes[indexPath.section].timeToCook
-        cell.recipeImage.image = UIImage(named: recipes[indexPath.section].image)
-        cell.personLbl.text = String(recipes[indexPath.section].people)
-        cell.difficultyLbl.text = recipes[indexPath.section].difficulty
+        cell.timeLbl.text = recipe.timeToCook
+        cell.recipeImage.image = UIImage(named: recipe.image)
+        cell.personLbl.text = String(recipe.people)
+        cell.difficultyLbl.text = recipe.difficulty
         
         return cell
     }
-
-    // Set the spacing between sections
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 258
     }
     
-    // Make the background color show through
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor(red: 0.18, green: 0.25, blue: 0.32, alpha: 1.00)
-        return headerView
-    }
 }
 
 extension RecipeListViewController {

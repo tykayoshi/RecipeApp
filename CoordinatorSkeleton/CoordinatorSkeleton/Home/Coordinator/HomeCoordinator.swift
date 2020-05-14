@@ -52,7 +52,7 @@ class HomeCoordinator: Coordinator, RecipeListCoordinatorProtocol {
         let presenter = RecipeListPresenter(view: recipeListViewController, interactor: interactor, coordinator: self)
         
         recipeListViewController.presenter = presenter
-        
+        tabBarController.tabBar.isHidden = true
         navigationController.pushViewController(recipeListViewController, animated: true)
         
     }
@@ -62,4 +62,5 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
     func showRecipeList() {
         self.presentRecipeList()
     }
+    
 }
