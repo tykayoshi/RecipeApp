@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="3ha-sC-HzU" customClass="HomeViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VdM-fR-DDb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-Tt-rCB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="373"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV1-pz-4JW">
                                         <rect key="frame" x="354" y="50" width="35" height="35"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6tM-pn-eef">
-                                <rect key="frame" x="17" y="573" width="380" height="70"/>
+                                <rect key="frame" x="17" y="447" width="380" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-48-6M2" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
@@ -184,13 +184,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZz-6d-NCj">
-                                <rect key="frame" x="25" y="529" width="95" height="24"/>
+                                <rect key="frame" x="25" y="403" width="95" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-Hg-5sZ" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
-                                <rect key="frame" x="35" y="733" width="344" height="50"/>
+                                <rect key="frame" x="35" y="607" width="344" height="50"/>
                                 <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dc2-e8-vF3"/>
@@ -205,7 +205,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjM-v9-R1q" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
-                                <rect key="frame" x="35" y="663" width="344" height="50"/>
+                                <rect key="frame" x="35" y="537" width="344" height="50"/>
                                 <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="JxR-09-7ed"/>
@@ -223,7 +223,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nBP-w8-oxe">
-                                <rect key="frame" x="0.0" y="114.33333333333334" width="414" height="414.66666666666663"/>
+                                <rect key="frame" x="0.0" y="114.33333333333334" width="414" height="288.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="20" id="jis-tz-J6W">
                                     <size key="itemSize" width="50" height="50"/>
@@ -263,7 +263,7 @@
                             <constraint firstItem="vRe-Tt-rCB" firstAttribute="top" secondItem="VdM-fR-DDb" secondAttribute="top" id="MyJ-Vl-0jL"/>
                             <constraint firstItem="e3q-SX-VLn" firstAttribute="bottom" secondItem="NMS-Hg-5sZ" secondAttribute="bottom" constant="30" id="Qq9-81-i8g"/>
                             <constraint firstItem="IjM-v9-R1q" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" constant="35" id="VGv-ZN-yQD"/>
-                            <constraint firstItem="e3q-SX-VLn" firstAttribute="bottom" secondItem="vRe-Tt-rCB" secondAttribute="bottom" constant="440" id="Wbn-IP-bYx"/>
+                            <constraint firstItem="e3q-SX-VLn" firstAttribute="bottom" secondItem="vRe-Tt-rCB" secondAttribute="bottom" constant="375" id="Wbn-IP-bYx"/>
                             <constraint firstItem="vRe-Tt-rCB" firstAttribute="leading" secondItem="e3q-SX-VLn" secondAttribute="leading" id="amN-sr-WPc"/>
                             <constraint firstItem="IjM-v9-R1q" firstAttribute="centerX" secondItem="VdM-fR-DDb" secondAttribute="centerX" id="bLf-ab-6kX"/>
                             <constraint firstItem="e3q-SX-VLn" firstAttribute="trailing" secondItem="IjM-v9-R1q" secondAttribute="trailing" constant="35" id="foC-GI-cHB"/>
