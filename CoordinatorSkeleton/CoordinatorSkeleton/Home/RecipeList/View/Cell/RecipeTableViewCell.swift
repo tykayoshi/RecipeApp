@@ -15,6 +15,7 @@ class RecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var personLbl: UILabel!
     @IBOutlet weak var difficultyLbl: UILabel!
+    @IBOutlet weak var recipeImage: UIImageView!
     
     
     override func awakeFromNib() {
