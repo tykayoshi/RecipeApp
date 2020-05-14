@@ -55,13 +55,26 @@
                                     <outlet property="delegate" destination="FSP-Ke-Lj1" id="9ev-Je-G2I"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmD-4D-u1c">
+                                <rect key="frame" x="25" y="69" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="VbN-we-GiE"/>
+                                    <constraint firstAttribute="width" constant="15" id="WOR-gK-AkE"/>
+                                </constraints>
+                                <state key="normal" image="arrowBackWhite"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="FSP-Ke-Lj1" eventType="touchUpInside" id="1ck-YG-Bka"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20784313725490194" green="0.25098039215686274" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="GfE-v0-Glt" firstAttribute="top" secondItem="Tm5-aP-fvv" secondAttribute="top" constant="85" id="43d-Rk-hsV"/>
                             <constraint firstItem="nfh-3p-Pp7" firstAttribute="bottom" secondItem="ZQL-Pb-Fch" secondAttribute="bottom" constant="10" id="8Mr-gp-RDT"/>
                             <constraint firstItem="nfh-3p-Pp7" firstAttribute="trailing" secondItem="aV6-uE-Vcj" secondAttribute="trailing" constant="25" id="BSB-EL-TBw"/>
+                            <constraint firstItem="WmD-4D-u1c" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="CSq-uo-5Ix"/>
                             <constraint firstItem="aV6-uE-Vcj" firstAttribute="top" secondItem="Tm5-aP-fvv" secondAttribute="top" constant="85" id="Gpv-fT-DBF"/>
+                            <constraint firstItem="WmD-4D-u1c" firstAttribute="top" secondItem="nfh-3p-Pp7" secondAttribute="top" constant="25" id="dAg-hH-2fQ"/>
                             <constraint firstItem="ZQL-Pb-Fch" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="jND-SU-Dma"/>
                             <constraint firstItem="ZQL-Pb-Fch" firstAttribute="top" secondItem="GfE-v0-Glt" secondAttribute="bottom" constant="10" id="r98-rP-fXP"/>
                             <constraint firstItem="GfE-v0-Glt" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="tYy-dY-pMm"/>
@@ -79,6 +92,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowBackWhite" width="16" height="16"/>
         <image name="searchIcon" width="120" height="120"/>
     </resources>
 </document>

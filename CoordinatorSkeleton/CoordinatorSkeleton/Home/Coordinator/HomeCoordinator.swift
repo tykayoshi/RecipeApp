@@ -11,7 +11,7 @@ import UIKit
 
 // test commit
 
-class HomeCoordinator: Coordinator, RecipeListCoordinatorProtocol {
+class HomeCoordinator: Coordinator {
     
     let tabBarController: UITabBarController
     let tabBarCoordinator: TabBarCoordinatorProtocol
@@ -61,6 +61,11 @@ class HomeCoordinator: Coordinator, RecipeListCoordinatorProtocol {
 extension HomeCoordinator: HomeCoordinatorProtocol {
     func showRecipeList() {
         self.presentRecipeList()
+    }
+    
+    func popBackScreen(){
+        tabBarController.tabBar.isHidden = false
+        navigationController.popViewController(animated: true)
     }
     
 }

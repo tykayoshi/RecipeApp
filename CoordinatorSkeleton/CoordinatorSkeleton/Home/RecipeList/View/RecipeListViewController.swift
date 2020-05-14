@@ -23,6 +23,9 @@ class RecipeListViewController: UIViewController {
         tableView?.register(recipeListNib, forCellReuseIdentifier: String(describing: RecipeTableViewCell.self))
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        presenter.backButtonPressed()
+    }
     
     
 }

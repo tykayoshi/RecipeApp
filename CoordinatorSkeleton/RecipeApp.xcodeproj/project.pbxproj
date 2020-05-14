@@ -310,16 +310,8 @@
 				C30F6B62246C242900906AAF /* Presenter */,
 				C30F6B61246C242100906AAF /* Interactor */,
 				C30F6B60246C241A00906AAF /* Contract */,
-				C30F6B5F246C241100906AAF /* Coordinator */,
 			);
 			path = RecipeList;
-			sourceTree = "<group>";
-		};
-		C30F6B5F246C241100906AAF /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		C30F6B60246C241A00906AAF /* Contract */ = {

@@ -12,14 +12,18 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     
     weak var view: RecipeListViewProtocol?
     var interactor: RecipeListInteractorProtocol
-    weak var coordinator: RecipeListCoordinatorProtocol?
+    weak var coordinator: HomeCoordinatorProtocol?
     
     init(view: RecipeListViewProtocol,
          interactor: RecipeListInteractorProtocol,
-         coordinator: RecipeListCoordinatorProtocol) {
+         coordinator: HomeCoordinatorProtocol) {
         
         self.view = view
         self.interactor = interactor
         self.coordinator = coordinator
+    }
+    
+    func backButtonPressed(){
+        coordinator?.popBackScreen()
     }
 }

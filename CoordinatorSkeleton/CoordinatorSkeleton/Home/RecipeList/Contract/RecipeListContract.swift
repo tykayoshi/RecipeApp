@@ -9,11 +9,8 @@
 import Foundation
 
 protocol RecipeListPresenterProtocol: class {
+    func backButtonPressed()
 
-}
-
-protocol RecipeListCoordinatorProtocol: class {
-    
 }
 
 protocol RecipeListInteractorProtocol: class {
