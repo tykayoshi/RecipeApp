@@ -45,6 +45,11 @@ class HomeViewController: UIViewController {
         print("cellHeight \(cellHeight)")
     }
     
+    
+    @IBAction func BrowseAllRecipesBtn(_ sender: Any) {
+        presenter.BrowseAllRecipesBtnPressed()
+    }
+    
 }
 
 extension HomeViewController: HomeViewProtocol {
