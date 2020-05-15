@@ -37,6 +37,11 @@ internal enum StoryboardScene {
 
     internal static let profileViewController = SceneType<ProfileViewController>(storyboard: Profile.self, identifier: "ProfileViewController")
   }
+  internal enum RecipeList: StoryboardType {
+    internal static let storyboardName = "RecipeList"
+
+    internal static let recipeListViewController = SceneType<RecipeListViewController>(storyboard: RecipeList.self, identifier: "RecipeListViewController")
+  }
   internal enum RegisterName: StoryboardType {
     internal static let storyboardName = "RegisterName"
 

@@ -155,7 +155,7 @@
                 <outlet property="recipeTypeLbl" destination="q9P-5l-SLA" id="7Cp-7l-MNp"/>
                 <outlet property="timeLabel" destination="TyD-5q-aAc" id="jZ5-yS-kcJ"/>
             </connections>
-            <point key="canvasLocation" x="47.826086956521742" y="80.691964285714278"/>
+            <point key="canvasLocation" x="-767" y="82"/>
         </collectionViewCell>
     </objects>
     <resources>

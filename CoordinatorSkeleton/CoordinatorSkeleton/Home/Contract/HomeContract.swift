@@ -9,10 +9,12 @@
 import Foundation
 
 protocol HomeCoordinatorProtocol: class {
-    
+    func showRecipeList()
+    func popBackScreen()
 }
 
 protocol HomePresenterProtocol: class {
+    func BrowseAllRecipesBtnPressed()
     
 }
 

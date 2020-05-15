@@ -45,8 +45,27 @@ class HomeCoordinator: Coordinator {
         navigationController.isNavigationBarHidden = true
         tabBarCoordinator.add(viewController: navigationController)
     }
+    
+    func presentRecipeList() {
+        let recipeListViewController = RecipeListViewController.makeFromStoryboard()
+        let interactor = RecipeListInteractor()
+        let presenter = RecipeListPresenter(view: recipeListViewController, interactor: interactor, coordinator: self)
+        
+        recipeListViewController.presenter = presenter
+        tabBarController.tabBar.isHidden = true
+        navigationController.pushViewController(recipeListViewController, animated: true)
+        
+    }
 }
 
 extension HomeCoordinator: HomeCoordinatorProtocol {
+    func showRecipeList() {
+        self.presentRecipeList()
+    }
+    
+    func popBackScreen(){
+        tabBarController.tabBar.isHidden = false
+        navigationController.popViewController(animated: true)
+    }
     
 }
