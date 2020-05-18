@@ -34,10 +34,10 @@ class HomeViewController: UIViewController {
         layout.itemSize = CGSize(width: 300, height: cellHeight)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX)
         
-//        buttonMeal.alignImageAndTitleVertically()
-//        buttonDrink.alignImageAndTitleVertically()
-//        buttonSalad.alignImageAndTitleVertically()
-//        buttonDessert.alignImageAndTitleVertically()
+        buttonMeal.alignImageAndTitleVertically()
+        buttonDrink.alignImageAndTitleVertically()
+        buttonSalad.alignImageAndTitleVertically()
+        buttonDessert.alignImageAndTitleVertically()
         
         let CarouselNib = UINib(nibName: String(describing: CarouselCollectionViewCell.self), bundle: nil)
         collectionView?.register(CarouselNib, forCellWithReuseIdentifier: String(describing: CarouselCollectionViewCell.self))
@@ -45,6 +45,9 @@ class HomeViewController: UIViewController {
         print("cellHeight \(cellHeight)")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
     
     @IBAction func BrowseAllRecipesBtn(_ sender: Any) {
         presenter.BrowseAllRecipesBtnPressed()
