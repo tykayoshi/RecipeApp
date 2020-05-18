@@ -45,6 +45,9 @@ class HomeViewController: UIViewController {
         print("cellHeight \(cellHeight)")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
     
     @IBAction func BrowseAllRecipesBtn(_ sender: Any) {
         presenter.BrowseAllRecipesBtnPressed()
