@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxQ-f4-c2Y">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="vxQ-f4-c2Y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z1L-aE-Jf2">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="816"/>
@@ -300,6 +300,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.25098039220000001" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="Z1L-aE-Jf2" firstAttribute="top" secondItem="3qp-d9-EIa" secondAttribute="top" id="Amn-YO-aYc"/>
                                     <constraint firstItem="Z1L-aE-Jf2" firstAttribute="leading" secondItem="3qp-d9-EIa" secondAttribute="leading" id="IeD-GS-o8A"/>
@@ -313,7 +314,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="vxQ-f4-c2Y" firstAttribute="top" secondItem="lDU-hX-gAW" secondAttribute="top" id="Cec-zh-SZD"/>
+                            <constraint firstItem="vxQ-f4-c2Y" firstAttribute="top" secondItem="kEX-YF-8Aq" secondAttribute="top" id="Cec-zh-SZD"/>
                             <constraint firstItem="vxQ-f4-c2Y" firstAttribute="trailing" secondItem="lDU-hX-gAW" secondAttribute="trailing" id="DRd-qw-yEr"/>
                             <constraint firstItem="vxQ-f4-c2Y" firstAttribute="bottom" secondItem="lDU-hX-gAW" secondAttribute="bottom" id="OIx-1j-IJC"/>
                             <constraint firstItem="vxQ-f4-c2Y" firstAttribute="leading" secondItem="lDU-hX-gAW" secondAttribute="leading" id="ist-bM-CuU"/>
