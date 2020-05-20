@@ -65,6 +65,8 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected \(indexPath.row)")
+        let recipe = recipes[indexPath.row]
+        presenter.recipeSelected(recipe: recipe)
         // Check which index/object has been selected (skip this for now)
         // Tell the presenter i've pressed a recipe
         // Presenter tell coordinator, show recipe details screen

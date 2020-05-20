@@ -9,11 +9,11 @@
 import Foundation
 
 protocol RecipeDetailsPresenterProtocol: class {
-
+    func displayRecipe()
 }
 
 protocol RecipeDetailsViewProtocol: class {
-    
+    func getRecipeSelected(recipe: Recipe)
 }
 
 protocol RecipeDetailsInteractorProtocol: class {

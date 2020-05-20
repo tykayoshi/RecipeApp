@@ -11,6 +11,7 @@ import Foundation
 protocol HomeCoordinatorProtocol: class {
     func showRecipeList()
     func popBackScreen()
+    func showRecipeDetail(recipe:Recipe)
 }
 
 protocol HomePresenterProtocol: class {
