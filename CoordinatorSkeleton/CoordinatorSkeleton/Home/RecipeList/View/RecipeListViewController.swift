@@ -12,7 +12,7 @@ import UIKit
 class RecipeListViewController: UIViewController {
     
     var presenter: RecipeListPresenterProtocol!
-    var recipes: [Recipe] = [Recipe(name:"Pumpkin Pie", timeToCook: "2hrs", difficulty: "hard", image: "pumpkin", people: 2), Recipe(name:"Potato Smiles", timeToCook: "1hrs", difficulty: "easy", image: "smilies", people: 3), Recipe(name:"Buffalo Wings", timeToCook: "1.5hrs", difficulty: "medium", image: "wings", people: 4)]
+    var recipes: [Recipe] = [Recipe(name:"Pumpkin Pie", timeToCook: "2hrs", difficulty: "hard", image: "pumpkin", people: 2, steps: ["1. step 1", "2. step 2 pp"], ingredients: ["onions", "potato", "cheese"]), Recipe(name:"Potato Smiles", timeToCook: "1hrs", difficulty: "easy", image: "smilies", people: 3, steps: ["1. step 1", "2. step 2 ps"], ingredients: ["onions", "potato", "cheese"]), Recipe(name:"Buffalo Wings", timeToCook: "1.5hrs", difficulty: "medium", image: "wings", people: 4, steps: ["1. step 1", "2. step 2 bw"], ingredients: ["onions", "potato", "cheese"])]
     
     @IBOutlet weak var tableView: UITableView!
     

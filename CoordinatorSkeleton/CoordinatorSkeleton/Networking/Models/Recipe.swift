@@ -14,4 +14,6 @@ struct Recipe: Codable {
     var difficulty: String
     var image: String
     var people: Int
+    var steps: [String]
+    var ingredients: [String]
 }

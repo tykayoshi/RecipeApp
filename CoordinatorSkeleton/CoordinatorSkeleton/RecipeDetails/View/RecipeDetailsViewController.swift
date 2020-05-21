@@ -26,6 +26,10 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var ingTitleView: UIView!
     
+    @IBOutlet weak var stepsTitleView: UIView!
+    @IBOutlet weak var ingredientsTableView: UITableView!
+    @IBOutlet weak var stepsTableView: UITableView!
+    
     var recipe: Recipe?
     
     override func viewDidLoad() {
@@ -33,6 +37,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         titleCardView.curveEdges()
         recipeInfoView.curveEdges()
         ingTitleView.curveEdges()
+        stepsTitleView.curveEdges()
                 
         presenter.displayRecipe()
         
@@ -59,6 +64,42 @@ extension RecipeDetailsViewController: RecipeDetailsViewProtocol {
     func getRecipeSelected(recipe: Recipe){
         self.recipe = recipe
     }
+}
+
+extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var count: Int?
+        
+        if (tableView == self.ingredientsTableView) {
+            count = recipe?.ingredients.count
+        }
+        
+        if (tableView == self.stepsTableView) {
+            count = recipe?.steps.count
+        }
+        
+        return count!
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell?
+        
+        if (tableView == self.ingredientsTableView) {
+            cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
+            
+            cell!.textLabel!.text = recipe?.ingredients[indexPath.row]
+        }
+        
+        if (tableView == self.stepsTableView) {
+            cell = tableView.dequeueReusableCell(withIdentifier: "stepCell", for: indexPath)
+            
+            cell!.textLabel!.text = recipe?.steps[indexPath.row]
+        }
+        
+        return cell!
+    }
+    
+    
 }
 
 extension RecipeDetailsViewController {
