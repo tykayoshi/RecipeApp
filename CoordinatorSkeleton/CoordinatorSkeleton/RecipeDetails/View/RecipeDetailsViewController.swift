@@ -22,13 +22,16 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var difficultyLbl: UILabel!
     @IBOutlet weak var recipeInfoView: UIView!
     
+    @IBOutlet weak var ingTitleView: UIView!
+    
     var recipe: Recipe?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleCardView.curveEdges()
         recipeInfoView.curveEdges()
-        
+        ingTitleView.curveEdges()
+                
         presenter.displayRecipe()
         
         recipeNameLbl.text = recipe?.name
