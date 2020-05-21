@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class RecipeDetailsViewController: UIViewController {
+class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var presenter: RecipeDetailsPresenterProtocol!
     
@@ -41,6 +43,14 @@ class RecipeDetailsViewController: UIViewController {
         personLbl.text = String(recipe!.people)
         difficultyLbl.text = recipe?.difficulty
         
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.x != 0 {
+            scrollView.contentOffset.x = 0
+        }
+        
+        scrollView.delegate = self
     }
     
 }
