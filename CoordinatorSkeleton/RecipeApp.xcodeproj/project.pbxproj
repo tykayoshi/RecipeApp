@@ -20,6 +20,11 @@
 		C30F6B67246C246800906AAF /* RecipeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30F6B66246C246800906AAF /* RecipeList.storyboard */; };
 		C30F6B6D246C270800906AAF /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6B6B246C270800906AAF /* RecipeTableViewCell.swift */; };
 		C30F6B6E246C270800906AAF /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30F6B6C246C270800906AAF /* RecipeTableViewCell.xib */; };
+		C38E6AAC2473FB81007D99D8 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E6AAB2473FB81007D99D8 /* RecipeDetailsViewController.swift */; };
+		C38E6AAE2473FBA8007D99D8 /* RecipeDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38E6AAD2473FBA8007D99D8 /* RecipeDetails.storyboard */; };
+		C38E6AB02473FC58007D99D8 /* RecipeDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E6AAF2473FC58007D99D8 /* RecipeDetailsContract.swift */; };
+		C38E6AB22473FCEA007D99D8 /* RecipeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E6AB12473FCEA007D99D8 /* RecipeDetailsInteractor.swift */; };
+		C38E6AB42473FD3A007D99D8 /* RecipeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E6AB32473FD3A007D99D8 /* RecipeDetailsPresenter.swift */; };
 		C3F07D33246C462200794371 /* RecipeListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F07D32246C462200794371 /* RecipeListInteractor.swift */; };
 		C3F07D35246C466900794371 /* RecipeListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F07D34246C466900794371 /* RecipeListContract.swift */; };
 		C3F07D37246C476000794371 /* RecipeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F07D36246C476000794371 /* RecipeListPresenter.swift */; };
@@ -117,6 +122,11 @@
 		C30F6B66246C246800906AAF /* RecipeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeList.storyboard; sourceTree = "<group>"; };
 		C30F6B6B246C270800906AAF /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		C30F6B6C246C270800906AAF /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		C38E6AAB2473FB81007D99D8 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		C38E6AAD2473FBA8007D99D8 /* RecipeDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetails.storyboard; sourceTree = "<group>"; };
+		C38E6AAF2473FC58007D99D8 /* RecipeDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsContract.swift; sourceTree = "<group>"; };
+		C38E6AB12473FCEA007D99D8 /* RecipeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsInteractor.swift; sourceTree = "<group>"; };
+		C38E6AB32473FD3A007D99D8 /* RecipeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsPresenter.swift; sourceTree = "<group>"; };
 		C3F07D32246C462200794371 /* RecipeListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListInteractor.swift; sourceTree = "<group>"; };
 		C3F07D34246C466900794371 /* RecipeListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListContract.swift; sourceTree = "<group>"; };
 		C3F07D36246C476000794371 /* RecipeListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenter.swift; sourceTree = "<group>"; };
@@ -355,6 +365,50 @@
 				C30F6B6C246C270800906AAF /* RecipeTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C38E6AA62473FB0E007D99D8 /* RecipeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C38E6AAA2473FB59007D99D8 /* View */,
+				C38E6AA92473FB50007D99D8 /* Presenter */,
+				C38E6AA82473FB46007D99D8 /* Interactor */,
+				C38E6AA72473FB2B007D99D8 /* Contract */,
+			);
+			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		C38E6AA72473FB2B007D99D8 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				C38E6AAF2473FC58007D99D8 /* RecipeDetailsContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		C38E6AA82473FB46007D99D8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C38E6AB12473FCEA007D99D8 /* RecipeDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C38E6AA92473FB50007D99D8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C38E6AB32473FD3A007D99D8 /* RecipeDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C38E6AAA2473FB59007D99D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C38E6AAB2473FB81007D99D8 /* RecipeDetailsViewController.swift */,
+				C38E6AAD2473FBA8007D99D8 /* RecipeDetails.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C3F41DA12459968500B9EC46 /* DietaryRequirements */ = {
@@ -684,6 +738,7 @@
 				C45A59D72451993200F68A06 /* Profile */,
 				C45A59C42450552000F68A06 /* Settings */,
 				C4DFE922232FA0A2001EEB3D /* Base */,
+				C38E6AA62473FB0E007D99D8 /* RecipeDetails */,
 				C44E8470244DC0AA00D97E32 /* Networking */,
 				C4DFE8F1232F9E04001EEB3D /* AppDelegate.swift */,
 				C4DFE8F3232F9E04001EEB3D /* ViewController.swift */,
@@ -908,6 +963,7 @@
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
 				C433D4082460428A003A8957 /* SettingsTableViewCell.xib in Resources */,
+				C38E6AAE2473FBA8007D99D8 /* RecipeDetails.storyboard in Resources */,
 				C30F6B67246C246800906AAF /* RecipeList.storyboard in Resources */,
 				C45A59CC245055E800F68A06 /* Settings.storyboard in Resources */,
 			);
@@ -947,6 +1003,7 @@
 				C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */,
 				C3F41DAF2459979200B9EC46 /* DietaryRequirementsContract.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
+				C38E6AB42473FD3A007D99D8 /* RecipeDetailsPresenter.swift in Sources */,
 				C3F41DF124630B1200B9EC46 /* Recipe.swift in Sources */,
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
 				C3F07D37246C476000794371 /* RecipeListPresenter.swift in Sources */,
@@ -954,10 +1011,12 @@
 				1B13F18A245B27000079FC8B /* ShoppingEssentialsContract.swift in Sources */,
 				C45BCE65246D870400BEBB22 /* UIView+Extension.swift in Sources */,
 				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
+				C38E6AAC2473FB81007D99D8 /* RecipeDetailsViewController.swift in Sources */,
 				C4DFE939232FD87A001EEB3D /* HomeContract.swift in Sources */,
 				C3F41DAD2459976300B9EC46 /* DietaryRequirementsInteractor.swift in Sources */,
 				C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */,
 				1B29780B245725F200C2CC23 /* RATextField.swift in Sources */,
+				C38E6AB22473FCEA007D99D8 /* RecipeDetailsInteractor.swift in Sources */,
 				C4C89D442456F95E0063D721 /* SignupCoordinator.swift in Sources */,
 				C433D4072460428A003A8957 /* SettingsTableViewCell.swift in Sources */,
 				C44E8485244DD99300D97E32 /* Router.swift in Sources */,
@@ -983,6 +1042,7 @@
 				C3F41DF52464191900B9EC46 /* CarouselCollectionViewCell.swift in Sources */,
 				1B13F18E245B27320079FC8B /* ShoppingEssentialsPresenter.swift in Sources */,
 				C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */,
+				C38E6AB02473FC58007D99D8 /* RecipeDetailsContract.swift in Sources */,
 				1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */,
@@ -1169,13 +1229,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86DRV5RU2K;
+				DEVELOPMENT_TEAM = ZSWKRAK5DA;
 				INFOPLIST_FILE = CoordinatorSkeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Natalie.CoordinatorSkeleton;
+				PRODUCT_BUNDLE_IDENTIFIER = Rhiannaa.CoordinatorSkeleton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1187,13 +1247,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86DRV5RU2K;
+				DEVELOPMENT_TEAM = ZSWKRAK5DA;
 				INFOPLIST_FILE = CoordinatorSkeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Natalie.CoordinatorSkeleton;
+				PRODUCT_BUNDLE_IDENTIFIER = Rhiannaa.CoordinatorSkeleton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
