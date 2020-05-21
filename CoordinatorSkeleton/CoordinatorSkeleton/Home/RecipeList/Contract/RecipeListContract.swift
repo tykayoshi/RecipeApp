@@ -10,6 +10,7 @@ import Foundation
 
 protocol RecipeListPresenterProtocol: class {
     func backButtonPressed()
+    func recipeSelected(recipe: Recipe)
 
 }
 
