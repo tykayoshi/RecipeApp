@@ -19,6 +19,8 @@ class RecipeListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.getRecipeFromAPI()
+        
         let recipeListNib = UINib(nibName: String(describing: RecipeTableViewCell.self), bundle: nil)
         tableView?.register(recipeListNib, forCellReuseIdentifier: String(describing: RecipeTableViewCell.self))
     }

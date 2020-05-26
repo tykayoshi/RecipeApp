@@ -11,12 +11,14 @@ import Foundation
 
 class RecipeListInteractor: RecipeListInteractorProtocol {
     
-    let loader: ServiceLayer
-    
-    init (loader: ServiceLayer = ServiceLayer()) {
-        self.loader = loader
+    func getRecipeList(completion: @escaping (Result<[String: [RecipeAPI]], Error>) -> Void) {
+            ServiceLayer.request(router: Router.getRecipes) { (result: Result<[String: [RecipeAPI]], Error>) in
+                    switch result {
+                    case .success:
+                        completion(result)
+                    case .failure:
+                        completion(result)
+                    }
+                }
     }
-    
-    
-
 }

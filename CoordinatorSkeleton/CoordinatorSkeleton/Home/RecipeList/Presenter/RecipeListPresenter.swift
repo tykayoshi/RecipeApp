@@ -27,6 +27,20 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
         coordinator?.popBackScreen()
     }
     
+    func getRecipeFromAPI() {
+        
+        // Firstly re-read the code
+        // Pass the recipe array from presenter to the view
+        // Remember to create the ViewProtocol Method, same as recipe details
+        // Replace Recipe object with our RecipeAPI object to get the data from API
+        // Add missing paramters in RecipeAPI object
+        
+        interactor.getRecipeList { (result) in
+            print(result)
+        }
+    }
+
+    
     func recipeSelected(recipe: Recipe){
         coordinator?.showRecipeDetail(recipe: recipe)
     }

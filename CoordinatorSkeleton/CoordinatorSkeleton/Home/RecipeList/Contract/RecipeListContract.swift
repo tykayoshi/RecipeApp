@@ -11,13 +11,12 @@ import Foundation
 protocol RecipeListPresenterProtocol: class {
     func backButtonPressed()
     func recipeSelected(recipe: Recipe)
+    func getRecipeFromAPI()
 
 }
 
 protocol RecipeListInteractorProtocol: class {
-    //    func getActiveParticipantAliases(using user: RegisteredUser, completion: @escaping (Result<GetActiveParticipantAliasesRequests.ResponseDataType>) -> Void)
-    
-    func getRecipeList(completion: @escaping (RecipeAPI) -> Void)
+    func getRecipeList(completion: @escaping (Result<[String: [RecipeAPI]], Error>) -> Void)
 }
 
 protocol RecipeListViewProtocol: class {
