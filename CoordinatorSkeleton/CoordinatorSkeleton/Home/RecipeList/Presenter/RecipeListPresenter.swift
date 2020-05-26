@@ -37,12 +37,19 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
         // Replace Recipe object with our RecipeAPI object to get the data from API
         // Add missing paramters in RecipeAPI object
         
-        interactor.getRecipeList { result in
-            print(result)
-//            self.view?.getRecipe(result: result)
-            self.recipe = result
-        }
+//        interactor.getRecipeList { result in
+////            self.view?.getRecipe(result: result)
+//           // self.recipe = result
+//        }
         
+        interactor.getRecipeList2 { (result) in
+            switch result {
+            case .success(let values):
+                print("success \(values.recipes[0].name)")
+            case .failure(let error):
+                print("error")
+            }
+        }
     }
 
     
