@@ -28,4 +28,10 @@ struct RecipeAPI: Codable {
     var recipeId: Int
     var name: String
     var ingredients: [String: String]
+    var steps: [String]
+    var timeToCook: Double
+    var difficulty: Int
+    var cuisine: String
+    var image: String
+//    var people: Int
 }

@@ -12,7 +12,7 @@ import UIKit
 class RecipeListViewController: UIViewController {
     
     var presenter: RecipeListPresenterProtocol!
-    var recipes: [Recipe] = [Recipe(name:"Pumpkin Pie", timeToCook: "2hrs", difficulty: "hard", image: "pumpkin", people: 2, steps: ["1. step 1", "2. step 2 pp"], ingredients: ["onions", "potato", "cheese"]), Recipe(name:"Potato Smiles", timeToCook: "1hrs", difficulty: "easy", image: "smilies", people: 3, steps: ["1. step 1", "2. step 2 ps"], ingredients: ["onions", "potato", "cheese"]), Recipe(name:"Buffalo Wings", timeToCook: "1.5hrs", difficulty: "medium", image: "wings", people: 4, steps: ["1. step 1", "2. step 2 bw"], ingredients: ["onions", "potato", "cheese"])]
+    var recipes: Result<[String : [RecipeAPI]], Error>?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,6 +33,10 @@ class RecipeListViewController: UIViewController {
 }
 
 extension RecipeListViewController: RecipeListViewProtocol {
+    func getRecipe(result: Result<[String : [RecipeAPI]], Error>) {
+        self.recipes = result
+    }
+    
     
 }
 
@@ -43,7 +47,7 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipes.count
+        return recipes.indexPath.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

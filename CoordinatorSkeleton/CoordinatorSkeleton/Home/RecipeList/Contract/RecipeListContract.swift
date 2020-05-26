@@ -20,5 +20,5 @@ protocol RecipeListInteractorProtocol: class {
 }
 
 protocol RecipeListViewProtocol: class {
-    
+    func getRecipe(result: Result<[String: [RecipeAPI]], Error>)
 }

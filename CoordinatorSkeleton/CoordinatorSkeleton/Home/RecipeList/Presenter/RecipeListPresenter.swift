@@ -14,6 +14,8 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     var interactor: RecipeListInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
     
+    var recipe: Recipes?
+    
     init(view: RecipeListViewProtocol,
          interactor: RecipeListInteractorProtocol,
          coordinator: HomeCoordinatorProtocol) {
@@ -35,9 +37,12 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
         // Replace Recipe object with our RecipeAPI object to get the data from API
         // Add missing paramters in RecipeAPI object
         
-        interactor.getRecipeList { (result) in
+        interactor.getRecipeList { result in
             print(result)
+//            self.view?.getRecipe(result: result)
+            self.recipe = result
         }
+        
     }
 
     
