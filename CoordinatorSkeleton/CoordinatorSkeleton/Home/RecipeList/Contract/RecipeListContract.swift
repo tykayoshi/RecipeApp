@@ -15,7 +15,9 @@ protocol RecipeListPresenterProtocol: class {
 }
 
 protocol RecipeListInteractorProtocol: class {
+    //    func getActiveParticipantAliases(using user: RegisteredUser, completion: @escaping (Result<GetActiveParticipantAliasesRequests.ResponseDataType>) -> Void)
     
+    func getRecipeList(completion: @escaping (RecipeAPI) -> Void)
 }
 
 protocol RecipeListViewProtocol: class {

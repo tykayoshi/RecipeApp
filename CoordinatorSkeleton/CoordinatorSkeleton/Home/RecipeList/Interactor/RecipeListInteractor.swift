@@ -10,5 +10,13 @@ import Foundation
 
 
 class RecipeListInteractor: RecipeListInteractorProtocol {
+    
+    let loader: ServiceLayer
+    
+    init (loader: ServiceLayer = ServiceLayer()) {
+        self.loader = loader
+    }
+    
+    
 
 }

@@ -43,15 +43,6 @@ class HomeViewController: UIViewController {
         collectionView?.register(CarouselNib, forCellWithReuseIdentifier: String(describing: CarouselCollectionViewCell.self))
         
         print("cellHeight \(cellHeight)")
-        
-        ServiceLayer.request(router: Router.getRecipes) { (result: Result<[String: [Recipes]], Error>) in
-                    switch result {
-                    case .success:
-                        print(result)
-                    case .failure:
-                        print(result)
-                    }
-                }
     }
     
     override func viewDidAppear(_ animated: Bool) {
