@@ -46,7 +46,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         presenter.displayRecipe()
         
         recipeNameLbl.text = recipe?.name
-        recipeTypeLbl.text = "Meal"
+        recipeTypeLbl.text = recipe?.cuisine
         timeLbl.text = String(recipe!.timeToCook) + " hrs"
         recipeImg.image = UIImage(named: "pumpkin")
         personLbl.text = String(recipe!.people)

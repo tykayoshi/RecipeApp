@@ -58,10 +58,10 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
         let recipe = recipeAPI[indexPath.row]
     
         cell.recipeNameLbl.text = recipe.name
-        cell.recipeTypeLbl.text = "Meal"
+        cell.recipeTypeLbl.text = recipe.cuisine
         cell.timeLbl.text = String(recipe.timeToCook)
         //placeholder image
-        cell.recipeImage.image = UIImage(named: "pikachu" )
+        cell.recipeImage.image = UIImage(named: "pikachu")
         cell.personLbl.text = String(recipe.people)
         cell.difficultyLbl.text = String(recipe.difficulty)
         
