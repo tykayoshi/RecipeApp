@@ -12,9 +12,8 @@ import UIKit
 class RecipeListViewController: UIViewController {
     
     var presenter: RecipeListPresenterProtocol!
-    var recipes: [Recipe] = [Recipe(name:"Pumpkin Pie", timeToCook: "2hrs", difficulty: "hard", image: "pumpkin", people: 2, steps: ["1. step 1", "2. step 2 pp"], ingredients: ["onions", "potato", "cheese"]), Recipe(name:"Potato Smiles", timeToCook: "1hrs", difficulty: "easy", image: "smilies", people: 3, steps: ["1. step 1", "2. step 2 ps"], ingredients: ["onions", "potato", "cheese"]), Recipe(name:"Buffalo Wings", timeToCook: "1.5hrs", difficulty: "medium", image: "wings", people: 4, steps: ["1. step 1", "2. step 2 bw"], ingredients: ["onions", "potato", "cheese"])]
-
-    //var recipes: Result<[String : [RecipeAPI]], Error>?
+    
+    var recipeAPI = [RecipeAPI]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,8 +34,9 @@ class RecipeListViewController: UIViewController {
 }
 
 extension RecipeListViewController: RecipeListViewProtocol {
-    func getRecipe(result: Result<[String : [RecipeAPI]], Error>) {
-       //
+    func getRecipe(result: [RecipeAPI]) {
+        self.recipeAPI =  result
+        tableView.reloadData()
     }
     
     
@@ -49,20 +49,20 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipes.count
+        return  recipeAPI.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RecipeTableViewCell.self), for: indexPath) as! RecipeTableViewCell
         
-        let recipe = recipes[indexPath.row]
+        let recipe = recipeAPI[indexPath.row]
     
         cell.recipeNameLbl.text = recipe.name
         cell.recipeTypeLbl.text = "Meal"
-        cell.timeLbl.text = recipe.timeToCook
+        cell.timeLbl.text = String(recipe.timeToCook)
         cell.recipeImage.image = UIImage(named: recipe.image)
         cell.personLbl.text = String(recipe.people)
-        cell.difficultyLbl.text = recipe.difficulty
+        cell.difficultyLbl.text = String(recipe.difficulty)
         
         return cell
     }
@@ -73,11 +73,10 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected \(indexPath.row)")
-        let recipe = recipes[indexPath.row]
+        let recipe = recipeAPI[indexPath.row]
+        
+        // Update this flow with RecipeAPI object
         presenter.recipeSelected(recipe: recipe)
-        // Check which index/object has been selected (skip this for now)
-        // Tell the presenter i've pressed a recipe
-        // Presenter tell coordinator, show recipe details screen
         
     }
     

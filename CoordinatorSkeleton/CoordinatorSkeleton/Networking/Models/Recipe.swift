@@ -33,5 +33,5 @@ struct RecipeAPI: Codable {
     var difficulty: Int
     var cuisine: String
     var image: String
-//    var people: Int
+    var people: String
 }

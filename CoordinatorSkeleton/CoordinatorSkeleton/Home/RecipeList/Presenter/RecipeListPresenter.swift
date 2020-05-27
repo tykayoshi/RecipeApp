@@ -14,8 +14,6 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     var interactor: RecipeListInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
     
-    var recipe: Recipes?
-    
     init(view: RecipeListViewProtocol,
          interactor: RecipeListInteractorProtocol,
          coordinator: HomeCoordinatorProtocol) {
@@ -30,22 +28,10 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     }
     
     func getRecipeFromAPI() {
-        
-        // Firstly re-read the code
-        // Pass the recipe array from presenter to the view
-        // Remember to create the ViewProtocol Method, same as recipe details
-        // Replace Recipe object with our RecipeAPI object to get the data from API
-        // Add missing paramters in RecipeAPI object
-        
-//        interactor.getRecipeList { result in
-////            self.view?.getRecipe(result: result)
-//           // self.recipe = result
-//        }
-        
-        interactor.getRecipeList2 { (result) in
+        interactor.getRecipeList { (result) in
             switch result {
             case .success(let values):
-                print("success \(values.recipes[0].name)")
+                self.view?.getRecipe(result: values.recipes)
             case .failure(let error):
                 print("error")
             }

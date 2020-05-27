@@ -16,10 +16,9 @@ protocol RecipeListPresenterProtocol: class {
 }
 
 protocol RecipeListInteractorProtocol: class {
-    func getRecipeList(completion: @escaping (Result<[String: [RecipeAPI]], Error>) -> Void)
-    func getRecipeList2(completion: @escaping (Result<Recipes, Error>) -> Void)
+    func getRecipeList(completion: @escaping (Result<Recipes, Error>) -> Void)
 }
 
 protocol RecipeListViewProtocol: class {
-    func getRecipe(result: Result<[String: [RecipeAPI]], Error>)
+    func getRecipe(result: [RecipeAPI])
 }
