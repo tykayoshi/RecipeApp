@@ -29,4 +29,8 @@ extension UIButton {
             right: 0
         )
     }
+    
+    func makeRounded() {
+        self.layer.cornerRadius = self.frame.size.width / 2
+    }
 }

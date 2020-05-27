@@ -72,8 +72,8 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
         self.presentRecipeList()
     }
     
-    func popBackScreen(){
-        tabBarController.tabBar.isHidden = false
+    func popBackScreen(showTabBar: Bool){
+        tabBarController.tabBar.isHidden = showTabBar
         navigationController.popViewController(animated: true)
     }
     

@@ -24,7 +24,7 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     }
     
     func backButtonPressed(){
-        coordinator?.popBackScreen()
+        coordinator?.popBackScreen(showTabBar: false)
     }
     
     func getRecipeFromAPI() {

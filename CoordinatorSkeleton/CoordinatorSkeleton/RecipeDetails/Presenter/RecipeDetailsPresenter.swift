@@ -25,4 +25,8 @@ class RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
     func displayRecipe(){
         view?.getRecipeSelected(recipe: recipe)
     }
+    
+    func backButtonPressed(){
+        coordinator?.popBackScreen(showTabBar: true)
+    }
 }

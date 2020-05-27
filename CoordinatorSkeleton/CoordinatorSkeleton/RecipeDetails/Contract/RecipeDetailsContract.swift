@@ -10,6 +10,7 @@ import Foundation
 
 protocol RecipeDetailsPresenterProtocol: class {
     func displayRecipe()
+    func backButtonPressed()
 }
 
 protocol RecipeDetailsViewProtocol: class {

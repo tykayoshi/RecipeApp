@@ -28,6 +28,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var stepsTitleView: UIView!
     @IBOutlet weak var ingredientsTableView: UITableView!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var stepsTableView: UITableView!
     
     var recipe: RecipeAPI?
@@ -40,6 +41,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         recipeInfoView.curveEdges()
         ingTitleView.curveEdges()
         stepsTitleView.curveEdges()
+        backButton.makeRounded()
                 
         presenter.displayRecipe()
         
@@ -73,6 +75,9 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        presenter.backButtonPressed()
+    }
 }
 
 extension RecipeDetailsViewController: RecipeDetailsViewProtocol {
