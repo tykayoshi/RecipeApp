@@ -39,7 +39,7 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     }
 
     
-    func recipeSelected(recipe: Recipe){
+    func recipeSelected(recipe: RecipeAPI){
         coordinator?.showRecipeDetail(recipe: recipe)
     }
 }

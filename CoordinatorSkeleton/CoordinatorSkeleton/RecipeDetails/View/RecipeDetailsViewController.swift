@@ -30,7 +30,9 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var ingredientsTableView: UITableView!
     @IBOutlet weak var stepsTableView: UITableView!
     
-    var recipe: Recipe?
+    var recipe: RecipeAPI?
+    
+    var indicies: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +45,23 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         
         recipeNameLbl.text = recipe?.name
         recipeTypeLbl.text = "Meal"
-        timeLbl.text = recipe?.timeToCook
-        recipeImg.image = UIImage(named: recipe!.image)
+        timeLbl.text = String(recipe!.timeToCook) + " hrs"
+        recipeImg.image = UIImage(named: "pumpkin")
         personLbl.text = String(recipe!.people)
-        difficultyLbl.text = recipe?.difficulty
+        
+        if (String(recipe!.difficulty) == "1") {
+            difficultyLbl.text = "Easy"
+        }
+        
+        if (String(recipe!.difficulty) == "2") {
+            difficultyLbl.text = "Medium"
+        }
+        
+        if (String(recipe!.difficulty) == "3") {
+            difficultyLbl.text = "Hard"
+        }
+        
+        indicies = recipe!.ingredients.keys.sorted()
         
     }
     
@@ -61,7 +76,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
 }
 
 extension RecipeDetailsViewController: RecipeDetailsViewProtocol {
-    func getRecipeSelected(recipe: Recipe){
+    func getRecipeSelected(recipe: RecipeAPI){
         self.recipe = recipe
     }
 }
@@ -87,7 +102,7 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
         if (tableView == self.ingredientsTableView) {
             cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
             
-            cell!.textLabel!.text = recipe?.ingredients[indexPath.row]
+            cell!.textLabel!.text = (recipe?.ingredients[indicies[indexPath.row]]!)! + "  " +  indicies[indexPath.row]
         }
         
         if (tableView == self.stepsTableView) {

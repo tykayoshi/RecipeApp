@@ -13,7 +13,7 @@ protocol RecipeDetailsPresenterProtocol: class {
 }
 
 protocol RecipeDetailsViewProtocol: class {
-    func getRecipeSelected(recipe: Recipe)
+    func getRecipeSelected(recipe: RecipeAPI)
 }
 
 protocol RecipeDetailsInteractorProtocol: class {
