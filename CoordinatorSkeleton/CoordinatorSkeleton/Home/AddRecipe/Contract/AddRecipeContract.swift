@@ -9,6 +9,7 @@
 import Foundation
 
 protocol AddRecipePresenterProtocol {
+    func cancelButtonPressed()
     
 }
 

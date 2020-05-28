@@ -22,4 +22,8 @@ class AddRecipePresenter: AddRecipePresenterProtocol{
         self.interactor = interactor
         self.coordinator = coordinator
     }
+    
+    func cancelButtonPressed(){
+        coordinator?.popBackScreen(showTabBar: false)
+    }
 }

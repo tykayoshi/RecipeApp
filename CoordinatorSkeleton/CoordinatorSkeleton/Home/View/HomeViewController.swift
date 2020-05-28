@@ -53,6 +53,9 @@ class HomeViewController: UIViewController {
         presenter.BrowseAllRecipesBtnPressed()
     }
     
+    @IBAction func addRecipeButtonPressed(_ sender: Any) {
+        presenter.addRecipeButtonPressed()
+    }
 }
 
 extension HomeViewController: HomeViewProtocol {

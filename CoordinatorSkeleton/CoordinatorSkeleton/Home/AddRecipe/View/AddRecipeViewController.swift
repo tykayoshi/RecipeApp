@@ -10,16 +10,20 @@ import Foundation
 import UIKit
 
 class AddRecipeViewController: UIViewController{
+    var presenter: AddRecipePresenterProtocol!
     
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        presenter.cancelButtonPressed()
+    }
 }
 
 extension AddRecipeViewController: AddRecipeViewProtocol{
     
 }
 
-//extension AddRecipeViewController {
-//    static func makeFromStoryboard() -> AddRecipeViewController {
-//        let viewController = StoryboardScene.AddRecipe.addRecipeViewController.instantiate()
-//        return viewController
-//    }
-//}
+extension AddRecipeViewController {
+    static func makeFromStoryboard() -> AddRecipeViewController {
+        let viewController = StoryboardScene.AddRecipe.addRecipeViewController.instantiate()
+        return viewController
+    }
+}
