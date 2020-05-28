@@ -102,7 +102,7 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell?
+        var cell: UITableViewCell?
         
         if (tableView == self.ingredientsTableView) {
             cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
@@ -113,7 +113,8 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
         if (tableView == self.stepsTableView) {
             cell = tableView.dequeueReusableCell(withIdentifier: "stepCell", for: indexPath)
             
-            cell!.textLabel!.text = recipe?.steps[indexPath.row]
+            cell?.textLabel?.numberOfLines = 0
+            cell!.textLabel!.text =  String(indexPath.row + 1) + ". " + (recipe?.steps[indexPath.row])!
         }
         
         return cell!
