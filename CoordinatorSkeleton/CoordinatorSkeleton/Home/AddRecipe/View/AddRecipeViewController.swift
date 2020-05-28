@@ -11,6 +11,19 @@ import UIKit
 
 class AddRecipeViewController: UIViewController{
     var presenter: AddRecipePresenterProtocol!
+    @IBOutlet weak var recipeCardView: UIView!
+    @IBOutlet weak var recipeInfoView: UIView!
+    @IBOutlet weak var ingTitleView: UIView!
+    @IBOutlet weak var stepsTitleView: UIView!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        recipeCardView.curveEdges()
+        recipeInfoView.curveEdges()
+        ingTitleView.curveEdges()
+        stepsTitleView.curveEdges()
+    }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         presenter.cancelButtonPressed()
