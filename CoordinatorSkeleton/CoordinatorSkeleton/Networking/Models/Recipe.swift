@@ -17,3 +17,21 @@ struct Recipe: Codable {
     var steps: [String]
     var ingredients: [String]
 }
+
+
+struct Recipes: Codable {
+    var recipes: [RecipeAPI]
+}
+
+struct RecipeAPI: Codable {
+    var userId: Int
+    var recipeId: Int
+    var name: String
+    var ingredients: [String: String]
+    var steps: [String]
+    var timeToCook: Double
+    var difficulty: Int
+    var cuisine: String
+    var image: String
+    var people: String
+}

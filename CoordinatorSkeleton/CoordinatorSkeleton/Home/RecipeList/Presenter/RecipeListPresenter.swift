@@ -24,10 +24,22 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     }
     
     func backButtonPressed(){
-        coordinator?.popBackScreen()
+        coordinator?.popBackScreen(showTabBar: false)
     }
     
-    func recipeSelected(recipe: Recipe){
+    func getRecipeFromAPI() {
+        interactor.getRecipeList { (result) in
+            switch result {
+            case .success(let values):
+                self.view?.getRecipe(result: values.recipes)
+            case .failure(let error):
+                print("error")
+            }
+        }
+    }
+
+    
+    func recipeSelected(recipe: RecipeAPI){
         coordinator?.showRecipeDetail(recipe: recipe)
     }
 }

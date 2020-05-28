@@ -10,10 +10,11 @@ import Foundation
 
 protocol RecipeDetailsPresenterProtocol: class {
     func displayRecipe()
+    func backButtonPressed()
 }
 
 protocol RecipeDetailsViewProtocol: class {
-    func getRecipeSelected(recipe: Recipe)
+    func getRecipeSelected(recipe: RecipeAPI)
 }
 
 protocol RecipeDetailsInteractorProtocol: class {

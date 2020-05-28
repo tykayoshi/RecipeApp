@@ -9,6 +9,16 @@
 import Foundation
 
 
-class RecipeListInteractor: RecipeListInteractorProtocol {
+class RecipeListInteractor: RecipeListInteractorProtocol {    
+    func getRecipeList(completion: @escaping (Result<Recipes, Error>) -> Void) {
+        ServiceLayer.request(router: Router.getRecipes) { (result: Result<Recipes, Error>) in
+                switch result {
+                case .success:
+                    completion(result)
+                case .failure:
+                    completion(result)
+                }
+        }
 
+    }
 }

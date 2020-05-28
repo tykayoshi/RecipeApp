@@ -13,9 +13,9 @@ class RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
     weak var view: RecipeDetailsViewProtocol?
     var interactor: RecipeDetailsInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
-    var recipe: Recipe
+    var recipe: RecipeAPI
     
-    init(view: RecipeDetailsViewProtocol, interactor: RecipeDetailsInteractorProtocol, coordinator: HomeCoordinatorProtocol, recipe: Recipe) {
+    init(view: RecipeDetailsViewProtocol, interactor: RecipeDetailsInteractorProtocol, coordinator: HomeCoordinatorProtocol, recipe: RecipeAPI) {
         self.view = view
         self.interactor = interactor
         self.coordinator = coordinator
@@ -24,5 +24,9 @@ class RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
     
     func displayRecipe(){
         view?.getRecipeSelected(recipe: recipe)
+    }
+    
+    func backButtonPressed(){
+        coordinator?.popBackScreen(showTabBar: true)
     }
 }
