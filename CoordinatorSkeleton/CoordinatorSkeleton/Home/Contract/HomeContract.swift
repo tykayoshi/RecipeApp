@@ -10,8 +10,8 @@ import Foundation
 
 protocol HomeCoordinatorProtocol: class {
     func showRecipeList()
-    func popBackScreen()
-    func showRecipeDetail(recipe:Recipe)
+    func popBackScreen(showTabBar: Bool)
+    func showRecipeDetail(recipe:RecipeAPI)
 }
 
 protocol HomePresenterProtocol: class {

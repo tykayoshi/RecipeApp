@@ -10,12 +10,14 @@ import Foundation
 
 class ServiceLayer {
     
-    class func request<T: Codable>(router: Router, completion: @escaping (Result<[String: [T]], Error>) -> ()) {
+    class func request<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ()) {
         var components = URLComponents()
         components.scheme = router.scheme
         components.host = router.host
+        components.port = router.port
         components.path = router.path
         components.queryItems = router.parameters
+
         
         guard let url = components.url else { return }
         var urlRequest = URLRequest(url: url)
@@ -38,7 +40,7 @@ class ServiceLayer {
                 return
             }
             
-            let responseObject = try! JSONDecoder().decode([String: [T]].self, from: data)
+            let responseObject = try! JSONDecoder().decode(T.self, from: data)
             
             DispatchQueue.main.async {
                 completion(.success(responseObject))
@@ -48,13 +50,3 @@ class ServiceLayer {
         dataTask.resume()
     }
 }
-
-        // Test service request
-//        ServiceLayer.request(router: Router.getSources) { (result: Result<[String: [CollectionItem]], Error>) in
-//            switch result {
-//            case .success:
-//                print(result)
-//            case .failure:
-//                print(result)
-//            }
-//        }

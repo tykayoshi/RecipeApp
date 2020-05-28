@@ -10,14 +10,15 @@ import Foundation
 
 protocol RecipeListPresenterProtocol: class {
     func backButtonPressed()
-    func recipeSelected(recipe: Recipe)
+    func recipeSelected(recipe: RecipeAPI)
+    func getRecipeFromAPI()
 
 }
 
 protocol RecipeListInteractorProtocol: class {
-    
+    func getRecipeList(completion: @escaping (Result<Recipes, Error>) -> Void)
 }
 
 protocol RecipeListViewProtocol: class {
-    
+    func getRecipe(result: [RecipeAPI])
 }

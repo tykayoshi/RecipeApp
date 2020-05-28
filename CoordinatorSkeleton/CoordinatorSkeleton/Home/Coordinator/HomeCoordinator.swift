@@ -56,7 +56,7 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(recipeListViewController, animated: true)
     }
     
-    func presentRecipeDetail(recipe:Recipe){
+    func presentRecipeDetail(recipe:RecipeAPI){
         let recipeDetailsViewController = RecipeDetailsViewController.makeFromStoryboard()
         let interactor = RecipeDetailsInteractor()
         let presenter = RecipeDetailsPresenter(view: recipeDetailsViewController, interactor: interactor, coordinator: self, recipe: recipe)
@@ -72,12 +72,12 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
         self.presentRecipeList()
     }
     
-    func popBackScreen(){
-        tabBarController.tabBar.isHidden = false
+    func popBackScreen(showTabBar: Bool){
+        tabBarController.tabBar.isHidden = showTabBar
         navigationController.popViewController(animated: true)
     }
     
-    func showRecipeDetail(recipe: Recipe){
+    func showRecipeDetail(recipe: RecipeAPI){
         self.presentRecipeDetail(recipe: recipe)
     }
     
