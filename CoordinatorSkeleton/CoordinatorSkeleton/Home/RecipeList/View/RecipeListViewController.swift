@@ -61,7 +61,7 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.recipeTypeLbl.text = recipe.cuisine
         cell.timeLbl.text = String(recipe.timeToCook)
         //placeholder image
-        cell.recipeImage.image = UIImage(named: "pikachu")
+        cell.recipeImage.image = UIImage(named: "pumpkin")
         cell.personLbl.text = String(recipe.people)
         cell.difficultyLbl.text = String(recipe.difficulty)
         
