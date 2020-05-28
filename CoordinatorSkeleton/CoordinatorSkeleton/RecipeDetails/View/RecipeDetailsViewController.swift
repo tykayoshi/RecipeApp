@@ -102,7 +102,7 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell?
+        let cell: UITableViewCell?
         
         if (tableView == self.ingredientsTableView) {
             cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)

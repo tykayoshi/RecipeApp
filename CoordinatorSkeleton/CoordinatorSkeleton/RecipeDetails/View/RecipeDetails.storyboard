@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBE-0O-Chz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBE-0O-Chz">
                                 <rect key="frame" x="0.0" y="-10" width="414" height="275"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="275" id="wt6-RO-RHL"/>
@@ -270,7 +270,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="LBE-0O-Chz" firstAttribute="leading" secondItem="lPE-8h-WLK" secondAttribute="leading" id="6m5-pV-SyV"/>
                             <constraint firstItem="J5P-je-6Ch" firstAttribute="top" secondItem="lPE-8h-WLK" secondAttribute="top" constant="25" id="CBd-sB-8E2"/>
+                            <constraint firstItem="lPE-8h-WLK" firstAttribute="trailing" secondItem="LBE-0O-Chz" secondAttribute="trailing" id="EvJ-D4-WZE"/>
                             <constraint firstItem="Knl-6O-nfn" firstAttribute="top" secondItem="O9e-nP-y3q" secondAttribute="bottom" constant="37" id="HGx-53-aRA"/>
                             <constraint firstItem="LBE-0O-Chz" firstAttribute="top" secondItem="FqF-K8-i5L" secondAttribute="top" constant="-10" id="Jgt-zI-yNx"/>
                             <constraint firstItem="O9e-nP-y3q" firstAttribute="leading" secondItem="lPE-8h-WLK" secondAttribute="leading" constant="35" id="POp-jE-hJ2"/>
@@ -278,8 +280,6 @@
                             <constraint firstItem="Knl-6O-nfn" firstAttribute="leading" secondItem="FqF-K8-i5L" secondAttribute="leading" id="UHh-Zj-HO0"/>
                             <constraint firstItem="O9e-nP-y3q" firstAttribute="top" secondItem="lPE-8h-WLK" secondAttribute="top" constant="175" id="YrP-dU-WOS"/>
                             <constraint firstItem="Knl-6O-nfn" firstAttribute="trailing" secondItem="FqF-K8-i5L" secondAttribute="trailing" id="d2W-N2-iwE"/>
-                            <constraint firstItem="LBE-0O-Chz" firstAttribute="leading" secondItem="FqF-K8-i5L" secondAttribute="leading" id="lFz-1S-UwM"/>
-                            <constraint firstItem="LBE-0O-Chz" firstAttribute="trailing" secondItem="FqF-K8-i5L" secondAttribute="trailing" id="qVn-UL-PVA"/>
                             <constraint firstAttribute="bottom" secondItem="Knl-6O-nfn" secondAttribute="bottom" id="vtj-1N-L9C"/>
                             <constraint firstItem="J5P-je-6Ch" firstAttribute="leading" secondItem="lPE-8h-WLK" secondAttribute="leading" constant="25" id="wJF-Gt-ukB"/>
                         </constraints>
