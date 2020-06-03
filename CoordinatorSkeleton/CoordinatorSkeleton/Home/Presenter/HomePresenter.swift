@@ -29,4 +29,9 @@ class HomePresenter: HomePresenterProtocol {
         print("pressed browse all")
         coordinator?.showRecipeList()
     }
+    
+    func addRecipeButtonPressed(){
+        print("Add Recipe button pressed")
+        coordinator?.showAddRecipe()
+    }
 }

@@ -15,6 +15,11 @@
 		1B29780B245725F200C2CC23 /* RATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780A245725F200C2CC23 /* RATextField.swift */; };
 		1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B29780E24572DC800C2CC23 /* RegisterName.storyboard */; };
 		1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */; };
+		1B7A19B4247FDC3600CE0152 /* AddRecipeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19B3247FDC3600CE0152 /* AddRecipeContract.swift */; };
+		1B7A19B6247FDC5800CE0152 /* AddRecipeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19B5247FDC5800CE0152 /* AddRecipeInteractor.swift */; };
+		1B7A19B8247FDC6700CE0152 /* AddRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19B7247FDC6700CE0152 /* AddRecipePresenter.swift */; };
+		1B7A19BB247FDC8700CE0152 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19BA247FDC8700CE0152 /* AddRecipeViewController.swift */; };
+		1B7A19BD247FDC9800CE0152 /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7A19BC247FDC9800CE0152 /* AddRecipe.storyboard */; };
 		1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */; };
 		C30F6B65246C245300906AAF /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6B64246C245300906AAF /* RecipeListViewController.swift */; };
 		C30F6B67246C246800906AAF /* RecipeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30F6B66246C246800906AAF /* RecipeList.storyboard */; };
@@ -117,6 +122,11 @@
 		1B29780A245725F200C2CC23 /* RATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RATextField.swift; sourceTree = "<group>"; };
 		1B29780E24572DC800C2CC23 /* RegisterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterName.storyboard; sourceTree = "<group>"; };
 		1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		1B7A19B3247FDC3600CE0152 /* AddRecipeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeContract.swift; sourceTree = "<group>"; };
+		1B7A19B5247FDC5800CE0152 /* AddRecipeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeInteractor.swift; sourceTree = "<group>"; };
+		1B7A19B7247FDC6700CE0152 /* AddRecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipePresenter.swift; sourceTree = "<group>"; };
+		1B7A19BA247FDC8700CE0152 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		1B7A19BC247FDC9800CE0152 /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
 		1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		C30F6B64246C245300906AAF /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		C30F6B66246C246800906AAF /* RecipeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeList.storyboard; sourceTree = "<group>"; };
@@ -311,6 +321,50 @@
 				C4C89D4F24573F2B0063D721 /* RegisterNameContract.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		1B7A19AE247FDB6700CE0152 /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				1B7A19B2247FDBB100CE0152 /* View */,
+				1B7A19B1247FDB9F00CE0152 /* Presenter */,
+				1B7A19B0247FDB7F00CE0152 /* Interactor */,
+				1B7A19AF247FDB7600CE0152 /* Contract */,
+			);
+			path = AddRecipe;
+			sourceTree = "<group>";
+		};
+		1B7A19AF247FDB7600CE0152 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				1B7A19B3247FDC3600CE0152 /* AddRecipeContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		1B7A19B0247FDB7F00CE0152 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1B7A19B5247FDC5800CE0152 /* AddRecipeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1B7A19B1247FDB9F00CE0152 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1B7A19B7247FDC6700CE0152 /* AddRecipePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1B7A19B2247FDBB100CE0152 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B7A19BA247FDC8700CE0152 /* AddRecipeViewController.swift */,
+				1B7A19BC247FDC9800CE0152 /* AddRecipe.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C30F6B5E246C240100906AAF /* RecipeList */ = {
@@ -783,12 +837,13 @@
 		C4DFE927232FC37E001EEB3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C30F6B5E246C240100906AAF /* RecipeList */,
 				C4DFE931232FD796001EEB3D /* Coordinator */,
 				C4DFE92F232FD78B001EEB3D /* Contract */,
 				C4DFE930232FD791001EEB3D /* Interactor */,
 				C4DFE932232FD79B001EEB3D /* Presenter */,
 				C4DFE933232FD7A0001EEB3D /* View */,
+				C30F6B5E246C240100906AAF /* RecipeList */,
+				1B7A19AE247FDB6700CE0152 /* AddRecipe */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -956,6 +1011,7 @@
 				C30F6B6E246C270800906AAF /* RecipeTableViewCell.xib in Resources */,
 				C4DFE8FF232F9E05001EEB3D /* LaunchScreen.storyboard in Resources */,
 				C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */,
+				1B7A19BD247FDC9800CE0152 /* AddRecipe.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
 				1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */,
 				C3F41DF62464191900B9EC46 /* CarouselCollectionViewCell.xib in Resources */,
@@ -1000,7 +1056,9 @@
 				C3F07D35246C466900794371 /* RecipeListContract.swift in Sources */,
 				C3F41DA7245996D700B9EC46 /* DietaryRequirementsViewController.swift in Sources */,
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
+				1B7A19B8247FDC6700CE0152 /* AddRecipePresenter.swift in Sources */,
 				C3F41DAB2459972600B9EC46 /* DietaryRequirementsPresenter.swift in Sources */,
+				1B7A19BB247FDC8700CE0152 /* AddRecipeViewController.swift in Sources */,
 				C3F41DAF2459979200B9EC46 /* DietaryRequirementsContract.swift in Sources */,
 				C4DFE8FA232F9E04001EEB3D /* CoordinatorSkeleton.xcdatamodeld in Sources */,
 				C38E6AB42473FD3A007D99D8 /* RecipeDetailsPresenter.swift in Sources */,
@@ -1008,6 +1066,7 @@
 				C4DFE93D232FD99E001EEB3D /* HomePresenter.swift in Sources */,
 				C3F07D37246C476000794371 /* RecipeListPresenter.swift in Sources */,
 				C45A59EA2451B2AE00F68A06 /* User.swift in Sources */,
+				1B7A19B6247FDC5800CE0152 /* AddRecipeInteractor.swift in Sources */,
 				1B13F18A245B27000079FC8B /* ShoppingEssentialsContract.swift in Sources */,
 				C45BCE65246D870400BEBB22 /* UIView+Extension.swift in Sources */,
 				C45A59E824519E5000F68A06 /* ProfileCoordinator.swift in Sources */,
@@ -1046,6 +1105,7 @@
 				1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */,
+				1B7A19B4247FDC3600CE0152 /* AddRecipeContract.swift in Sources */,
 				C4AC0AA0245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift in Sources */,
 				C4DFE8F4232F9E04001EEB3D /* ViewController.swift in Sources */,
 				C4C89D5224573FAD0063D721 /* RegisterNameInteractor.swift in Sources */,
