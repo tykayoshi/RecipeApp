@@ -17,8 +17,8 @@ class UserManager {
     
     init(userDefaults: UserDefaults = UserDefaults.standard) {
         self.userDefaults = userDefaults
-        self.currentUser = User(name: "name"
-            , age: "27", dietaryRequirements:["Vegetarian"], essentialList: ["Oat Milk"])
+        //self.currentUser = User(name: "name"
+            //, age: "27", dietaryRequirements:["Vegetarian"], shoppingEssentials:["Oat Milk"])
     }
     
     var hasCompletedSignup: Bool? {
