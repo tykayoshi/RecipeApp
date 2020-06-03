@@ -91,13 +91,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.detailTextLabel?.text = currentUser?.name
             case .age:
                 cell.textLabel?.text = "Age"
-                cell.detailTextLabel?.text = "21"
-                    //currentUser?.age
+                cell.detailTextLabel?.text = "\(currentUser!.age)"
             case .dietaryRequirements:
                 cell.textLabel?.text = "Dietary Requirements"
+                dump(currentUser?.dietaryRequirements)
+                
                 cell.detailTextLabel?.text = currentUser?.dietaryRequirements[0]
             case .essentialList:
-                cell.textLabel?.text = "Essential List"
+                cell.textLabel?.text = "Essentials List"
                 cell.detailTextLabel?.text = currentUser?.shoppingEssentials[0]
             }
         }
