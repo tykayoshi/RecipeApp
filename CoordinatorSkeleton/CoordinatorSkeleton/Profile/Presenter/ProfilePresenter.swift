@@ -13,7 +13,7 @@ class ProfilePresenter: ProfilePresenterProtocol {
     weak var view: ProfileViewProtocol?
     var interactor: ProfileInteractorProtocol
     weak var coordinator: ProfileCoordinatorProtocol?
-    var currentUser = UserManager.shared.currentUser!
+    //var currentUser = UserManager.shared.currentUser!
     
     init(view: ProfileViewProtocol,
          interactor: ProfileInteractorProtocol,
@@ -24,8 +24,18 @@ class ProfilePresenter: ProfilePresenterProtocol {
         self.coordinator = coordinator
     }
     
-    func passCurrentUser() {
-        self.view?.getCurrentUser(user: currentUser)
-    }
+//    func passCurrentUser() {
+//        self.view?.getCurrentUser(user: currentUser)
+//    }
     
+    func getProfileFromAPI() {
+        interactor.getProfile { (result) in
+            switch result {
+            case .success(let values):
+                self.view?.getProfile(result: values)
+            case .failure(let error):
+                print("error")
+            }
+        }
+    }
 }

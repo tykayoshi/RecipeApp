@@ -13,13 +13,14 @@ protocol ProfileCoordinatorProtocol: class {
 }
 
 protocol ProfilePresenterProtocol: class {
-    func passCurrentUser()
+    //func passCurrentUser()
+    func getProfileFromAPI()
 }
 
 protocol ProfileViewProtocol: class {
     func getCurrentUser(user: User)
+    func getProfile(result: User) 
 }
-
 protocol ProfileInteractorProtocol: class {
-    
+    func getProfile(completion: @escaping (Result<User, Error>) -> Void)
 }
