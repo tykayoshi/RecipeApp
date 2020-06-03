@@ -10,7 +10,7 @@ import Foundation
 
 struct User: Codable {
     var name: String
-    var age: String
+    var age: Int
     var dietaryRequirements: [String]
-    var essentialList: [String]
+    var shoppingEssentials: [String]
 }
