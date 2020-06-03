@@ -12,10 +12,12 @@ protocol HomeCoordinatorProtocol: class {
     func showRecipeList()
     func popBackScreen(showTabBar: Bool)
     func showRecipeDetail(recipe:RecipeAPI)
+    func showAddRecipe()
 }
 
 protocol HomePresenterProtocol: class {
     func BrowseAllRecipesBtnPressed()
+    func addRecipeButtonPressed()
     
 }
 
