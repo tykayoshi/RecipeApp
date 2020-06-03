@@ -65,6 +65,16 @@ class HomeCoordinator: Coordinator {
         tabBarController.tabBar.isHidden = true
         navigationController.pushViewController(recipeDetailsViewController, animated: true)
     }
+    
+    func presentAddRecipe(){
+        let addRecipeViewController = AddRecipeViewController.makeFromStoryboard()
+        let interactor = AddRecipeInteractor()
+        let presenter = AddRecipePresenter(view: addRecipeViewController, interactor: interactor, coordinator: self)
+        
+        addRecipeViewController.presenter = presenter
+        tabBarController.tabBar.isHidden = true
+        navigationController.pushViewController(addRecipeViewController, animated: true)
+    }
 }
 
 extension HomeCoordinator: HomeCoordinatorProtocol {
@@ -81,4 +91,7 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
         self.presentRecipeDetail(recipe: recipe)
     }
     
+    func showAddRecipe(){
+        self.presentAddRecipe()
+    }
 }
