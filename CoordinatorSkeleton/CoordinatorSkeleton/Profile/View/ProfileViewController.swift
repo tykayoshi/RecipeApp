@@ -59,7 +59,7 @@ extension ProfileViewController: ProfileViewProtocol {
     }
     
     func getProfile(result: User) {
-        self.currentUser =  result
+        self.currentUser = result
         tableView.reloadData()
     }
     
@@ -82,30 +82,29 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UITableViewCell
         
+        guard let user = currentUser else { return UITableViewCell() }
+        
         switch sections[indexPath.section] {
         case let .profile(rows: options):
             let rowTitle = options[indexPath.row]
             switch rowTitle {
             case .name:
                 cell.textLabel?.text = "Name"
-                cell.detailTextLabel?.text = currentUser?.name
+                cell.detailTextLabel?.text = user.name
             case .age:
                 cell.textLabel?.text = "Age"
-                cell.detailTextLabel?.text = "\(currentUser!.age)"
+                cell.detailTextLabel?.text = "\(user.age)"
             case .dietaryRequirements:
                 cell.textLabel?.text = "Dietary Requirements"
-                dump(currentUser?.dietaryRequirements)
-                
-                cell.detailTextLabel?.text = currentUser?.dietaryRequirements[0]
+                cell.detailTextLabel?.text = user.dietaryRequirements[0]
             case .essentialList:
                 cell.textLabel?.text = "Essentials List"
-                cell.detailTextLabel?.text = currentUser?.shoppingEssentials[0]
+                cell.detailTextLabel?.text = user.shoppingEssentials[0]
             }
         }
         
         return cell
     }
-    
     
 }
 
