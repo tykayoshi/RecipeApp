@@ -75,7 +75,8 @@ enum Router {
         case .getRecipes:
             return nil
         case .getProfile:
-            return nil        }
+            return nil
+        }
     }
     
     var method: String {
