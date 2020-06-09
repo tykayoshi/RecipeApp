@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class RecipeListViewController: UIViewController {
     
@@ -61,7 +62,7 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.recipeTypeLbl.text = recipe.cuisine
         cell.timeLbl.text = String(recipe.timeToCook)
         //placeholder image
-        cell.recipeImage.image = UIImage(named: "pumpkin")
+        cell.recipeImage.sd_setImage(with: URL(string: recipe.image), placeholderImage: UIImage(named: "noImage"))
         cell.personLbl.text = String(recipe.people)
         cell.difficultyLbl.text = String(recipe.difficulty)
         
