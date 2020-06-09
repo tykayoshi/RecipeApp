@@ -37,9 +37,9 @@ enum Router {
     var host: String {
         switch self {
         case .getRecipes:
-           return "3.8.209.207"
+           return "18.132.98.242"
         case .getProfile:
-           return "3.8.209.207"
+           return "18.132.98.242"
         }
     }
         
