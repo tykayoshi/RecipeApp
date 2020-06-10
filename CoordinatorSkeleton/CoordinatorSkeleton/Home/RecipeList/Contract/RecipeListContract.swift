@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RecipeListPresenterProtocol: class {
     func backButtonPressed()
-    func recipeSelected(recipe: RecipeAPI)
+    func recipeSelected(recipe: RecipeAPI, image: UIImage)
     func getRecipeFromAPI()
 
 }

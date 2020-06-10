@@ -56,10 +56,10 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(recipeListViewController, animated: true)
     }
     
-    func presentRecipeDetail(recipe:RecipeAPI){
+    func presentRecipeDetail(recipe: RecipeAPI, image: UIImage){
         let recipeDetailsViewController = RecipeDetailsViewController.makeFromStoryboard()
         let interactor = RecipeDetailsInteractor()
-        let presenter = RecipeDetailsPresenter(view: recipeDetailsViewController, interactor: interactor, coordinator: self, recipe: recipe)
+        let presenter = RecipeDetailsPresenter(view: recipeDetailsViewController, interactor: interactor, coordinator: self, recipe: recipe, image: image)
         
         recipeDetailsViewController.presenter = presenter
         tabBarController.tabBar.isHidden = true
@@ -87,8 +87,8 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
         navigationController.popViewController(animated: true)
     }
     
-    func showRecipeDetail(recipe: RecipeAPI){
-        self.presentRecipeDetail(recipe: recipe)
+    func showRecipeDetail(recipe: RecipeAPI, image: UIImage){
+        self.presentRecipeDetail(recipe: recipe, image: image)
     }
     
     func showAddRecipe(){
