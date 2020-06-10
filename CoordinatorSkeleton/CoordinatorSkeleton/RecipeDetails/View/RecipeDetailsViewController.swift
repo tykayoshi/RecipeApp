@@ -48,7 +48,6 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         recipeNameLbl.text = recipe?.name
         recipeTypeLbl.text = recipe?.cuisine
         timeLbl.text = String(recipe!.timeToCook) + " hrs"
-        recipeImg.image = UIImage(named: "pumpkin")
         personLbl.text = String(recipe!.people)
         
         if (String(recipe!.difficulty) == "1") {
@@ -81,8 +80,9 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
 }
 
 extension RecipeDetailsViewController: RecipeDetailsViewProtocol {
-    func getRecipeSelected(recipe: RecipeAPI){
+    func getRecipeSelected(recipe: RecipeAPI, image: UIImage){
         self.recipe = recipe
+        self.recipeImg.image = image
     }
 }
 

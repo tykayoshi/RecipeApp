@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeCoordinatorProtocol: class {
     func showRecipeList()
     func popBackScreen(showTabBar: Bool)
-    func showRecipeDetail(recipe:RecipeAPI)
+    func showRecipeDetail(recipe:RecipeAPI, image: UIImage)
     func showAddRecipe()
 }
 
