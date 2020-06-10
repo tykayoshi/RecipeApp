@@ -61,7 +61,6 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.recipeNameLbl.text = recipe.name
         cell.recipeTypeLbl.text = recipe.cuisine
         cell.timeLbl.text = String(recipe.timeToCook)
-        //placeholder image
         cell.recipeImage.sd_setImage(with: URL(string: recipe.image), placeholderImage: UIImage(named: "noImage"))
         cell.personLbl.text = String(recipe.people)
         cell.difficultyLbl.text = String(recipe.difficulty)
@@ -74,11 +73,9 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected \(indexPath.row)")
+        let cell = tableView.cellForRow(at: indexPath) as! RecipeTableViewCell
         let recipe = recipeAPI[indexPath.row]
-        
-        // Update this flow with RecipeAPI object
-        presenter.recipeSelected(recipe: recipe)
+        presenter.recipeSelected(recipe: recipe, image: cell.recipeImage.image!)
         
     }
     

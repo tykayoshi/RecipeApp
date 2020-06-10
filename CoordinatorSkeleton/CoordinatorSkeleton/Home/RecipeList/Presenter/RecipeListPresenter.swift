@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RecipeListPresenter: RecipeListPresenterProtocol {
     
@@ -39,7 +40,7 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     }
 
     
-    func recipeSelected(recipe: RecipeAPI){
-        coordinator?.showRecipeDetail(recipe: recipe)
+    func recipeSelected(recipe: RecipeAPI, image: UIImage){
+        coordinator?.showRecipeDetail(recipe: recipe, image: image)
     }
 }

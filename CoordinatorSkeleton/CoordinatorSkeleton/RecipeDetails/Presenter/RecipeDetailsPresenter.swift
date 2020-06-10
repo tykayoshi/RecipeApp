@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
     
@@ -14,16 +15,18 @@ class RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
     var interactor: RecipeDetailsInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
     var recipe: RecipeAPI
+    var recipeImage: UIImage
     
-    init(view: RecipeDetailsViewProtocol, interactor: RecipeDetailsInteractorProtocol, coordinator: HomeCoordinatorProtocol, recipe: RecipeAPI) {
+    init(view: RecipeDetailsViewProtocol, interactor: RecipeDetailsInteractorProtocol, coordinator: HomeCoordinatorProtocol, recipe: RecipeAPI, image: UIImage) {
         self.view = view
         self.interactor = interactor
         self.coordinator = coordinator
         self.recipe = recipe
+        self.recipeImage = image
     }
     
     func displayRecipe(){
-        view?.getRecipeSelected(recipe: recipe)
+        view?.getRecipeSelected(recipe: recipe, image: recipeImage)
     }
     
     func backButtonPressed(){

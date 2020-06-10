@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RecipeDetailsPresenterProtocol: class {
     func displayRecipe()
@@ -14,7 +15,7 @@ protocol RecipeDetailsPresenterProtocol: class {
 }
 
 protocol RecipeDetailsViewProtocol: class {
-    func getRecipeSelected(recipe: RecipeAPI)
+    func getRecipeSelected(recipe: RecipeAPI, image: UIImage)
 }
 
 protocol RecipeDetailsInteractorProtocol: class {
