@@ -32,9 +32,15 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
         interactor.getRecipeList { (result) in
             switch result {
             case .success(let values):
+                Helper.saveJsonToDocumentDirectory(object: values, fileName: FileConstants.RECIPELIST)
                 self.view?.getRecipe(result: values.recipes)
             case .failure(let error):
-                print("error")
+                if Helper.isJsonAvailable(fileName: FileConstants.RECIPELIST) {
+                    let recipeList = Helper.readJsonFromDocumentDirectory(fileName: FileConstants.RECIPELIST)
+                    print(recipeList)
+                } else {
+                    print(error)
+                }
             }
         }
     }
