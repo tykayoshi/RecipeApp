@@ -68,6 +68,8 @@
 		C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC0A672458435800D40612 /* UIImageView+Extension.swift */; };
 		C4AC0AA0245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC0A9E245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift */; };
 		C4AC0AA1245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC0A9F245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib */; };
+		C4B0299324923EFD004E78D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0299224923EFD004E78D3 /* Constants.swift */; };
+		C4B0299524923F88004E78D3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0299424923F88004E78D3 /* Helper.swift */; };
 		C4C89D3E2456F5810063D721 /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3D2456F5810063D721 /* SignupContract.swift */; };
 		C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C89D3F2456F5C00063D721 /* SignupViewController.swift */; };
 		C4C89D422456F5C90063D721 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C89D412456F5C90063D721 /* Signup.storyboard */; };
@@ -182,6 +184,8 @@
 		C4AC0A672458435800D40612 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		C4AC0A9E245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingEssentialsTableViewCell.swift; sourceTree = "<group>"; };
 		C4AC0A9F245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingEssentialsTableViewCell.xib; sourceTree = "<group>"; };
+		C4B0299224923EFD004E78D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C4B0299424923F88004E78D3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C4C89D3D2456F5810063D721 /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		C4C89D3F2456F5C00063D721 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C4C89D412456F5C90063D721 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
@@ -568,6 +572,8 @@
 		C44C5C3C24473103003B7825 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4B0299124923ED9004E78D3 /* Helper */,
+				C4B0299024923ECF004E78D3 /* Constants */,
 				C44C5C3D2447310C003B7825 /* Generated */,
 			);
 			path = Resources;
@@ -732,6 +738,22 @@
 				C4AC0A9F245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C4B0299024923ECF004E78D3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C4B0299224923EFD004E78D3 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C4B0299124923ED9004E78D3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C4B0299424923F88004E78D3 /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		C4C89D372456F52E0063D721 /* Signup */ = {
@@ -1223,6 +1245,7 @@
 				C3F41DAD2459976300B9EC46 /* DietaryRequirementsInteractor.swift in Sources */,
 				C4C89D402456F5C00063D721 /* SignupViewController.swift in Sources */,
 				1B29780B245725F200C2CC23 /* RATextField.swift in Sources */,
+				C4B0299324923EFD004E78D3 /* Constants.swift in Sources */,
 				C38E6AB22473FCEA007D99D8 /* RecipeDetailsInteractor.swift in Sources */,
 				C4C89D442456F95E0063D721 /* SignupCoordinator.swift in Sources */,
 				C433D4072460428A003A8957 /* SettingsTableViewCell.swift in Sources */,
@@ -1250,6 +1273,7 @@
 				1B13F18E245B27320079FC8B /* ShoppingEssentialsPresenter.swift in Sources */,
 				C4C89D5024573F2B0063D721 /* RegisterNameContract.swift in Sources */,
 				C38E6AB02473FC58007D99D8 /* RecipeDetailsContract.swift in Sources */,
+				C4B0299524923F88004E78D3 /* Helper.swift in Sources */,
 				1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */,
 				C45A59CE2450561500F68A06 /* SettingsContract.swift in Sources */,
 				C4AC0A682458435800D40612 /* UIImageView+Extension.swift in Sources */,

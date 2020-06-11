@@ -20,10 +20,11 @@ class ServiceLayer {
 
         
         guard let url = components.url else { return }
-        var urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url, timeoutInterval: 1)
         urlRequest.httpMethod = router.method
         
         let session = URLSession(configuration: .default)
+        
         let dataTask = session.dataTask(with: urlRequest) { data, response, error in
             
             guard error == nil else {
