@@ -51,6 +51,12 @@ class ProfileViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
 }
 
 extension ProfileViewController: ProfileViewProtocol {
@@ -60,7 +66,7 @@ extension ProfileViewController: ProfileViewProtocol {
     
     func getProfile(result: User) {
         self.currentUser = result
-        tableView.reloadData()
+        reloadTableView()
     }
     
     

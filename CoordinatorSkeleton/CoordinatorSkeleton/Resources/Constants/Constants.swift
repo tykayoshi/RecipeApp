@@ -10,4 +10,5 @@ import Foundation
 
 struct FileConstants {
     static let RECIPELIST = "RecipeList"
+    static let PROFILE = "Profile"
 }
