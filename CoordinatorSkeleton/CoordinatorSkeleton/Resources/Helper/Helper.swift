@@ -56,4 +56,22 @@ struct Helper {
                }
                return nil
            }
+    
+    
+        static func readProfileFromDocumentDirectory(fileName: String) -> User? {
+               do {
+                    let decoder = JSONDecoder()
+                    let fileManager = FileManager.default
+                    let url = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                    let jsonUrl = url.appendingPathComponent(fileName)
+                
+                guard let data = try? decoder.decode(User.self, from: Data(contentsOf: jsonUrl)) else {
+                    return nil
+                }
+                   return data
+               } catch {
+
+               }
+               return nil
+           }
 }

@@ -32,9 +32,16 @@ class ProfilePresenter: ProfilePresenterProtocol {
         interactor.getProfile { (result) in
             switch result {
             case .success(let values):
+                Helper.saveJsonToDocumentDirectory(object: values, fileName: FileConstants.PROFILE)
                 self.view?.getProfile(result: values)
             case .failure(let error):
-                print("error")
+                if Helper.isJsonAvailable(fileName: FileConstants.PROFILE) {
+                    if let profile = Helper.readProfileFromDocumentDirectory(fileName: FileConstants.PROFILE) {
+                        self.view?.getProfile(result: profile)
+                    }
+                } else {
+                    print(error)
+                }
             }
         }
     }
