@@ -36,8 +36,9 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
                 self.view?.getRecipe(result: values.recipes)
             case .failure(let error):
                 if Helper.isJsonAvailable(fileName: FileConstants.RECIPELIST) {
-                    let recipeList = Helper.readJsonFromDocumentDirectory(fileName: FileConstants.RECIPELIST)
-                    print(recipeList)
+                    if let recipes = Helper.readRecipeFromDocumentDirectory(fileName: FileConstants.RECIPELIST) {
+                        self.view?.getRecipe(result: recipes.recipes)
+                    }
                 } else {
                     print(error)
                 }

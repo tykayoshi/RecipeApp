@@ -31,13 +31,19 @@ class RecipeListViewController: UIViewController {
         presenter.backButtonPressed()
     }
     
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     
 }
 
 extension RecipeListViewController: RecipeListViewProtocol {
     func getRecipe(result: [RecipeAPI]) {
         self.recipeAPI =  result
-        tableView.reloadData()
+        reloadTableView()
     }
     
     

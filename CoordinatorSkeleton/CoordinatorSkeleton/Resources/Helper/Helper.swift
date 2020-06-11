@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol Validatable {
+    associatedtype RecipeAPI
+}
+
 struct Helper {
     
     static func isJsonAvailable(fileName: String) -> Bool {
@@ -26,28 +30,30 @@ struct Helper {
                 var objectData = Data()
                 let encoder = JSONEncoder()
                 objectData =  try encoder.encode(object)
-               let fileManager = FileManager.default
-               let url = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-               let jsonUrl = url.appendingPathComponent(fileName)
-               try objectData.write(to: jsonUrl)
-               print("\(fileName) is stored in \(jsonUrl)")
+                let fileManager = FileManager.default
+                let url = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                let jsonUrl = url.appendingPathComponent(fileName)
+                try objectData.write(to: jsonUrl)
+                print("\(fileName) is stored in \(jsonUrl)")
            } catch {
                
            }
        }
-       
-       static func readJsonFromDocumentDirectory(fileName: String) -> Data {
-           do {
-               let fileManager = FileManager.default
-               let url = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-               let jsonUrl = url.appendingPathComponent(fileName)
-               guard let data = try? Data(contentsOf: jsonUrl) else {
-                   return Data()
-               }
-               return data
-           } catch {
+    
+        static func readRecipeFromDocumentDirectory(fileName: String) -> Recipes? {
+               do {
+                    let decoder = JSONDecoder()
+                    let fileManager = FileManager.default
+                    let url = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                    let jsonUrl = url.appendingPathComponent(fileName)
+                
+                guard let data = try? decoder.decode(Recipes.self, from: Data(contentsOf: jsonUrl)) else {
+                    return nil
+                }
+                   return data
+               } catch {
 
+               }
+               return nil
            }
-           return Data()
-       }
 }
