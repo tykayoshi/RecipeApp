@@ -58,7 +58,6 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     
     func searchRecipes(searchValue: String) -> [RecipeAPI] {
         filteredRecipes = allRecipes.filter({$0.name.prefix(searchValue.count) == searchValue})
-        print(filteredRecipes.count)
         return filteredRecipes
     }
 }
