@@ -15,14 +15,17 @@ class RecipeListViewController: UIViewController {
     var presenter: RecipeListPresenterProtocol!
     
     var recipeAPI = [RecipeAPI]()
+    var filteredRecipe = [RecipeAPI]()
+    var searching = false
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchRecipe: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter.getRecipeFromAPI()
-        
+                
         let recipeListNib = UINib(nibName: String(describing: RecipeTableViewCell.self), bundle: nil)
         tableView?.register(recipeListNib, forCellReuseIdentifier: String(describing: RecipeTableViewCell.self))
     }
@@ -56,20 +59,36 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  recipeAPI.count
+        if searching {
+            return filteredRecipe.count
+        } else {
+            return  recipeAPI.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RecipeTableViewCell.self), for: indexPath) as! RecipeTableViewCell
         
-        let recipe = recipeAPI[indexPath.row]
-    
-        cell.recipeNameLbl.text = recipe.name
-        cell.recipeTypeLbl.text = recipe.cuisine
-        cell.timeLbl.text = String(recipe.timeToCook)
-        cell.recipeImage.sd_setImage(with: URL(string: recipe.image), placeholderImage: UIImage(named: "noImage"))
-        cell.personLbl.text = String(recipe.people)
-        cell.difficultyLbl.text = String(recipe.difficulty)
+        if searching {
+            let recipe = filteredRecipe[indexPath.row]
+            
+                cell.recipeNameLbl.text = recipe.name
+                cell.recipeTypeLbl.text = recipe.cuisine
+                cell.timeLbl.text = String(recipe.timeToCook)
+                cell.recipeImage.sd_setImage(with: URL(string: recipe.image), placeholderImage: UIImage(named: "noImage"))
+                cell.personLbl.text = String(recipe.people)
+                cell.difficultyLbl.text = String(recipe.difficulty)
+        } else {
+            let recipe = recipeAPI[indexPath.row]
+            
+                cell.recipeNameLbl.text = recipe.name
+                cell.recipeTypeLbl.text = recipe.cuisine
+                cell.timeLbl.text = String(recipe.timeToCook)
+                cell.recipeImage.sd_setImage(with: URL(string: recipe.image), placeholderImage: UIImage(named: "noImage"))
+                cell.personLbl.text = String(recipe.people)
+                cell.difficultyLbl.text = String(recipe.difficulty)
+        }
         
         return cell
     }
@@ -83,6 +102,15 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
         let recipe = recipeAPI[indexPath.row]
         presenter.recipeSelected(recipe: recipe, image: cell.recipeImage.image!)
         
+    }
+    
+}
+
+extension RecipeListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredRecipe = presenter.searchRecipes(searchValue: searchText)
+        searching = true
+        tableView.reloadData()
     }
     
 }

@@ -13,6 +13,7 @@ protocol RecipeListPresenterProtocol: class {
     func backButtonPressed()
     func recipeSelected(recipe: RecipeAPI, image: UIImage)
     func getRecipeFromAPI()
+    func searchRecipes(searchValue: String) -> [RecipeAPI]
 
 }
 

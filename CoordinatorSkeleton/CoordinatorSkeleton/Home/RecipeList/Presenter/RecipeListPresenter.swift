@@ -11,9 +11,12 @@ import UIKit
 
 class RecipeListPresenter: RecipeListPresenterProtocol {
     
+    
     weak var view: RecipeListViewProtocol?
     var interactor: RecipeListInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
+    var filteredRecipes = [RecipeAPI]()
+    var allRecipes = [RecipeAPI]()
     
     init(view: RecipeListViewProtocol,
          interactor: RecipeListInteractorProtocol,
@@ -33,10 +36,12 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
             switch result {
             case .success(let values):
                 Helper.saveJsonToDocumentDirectory(object: values, fileName: FileConstants.RECIPELIST)
+                self.allRecipes = values.recipes
                 self.view?.getRecipe(result: values.recipes)
             case .failure(let error):
                 if Helper.isJsonAvailable(fileName: FileConstants.RECIPELIST) {
                     if let recipes = Helper.readRecipeFromDocumentDirectory(fileName: FileConstants.RECIPELIST) {
+                        self.allRecipes = recipes.recipes
                         self.view?.getRecipe(result: recipes.recipes)
                     }
                 } else {
@@ -49,5 +54,11 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
     
     func recipeSelected(recipe: RecipeAPI, image: UIImage){
         coordinator?.showRecipeDetail(recipe: recipe, image: image)
+    }
+    
+    func searchRecipes(searchValue: String) -> [RecipeAPI] {
+        filteredRecipes = allRecipes.filter({$0.name.prefix(searchValue.count) == searchValue})
+        print(filteredRecipes.count)
+        return filteredRecipes
     }
 }

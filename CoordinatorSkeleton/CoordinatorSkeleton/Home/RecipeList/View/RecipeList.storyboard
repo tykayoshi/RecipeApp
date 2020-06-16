@@ -31,7 +31,7 @@
                                 <state key="normal" image="searchIcon"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="233" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZQL-Pb-Fch">
-                                <rect key="frame" x="25" y="139" width="364" height="713"/>
+                                <rect key="frame" x="25" y="205" width="364" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,29 +66,40 @@
                                     <action selector="backButtonPressed:" destination="FSP-Ke-Lj1" eventType="touchUpInside" id="1ck-YG-Bka"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xt1-md-u9h">
+                                <rect key="frame" x="0.0" y="139" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FSP-Ke-Lj1" id="XcP-7q-g0m"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.20784313725490194" green="0.25098039215686274" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="GfE-v0-Glt" firstAttribute="top" secondItem="Tm5-aP-fvv" secondAttribute="top" constant="85" id="43d-Rk-hsV"/>
                             <constraint firstItem="nfh-3p-Pp7" firstAttribute="bottom" secondItem="ZQL-Pb-Fch" secondAttribute="bottom" constant="10" id="8Mr-gp-RDT"/>
                             <constraint firstItem="nfh-3p-Pp7" firstAttribute="trailing" secondItem="aV6-uE-Vcj" secondAttribute="trailing" constant="25" id="BSB-EL-TBw"/>
+                            <constraint firstItem="ZQL-Pb-Fch" firstAttribute="top" secondItem="Xt1-md-u9h" secondAttribute="bottom" constant="10" id="CQC-XF-0rV"/>
                             <constraint firstItem="WmD-4D-u1c" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="CSq-uo-5Ix"/>
                             <constraint firstItem="aV6-uE-Vcj" firstAttribute="top" secondItem="Tm5-aP-fvv" secondAttribute="top" constant="85" id="Gpv-fT-DBF"/>
+                            <constraint firstItem="Xt1-md-u9h" firstAttribute="trailing" secondItem="nfh-3p-Pp7" secondAttribute="trailing" id="Hl3-zY-tRY"/>
+                            <constraint firstItem="Xt1-md-u9h" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" id="Hld-nU-yTV"/>
+                            <constraint firstItem="Xt1-md-u9h" firstAttribute="top" secondItem="GfE-v0-Glt" secondAttribute="bottom" constant="10" id="MTD-fx-InW"/>
                             <constraint firstItem="WmD-4D-u1c" firstAttribute="top" secondItem="nfh-3p-Pp7" secondAttribute="top" constant="25" id="dAg-hH-2fQ"/>
                             <constraint firstItem="ZQL-Pb-Fch" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="jND-SU-Dma"/>
-                            <constraint firstItem="ZQL-Pb-Fch" firstAttribute="top" secondItem="GfE-v0-Glt" secondAttribute="bottom" constant="10" id="r98-rP-fXP"/>
                             <constraint firstItem="GfE-v0-Glt" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="tYy-dY-pMm"/>
                             <constraint firstItem="nfh-3p-Pp7" firstAttribute="trailing" secondItem="ZQL-Pb-Fch" secondAttribute="trailing" constant="25" id="vZg-dz-6SZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nfh-3p-Pp7"/>
                     </view>
                     <connections>
+                        <outlet property="searchRecipe" destination="Xt1-md-u9h" id="Wej-EA-82b"/>
                         <outlet property="tableView" destination="ZQL-Pb-Fch" id="5DI-sl-FF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTD-zR-4MS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67" y="24"/>
+            <point key="canvasLocation" x="66.666666666666671" y="23.4375"/>
         </scene>
     </scenes>
     <resources>
