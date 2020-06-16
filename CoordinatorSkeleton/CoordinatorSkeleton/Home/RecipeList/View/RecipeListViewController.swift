@@ -28,6 +28,10 @@ class RecipeListViewController: UIViewController {
                 
         let recipeListNib = UINib(nibName: String(describing: RecipeTableViewCell.self), bundle: nil)
         tableView?.register(recipeListNib, forCellReuseIdentifier: String(describing: RecipeTableViewCell.self))
+        
+        if let textfield = searchRecipe.value(forKey: "searchField") as? UITextField {
+            textfield.backgroundColor = UIColor.white
+        }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -99,7 +103,12 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RecipeTableViewCell
-        let recipe = recipeAPI[indexPath.row]
+        let recipe: RecipeAPI
+        if searching{
+            recipe = filteredRecipe[indexPath.row]
+        } else{
+            recipe = recipeAPI[indexPath.row]
+        }
         presenter.recipeSelected(recipe: recipe, image: cell.recipeImage.image!)
         
     }

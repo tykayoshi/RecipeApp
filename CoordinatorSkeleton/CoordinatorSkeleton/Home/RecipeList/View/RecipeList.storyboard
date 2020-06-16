@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -22,16 +22,8 @@
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV6-uE-Vcj">
-                                <rect key="frame" x="354" y="85" width="35" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="9P3-ue-XRj"/>
-                                    <constraint firstAttribute="width" constant="35" id="QhP-Yd-8XA"/>
-                                </constraints>
-                                <state key="normal" image="searchIcon"/>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="233" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZQL-Pb-Fch">
-                                <rect key="frame" x="25" y="205" width="364" height="647"/>
+                                <rect key="frame" x="25" y="195" width="364" height="657"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,9 +58,21 @@
                                     <action selector="backButtonPressed:" destination="FSP-Ke-Lj1" eventType="touchUpInside" id="1ck-YG-Bka"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xt1-md-u9h">
-                                <rect key="frame" x="0.0" y="139" width="414" height="56"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Xt1-md-u9h" customClass="RASearchBar" customModule="RecipeApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="134" width="394" height="56"/>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="FSP-Ke-Lj1" id="XcP-7q-g0m"/>
                                 </connections>
@@ -78,13 +82,11 @@
                         <constraints>
                             <constraint firstItem="GfE-v0-Glt" firstAttribute="top" secondItem="Tm5-aP-fvv" secondAttribute="top" constant="85" id="43d-Rk-hsV"/>
                             <constraint firstItem="nfh-3p-Pp7" firstAttribute="bottom" secondItem="ZQL-Pb-Fch" secondAttribute="bottom" constant="10" id="8Mr-gp-RDT"/>
-                            <constraint firstItem="nfh-3p-Pp7" firstAttribute="trailing" secondItem="aV6-uE-Vcj" secondAttribute="trailing" constant="25" id="BSB-EL-TBw"/>
-                            <constraint firstItem="ZQL-Pb-Fch" firstAttribute="top" secondItem="Xt1-md-u9h" secondAttribute="bottom" constant="10" id="CQC-XF-0rV"/>
+                            <constraint firstItem="ZQL-Pb-Fch" firstAttribute="top" secondItem="Xt1-md-u9h" secondAttribute="bottom" constant="5" id="CQC-XF-0rV"/>
                             <constraint firstItem="WmD-4D-u1c" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="CSq-uo-5Ix"/>
-                            <constraint firstItem="aV6-uE-Vcj" firstAttribute="top" secondItem="Tm5-aP-fvv" secondAttribute="top" constant="85" id="Gpv-fT-DBF"/>
-                            <constraint firstItem="Xt1-md-u9h" firstAttribute="trailing" secondItem="nfh-3p-Pp7" secondAttribute="trailing" id="Hl3-zY-tRY"/>
-                            <constraint firstItem="Xt1-md-u9h" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" id="Hld-nU-yTV"/>
-                            <constraint firstItem="Xt1-md-u9h" firstAttribute="top" secondItem="GfE-v0-Glt" secondAttribute="bottom" constant="10" id="MTD-fx-InW"/>
+                            <constraint firstItem="Xt1-md-u9h" firstAttribute="trailing" secondItem="nfh-3p-Pp7" secondAttribute="trailing" constant="-10" id="Hl3-zY-tRY"/>
+                            <constraint firstItem="Xt1-md-u9h" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="10" id="Hld-nU-yTV"/>
+                            <constraint firstItem="Xt1-md-u9h" firstAttribute="top" secondItem="GfE-v0-Glt" secondAttribute="bottom" constant="5" id="MTD-fx-InW"/>
                             <constraint firstItem="WmD-4D-u1c" firstAttribute="top" secondItem="nfh-3p-Pp7" secondAttribute="top" constant="25" id="dAg-hH-2fQ"/>
                             <constraint firstItem="ZQL-Pb-Fch" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="jND-SU-Dma"/>
                             <constraint firstItem="GfE-v0-Glt" firstAttribute="leading" secondItem="nfh-3p-Pp7" secondAttribute="leading" constant="25" id="tYy-dY-pMm"/>
@@ -99,11 +101,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTD-zR-4MS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66.666666666666671" y="23.4375"/>
+            <point key="canvasLocation" x="-116" y="-68"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrowBackWhite" width="16" height="16"/>
-        <image name="searchIcon" width="120" height="120"/>
     </resources>
 </document>
