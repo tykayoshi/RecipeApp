@@ -82,29 +82,28 @@ extension AddRecipeViewController: AddRecipeViewProtocol{
 
 extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count: Int?
                 
         if (tableView == self.ingTableView){
-            count = ingList.count
+            return ingList.count
         }
                 
         if (tableView == self.stepsTableView){
-            count = stepsList.count
+            return stepsList.count
         }
-                
-        return count!
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var ingCell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngTableViewCell.self), for: indexPath) as! IngTableViewCell
-        var stepCell = tableView.dequeueReusableCell(withIdentifier: String(describing: StepsTableViewCell.self), for: indexPath) as! StepsTableViewCell
         
-        if (tableView == self.ingTableView){
+        if (tableView == self.ingTableView) {
+            let ingCell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngTableViewCell.self), for: indexPath) as! IngTableViewCell
             ingCell.ingLabel.text = ingList[indexPath.row]
             return ingCell
         }
-                        
-        if (tableView == self.stepsTableView){
+
+        if (tableView == self.stepsTableView) {
+            let stepCell = tableView.dequeueReusableCell(withIdentifier: String(describing: StepsTableViewCell.self), for: indexPath) as! StepsTableViewCell
             stepCell.stepLabel.text = stepsList[indexPath.row]
             return stepCell
         }
