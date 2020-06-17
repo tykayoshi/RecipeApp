@@ -8,6 +8,8 @@
 
 import Foundation
 
-class AddRecipeInteractor: AddRecipeInteractorProtocol{
-    
+class AddRecipeInteractor: AddRecipeInteractorProtocol {
+    func postRecipe(using recipe: RecipeAPI, completion: @escaping (Result<RecipeAPI, Error>) -> Void) {
+        //
+    }
 }
