@@ -96,19 +96,20 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell?
+        var ingCell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngTableViewCell.self), for: indexPath) as! IngTableViewCell
+        var stepCell = tableView.dequeueReusableCell(withIdentifier: String(describing: StepsTableViewCell.self), for: indexPath) as! StepsTableViewCell
         
         if (tableView == self.ingTableView){
-            cell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngTableViewCell.self), for: indexPath)
-            cell!.textLabel!.text = ingList[indexPath.row]
+            ingCell.ingLabel.text = ingList[indexPath.row]
+            return ingCell
         }
                         
         if (tableView == self.stepsTableView){
-            cell = tableView.dequeueReusableCell(withIdentifier: String(describing: StepsTableViewCell.self), for: indexPath)
-            cell!.textLabel!.text = stepsList[indexPath.row]
+            stepCell.stepLabel.text = stepsList[indexPath.row]
+            return stepCell
         }
         
-        return cell!
+        return UITableViewCell()
     }
 }
 
