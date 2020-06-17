@@ -7,24 +7,25 @@
 //
 
 import UIKit
-
-protocol StepsCellProtocol: class {
-    func removeStep (step: String)
+protocol StepCellProtocol: class {
+    func removeStep(step: String)
 }
-
 class StepsTableViewCell: UITableViewCell {
-    
-    weak var delegate: StepsCellProtocol?
+ 
     @IBOutlet weak var stepLabel: UILabel!
+    weak var delegate: StepCellProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    @IBAction func removeStep(_ sender: Any) {
-        guard let step = stepLabel.text  else {return}
+    @IBAction func removeStepButtonPressed(_ sender: Any) {
+        guard let step = stepLabel.text else {
+            return
+        }
         delegate?.removeStep(step: step)
     }
+    
     
 }

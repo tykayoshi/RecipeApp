@@ -9,7 +9,7 @@
 import Foundation
 
 class AddRecipePresenter: AddRecipePresenterProtocol{
-    
+   
     var view: AddRecipeViewProtocol?
     var interactor: AddRecipeInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
@@ -36,29 +36,30 @@ class AddRecipePresenter: AddRecipePresenterProtocol{
         print(ingredients)
     }
     
+    func removeIngredient(ingName: String) {
+        if let index = ingredients.index(of: ingName) {
+            ingredients.remove(at: index)
+            view?.getIngredientsList(ingList: ingredients)
+            print("ing remove")
+        }
+    }
+    
+    func removeStep(step: String) {
+        if let index = steps.index(of: step) {
+            steps.remove(at: index)
+            view?.getStepsList(stepsList: steps)
+            print(steps)
+        }
+    }
+    
     func stepAddButtonPressed(step: String){
         steps.append(step)
         view?.getStepsList(stepsList: steps)
         print (steps)
     }
     
-    func removeIngredient(ingName: String){
-        if let index = ingredients.index(of: ingName){
-            ingredients.remove(at: index)
-            view?.getIngredientsList(ingList: ingredients)
-            print(ingredients)
-        }
-    }
-    
-    func removeStep(step: String) {
-        if let index = steps.index(of: step){
-            steps.remove(at: index)
-            view?.getStepsList(stepsList: steps)
-            print (steps)
-        }
-    }
-    
     func addRecipeButtonPressed() {
         print("add recipe pressed presenter")
     }
+    
 }

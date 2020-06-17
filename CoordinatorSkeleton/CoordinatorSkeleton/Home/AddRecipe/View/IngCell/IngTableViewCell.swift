@@ -9,22 +9,23 @@
 import UIKit
 
 protocol IngCellProtocol: class {
-    func removeIngredient (ingName: String)
+    func removeIngredient(ingName: String)
 }
 
 class IngTableViewCell: UITableViewCell {
 
-    weak var delegate: IngCellProtocol?
     @IBOutlet weak var ingLabel: UILabel!
+    weak var delegate: IngCellProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    @IBAction func removeIngredient(_ sender: Any) {
-        guard let ingName = ingLabel.text else {return}
+    @IBAction func removeIngButtonPressed(_ sender: Any) {
+        guard let ingName = ingLabel.text else {
+            return
+        }
         delegate?.removeIngredient(ingName: ingName)
     }
-    
 }

@@ -31,7 +31,7 @@
                         </constraints>
                         <state key="normal" image="deleteIcon"/>
                         <connections>
-                            <action selector="removeIngredient:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WOb-g5-Ise"/>
+                            <action selector="removeIngButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SKx-vc-Oug"/>
                         </connections>
                     </button>
                 </subviews>

@@ -99,12 +99,16 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
         if (tableView == self.ingTableView) {
             let ingCell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngTableViewCell.self), for: indexPath) as! IngTableViewCell
             ingCell.ingLabel.text = ingList[indexPath.row]
+            ingCell.delegate = self
             return ingCell
         }
 
         if (tableView == self.stepsTableView) {
             let stepCell = tableView.dequeueReusableCell(withIdentifier: String(describing: StepsTableViewCell.self), for: indexPath) as! StepsTableViewCell
+            
             stepCell.stepLabel.text = stepsList[indexPath.row]
+            stepCell.delegate = self
+    
             return stepCell
         }
         
@@ -118,6 +122,11 @@ extension AddRecipeViewController: IngCellProtocol{
     }
 }
 
+extension AddRecipeViewController: StepCellProtocol{
+    func removeStep(step: String) {
+        presenter.removeStep(step: step)
+    }
+}
 
 extension AddRecipeViewController {
     static func makeFromStoryboard() -> AddRecipeViewController {
