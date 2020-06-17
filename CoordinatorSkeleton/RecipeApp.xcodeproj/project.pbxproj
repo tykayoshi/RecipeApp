@@ -20,6 +20,10 @@
 		1B7A19B8247FDC6700CE0152 /* AddRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19B7247FDC6700CE0152 /* AddRecipePresenter.swift */; };
 		1B7A19BB247FDC8700CE0152 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19BA247FDC8700CE0152 /* AddRecipeViewController.swift */; };
 		1B7A19BD247FDC9800CE0152 /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7A19BC247FDC9800CE0152 /* AddRecipe.storyboard */; };
+		1BD5116D249A4260003468B1 /* IngTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD5116B249A4260003468B1 /* IngTableViewCell.swift */; };
+		1BD5116E249A4260003468B1 /* IngTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD5116C249A4260003468B1 /* IngTableViewCell.xib */; };
+		1BD51172249A4286003468B1 /* StepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD51170249A4286003468B1 /* StepsTableViewCell.swift */; };
+		1BD51173249A4286003468B1 /* StepsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD51171249A4286003468B1 /* StepsTableViewCell.xib */; };
 		1BECE7542462F38000DE7AE6 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */; };
 		20726D176901E8B7A696C093 /* Pods_RecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2C34EFEC8632AB4F83293B /* Pods_RecipeApp.framework */; };
 		B262779DE1E0EE246DF9D0F2 /* Pods_RecipeApp_RecipeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C93D7585DA4BF2EE86ED38 /* Pods_RecipeApp_RecipeAppUITests.framework */; };
@@ -132,6 +136,10 @@
 		1B7A19B7247FDC6700CE0152 /* AddRecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipePresenter.swift; sourceTree = "<group>"; };
 		1B7A19BA247FDC8700CE0152 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 		1B7A19BC247FDC9800CE0152 /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
+		1BD5116B249A4260003468B1 /* IngTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngTableViewCell.swift; sourceTree = "<group>"; };
+		1BD5116C249A4260003468B1 /* IngTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngTableViewCell.xib; sourceTree = "<group>"; };
+		1BD51170249A4286003468B1 /* StepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewCell.swift; sourceTree = "<group>"; };
+		1BD51171249A4286003468B1 /* StepsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepsTableViewCell.xib; sourceTree = "<group>"; };
 		1BECE7532462F38000DE7AE6 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		27A5E9A1FDAD1E38BBCF12ED /* Pods-RecipeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp.release.xcconfig"; path = "Target Support Files/Pods-RecipeApp/Pods-RecipeApp.release.xcconfig"; sourceTree = "<group>"; };
 		6E2C34EFEC8632AB4F83293B /* Pods_RecipeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -380,10 +388,30 @@
 		1B7A19B2247FDBB100CE0152 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1BD5116A249A41FE003468B1 /* IngCell */,
+				1BD5116F249A4268003468B1 /* StepsCell */,
 				1B7A19BA247FDC8700CE0152 /* AddRecipeViewController.swift */,
 				1B7A19BC247FDC9800CE0152 /* AddRecipe.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1BD5116A249A41FE003468B1 /* IngCell */ = {
+			isa = PBXGroup;
+			children = (
+				1BD5116B249A4260003468B1 /* IngTableViewCell.swift */,
+				1BD5116C249A4260003468B1 /* IngTableViewCell.xib */,
+			);
+			path = IngCell;
+			sourceTree = "<group>";
+		};
+		1BD5116F249A4268003468B1 /* StepsCell */ = {
+			isa = PBXGroup;
+			children = (
+				1BD51170249A4286003468B1 /* StepsTableViewCell.swift */,
+				1BD51171249A4286003468B1 /* StepsTableViewCell.xib */,
+			);
+			path = StepsCell;
 			sourceTree = "<group>";
 		};
 		A5A766BEAB7622D2FF2DE147 /* Pods */ = {
@@ -1080,12 +1108,14 @@
 				C3F41DA9245996F100B9EC46 /* DietaryRequirements.storyboard in Resources */,
 				1B7A19BD247FDC9800CE0152 /* AddRecipe.storyboard in Resources */,
 				C4DFE8FC232F9E05001EEB3D /* Assets.xcassets in Resources */,
+				1BD51173249A4286003468B1 /* StepsTableViewCell.xib in Resources */,
 				1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */,
 				C3F41DF62464191900B9EC46 /* CarouselCollectionViewCell.xib in Resources */,
 				C4AC0AA1245C3D6A00D40612 /* ShoppingEssentialsTableViewCell.xib in Resources */,
 				C4DFE8F7232F9E04001EEB3D /* Main.storyboard in Resources */,
 				C4DFE935232FD822001EEB3D /* Home.storyboard in Resources */,
 				C433D4082460428A003A8957 /* SettingsTableViewCell.xib in Resources */,
+				1BD5116E249A4260003468B1 /* IngTableViewCell.xib in Resources */,
 				C38E6AAE2473FBA8007D99D8 /* RecipeDetails.storyboard in Resources */,
 				C30F6B67246C246800906AAF /* RecipeList.storyboard in Resources */,
 				C45A59CC245055E800F68A06 /* Settings.storyboard in Resources */,
@@ -1221,6 +1251,7 @@
 				C4DFE924232FA0B4001EEB3D /* Coordinator.swift in Sources */,
 				C44C5C40244731EF003B7825 /* StoryboardSegues.swift in Sources */,
 				C45A59D02450567F00F68A06 /* SettingsInteractor.swift in Sources */,
+				1BD51172249A4286003468B1 /* StepsTableViewCell.swift in Sources */,
 				C4DFE93B232FD98F001EEB3D /* HomeInteractor.swift in Sources */,
 				C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */,
 				C3F07D35246C466900794371 /* RecipeListContract.swift in Sources */,
@@ -1260,6 +1291,7 @@
 				C44E848B244DEFA900D97E32 /* CollectionItem.swift in Sources */,
 				C30F6B6D246C270800906AAF /* RecipeTableViewCell.swift in Sources */,
 				1B13F190245B27400079FC8B /* ShoppingEssentialsViewController.swift in Sources */,
+				1BD5116D249A4260003468B1 /* IngTableViewCell.swift in Sources */,
 				C4DFE929232FC38B001EEB3D /* TabBarCoordinator.swift in Sources */,
 				C45A59D4245056A900F68A06 /* SettingsViewController.swift in Sources */,
 				C45A59DE24519ADC00F68A06 /* ProfileContract.swift in Sources */,

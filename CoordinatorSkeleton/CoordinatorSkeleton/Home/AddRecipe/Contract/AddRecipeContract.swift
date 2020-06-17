@@ -10,6 +10,11 @@ import Foundation
 
 protocol AddRecipePresenterProtocol {
     func cancelButtonPressed()
+    func ingAddButtonPressed(ingName: String)
+    func stepAddButtonPressed(step: String)
+    func removeIngredient(ingName: String)
+    func removeStep(step: String)
+    func addRecipeButtonPressed()
     
 }
 
@@ -18,5 +23,6 @@ protocol AddRecipeInteractorProtocol {
 }
 
 protocol AddRecipeViewProtocol {
-    
+    func getIngredientsList(ingList: [String])
+    func getStepsList(stepsList: [String])
 }
