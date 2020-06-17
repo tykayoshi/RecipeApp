@@ -144,7 +144,7 @@
                                 <rect key="frame" x="0.0" y="335" width="414" height="401"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mlf-Oe-U7l">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="765"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHL-l5-UuA" userLabel="IngredientsView">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -322,6 +322,34 @@
                                                     <constraint firstItem="yCs-bv-kK6" firstAttribute="top" secondItem="eiv-cl-iHA" secondAttribute="bottom" constant="10" id="eWe-Qx-mYe"/>
                                                     <constraint firstAttribute="trailing" secondItem="yCs-bv-kK6" secondAttribute="trailing" constant="25" id="fIz-bz-3Oh"/>
                                                     <constraint firstItem="eiv-cl-iHA" firstAttribute="leading" secondItem="BWJ-7o-WB2" secondAttribute="leading" constant="25" id="yoG-SE-DnH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSu-al-wz0" userLabel="AddButtonView">
+                                                <rect key="frame" x="0.0" y="700" width="414" height="65"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kL7-Th-A8L" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                        <rect key="frame" x="35" y="0.0" width="344" height="55"/>
+                                                        <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="G78-CQ-ZMY"/>
+                                                        </constraints>
+                                                        <state key="normal" title="ADD">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="9"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="kL7-Th-A8L" secondAttribute="trailing" constant="35" id="7up-pe-cQK"/>
+                                                    <constraint firstItem="kL7-Th-A8L" firstAttribute="leading" secondItem="JSu-al-wz0" secondAttribute="leading" constant="35" id="LUv-iU-PNL"/>
+                                                    <constraint firstAttribute="height" constant="65" id="q5s-E4-rnx"/>
+                                                    <constraint firstItem="kL7-Th-A8L" firstAttribute="centerX" secondItem="JSu-al-wz0" secondAttribute="centerX" id="tg4-Pk-LsY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kL7-Th-A8L" secondAttribute="bottom" constant="10" id="trX-SL-du4"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
