@@ -11,7 +11,7 @@ import Foundation
 
 class RecipeListInteractor: RecipeListInteractorProtocol {    
     func getRecipeList(completion: @escaping (Result<[RecipeAPI], Error>) -> Void) {
-        ServiceLayer.request(router: Router.getRecipes) { (result: Result<[RecipeAPI], Error>) in
+        ServiceLayer.request(router: Router.getRecipes, data: nil) { (result: Result<[RecipeAPI], Error>) in
                 switch result {
                 case .success:
                     completion(result)

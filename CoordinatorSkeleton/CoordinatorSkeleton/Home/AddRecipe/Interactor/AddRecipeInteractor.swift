@@ -10,6 +10,13 @@ import Foundation
 
 class AddRecipeInteractor: AddRecipeInteractorProtocol {
     func postRecipe(using recipe: RecipeAPI, completion: @escaping (Result<RecipeAPI, Error>) -> Void) {
-        //
+        ServiceLayer.request(router: Router.postRecipes, data: recipe) { (result: Result<RecipeAPI, Error>) in
+                switch result {
+                case .success:
+                    completion(result)
+                case .failure:
+                    completion(result)
+                }
+        }
     }
 }

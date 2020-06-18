@@ -15,6 +15,7 @@ protocol AddRecipePresenterProtocol {
     func stepAddButtonPressed(step: String)
     func removeStep(step: String)
     func addRecipeButtonPressed()
+    func postRecipe()
     
 }
 

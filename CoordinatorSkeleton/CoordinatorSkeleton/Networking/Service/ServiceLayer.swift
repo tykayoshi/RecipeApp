@@ -10,7 +10,7 @@ import Foundation
 
 class ServiceLayer {
     
-    class func request<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ()) {
+    class func request<T: Codable>(router: Router, data: RecipeAPI?, completion: @escaping (Result<T, Error>) -> ()) {
         var components = URLComponents()
         components.scheme = router.scheme
         components.host = router.host
@@ -22,6 +22,12 @@ class ServiceLayer {
         guard let url = components.url else { return }
         var urlRequest = URLRequest(url: url, timeoutInterval: 1)
         urlRequest.httpMethod = router.method
+        
+//        let encoder = JSONEncoder()
+//        let jsonData = try! encoder.encode(data)
+//        urlRequest.httpBody = jsonData
+//        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
         
         let session = URLSession(configuration: .default)
         
