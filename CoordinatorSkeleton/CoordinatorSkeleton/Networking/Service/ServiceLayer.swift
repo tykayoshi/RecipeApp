@@ -33,7 +33,7 @@ class ServiceLayer {
                 return
             }
             
-            guard response != nil else {
+            guard let response = response as? HTTPURLResponse else {
                 return
             }
             
@@ -41,11 +41,19 @@ class ServiceLayer {
                 return
             }
             
-            let responseObject = try! JSONDecoder().decode(T.self, from: data)
-            
-            DispatchQueue.main.async {
-                completion(.success(responseObject))
-            }
+            switch response.statusCode {
+            case 200...299:
+                do {
+                     let responseObject = try JSONDecoder().decode(T.self, from: data)
+                     DispatchQueue.main.async {
+                        completion(.success(responseObject))
+                    }
+                } catch {
+                    completion(.failure(error))
+                    }
+            default:
+                completion(.failure(error!))
+                }
         }
         
         dataTask.resume()

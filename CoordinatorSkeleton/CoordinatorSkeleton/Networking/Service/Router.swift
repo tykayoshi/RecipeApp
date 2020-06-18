@@ -52,7 +52,7 @@ enum Router {
     var path: String {
         switch self {
         case .getRecipes, .postRecipes:
-            return "/api/recipes/old"
+            return "/api/recipes"
         case .getProfile:
             return "/api/profiles/1"
         }
