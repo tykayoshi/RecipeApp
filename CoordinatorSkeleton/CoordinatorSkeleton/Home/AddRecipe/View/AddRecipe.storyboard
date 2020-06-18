@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -144,7 +144,7 @@
                                 <rect key="frame" x="0.0" y="335" width="414" height="401"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mlf-Oe-U7l">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="765"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHL-l5-UuA" userLabel="IngredientsView">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -200,6 +200,9 @@
                                                                         <real key="value" value="9"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="ingAddButtonPressed:" destination="DRL-GV-vXZ" eventType="touchUpInside" id="lDN-9O-fmt"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -213,7 +216,7 @@
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </view>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hMo-Id-fA4">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hMo-Id-fA4" customClass="IngTableViewCell" customModule="RecipeApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="364" height="43.666667938232422"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hMo-Id-fA4" id="cbu-Br-SfI">
@@ -222,6 +225,10 @@
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="DRL-GV-vXZ" id="Oxa-cz-qV5"/>
+                                                            <outlet property="delegate" destination="DRL-GV-vXZ" id="STs-Ua-KQp"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -289,6 +296,9 @@
                                                                         <real key="value" value="9"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="stepsAddButtonPressed:" destination="DRL-GV-vXZ" eventType="touchUpInside" id="dRB-0n-3h1"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -302,7 +312,7 @@
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </view>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uWk-PM-AV6">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uWk-PM-AV6" customClass="StepsTableViewCell" customModule="RecipeApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="364" height="43.666667938232422"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uWk-PM-AV6" id="Lpp-4o-p1m">
@@ -311,6 +321,10 @@
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="DRL-GV-vXZ" id="BgW-xK-Xmx"/>
+                                                            <outlet property="delegate" destination="DRL-GV-vXZ" id="BZi-Lj-fJ4"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -322,6 +336,37 @@
                                                     <constraint firstItem="yCs-bv-kK6" firstAttribute="top" secondItem="eiv-cl-iHA" secondAttribute="bottom" constant="10" id="eWe-Qx-mYe"/>
                                                     <constraint firstAttribute="trailing" secondItem="yCs-bv-kK6" secondAttribute="trailing" constant="25" id="fIz-bz-3Oh"/>
                                                     <constraint firstItem="eiv-cl-iHA" firstAttribute="leading" secondItem="BWJ-7o-WB2" secondAttribute="leading" constant="25" id="yoG-SE-DnH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSu-al-wz0" userLabel="AddButtonView">
+                                                <rect key="frame" x="0.0" y="700" width="414" height="65"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kL7-Th-A8L" customClass="RAButton" customModule="RecipeApp" customModuleProvider="target">
+                                                        <rect key="frame" x="35" y="0.0" width="344" height="55"/>
+                                                        <color key="backgroundColor" red="0.20879074929999999" green="0.24966779350000001" blue="0.30981191990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="G78-CQ-ZMY"/>
+                                                        </constraints>
+                                                        <state key="normal" title="ADD">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="9"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="addRecipeButtonPressed:" destination="DRL-GV-vXZ" eventType="touchUpInside" id="z6z-58-bHd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="kL7-Th-A8L" secondAttribute="trailing" constant="35" id="7up-pe-cQK"/>
+                                                    <constraint firstItem="kL7-Th-A8L" firstAttribute="leading" secondItem="JSu-al-wz0" secondAttribute="leading" constant="35" id="LUv-iU-PNL"/>
+                                                    <constraint firstAttribute="height" constant="65" id="q5s-E4-rnx"/>
+                                                    <constraint firstItem="kL7-Th-A8L" firstAttribute="centerX" secondItem="JSu-al-wz0" secondAttribute="centerX" id="tg4-Pk-LsY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kL7-Th-A8L" secondAttribute="bottom" constant="10" id="trX-SL-du4"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -356,15 +401,24 @@
                         <viewLayoutGuide key="safeArea" id="Gan-wV-H3G"/>
                     </view>
                     <connections>
+                        <outlet property="difficultyTextField" destination="7BE-vD-bdY" id="1nn-36-JZ4"/>
+                        <outlet property="ingTableView" destination="dWs-Go-A0h" id="QSx-Jr-CIV"/>
+                        <outlet property="ingTextField" destination="P7u-dJ-vvT" id="e6E-g0-Y4R"/>
                         <outlet property="ingTitleView" destination="SFn-DB-1Wk" id="fJO-Hw-zs3"/>
+                        <outlet property="peopleTextField" destination="Iaw-dF-3hU" id="iIU-FI-xeo"/>
                         <outlet property="recipeCardView" destination="ijf-jV-D7v" id="0ul-RR-eSA"/>
                         <outlet property="recipeInfoView" destination="8Hh-tu-2Y4" id="IZB-nm-tgx"/>
+                        <outlet property="recipeNameTextField" destination="0yP-ma-2rY" id="4uI-Xi-kNI"/>
+                        <outlet property="recipeTypeTextField" destination="zvB-Xs-G9n" id="eFC-5M-5Mi"/>
+                        <outlet property="stepsTableView" destination="B4E-Sm-ykR" id="GKo-yA-Qhq"/>
+                        <outlet property="stepsTextField" destination="mtw-6n-dcB" id="fZ1-gd-TZg"/>
                         <outlet property="stepsTitleView" destination="eiv-cl-iHA" id="UDC-AI-bYw"/>
+                        <outlet property="timeToCookTextField" destination="iXL-tq-TXy" id="dcB-yW-Egq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljo-Bp-0DY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60.869565217391312" y="110.86956521739131"/>
+            <point key="canvasLocation" x="-51" y="-87"/>
         </scene>
     </scenes>
     <resources>

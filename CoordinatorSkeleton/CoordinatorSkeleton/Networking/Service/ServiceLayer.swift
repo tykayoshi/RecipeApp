@@ -10,7 +10,7 @@ import Foundation
 
 class ServiceLayer {
     
-    class func request<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ()) {
+    class func request<T: Codable>(router: Router, data: RecipeAPI?, completion: @escaping (Result<T, Error>) -> ()) {
         var components = URLComponents()
         components.scheme = router.scheme
         components.host = router.host
@@ -23,6 +23,12 @@ class ServiceLayer {
         var urlRequest = URLRequest(url: url, timeoutInterval: 1)
         urlRequest.httpMethod = router.method
         
+//        let encoder = JSONEncoder()
+//        let jsonData = try! encoder.encode(data)
+//        urlRequest.httpBody = jsonData
+//        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        
         let session = URLSession(configuration: .default)
         
         let dataTask = session.dataTask(with: urlRequest) { data, response, error in
@@ -33,7 +39,7 @@ class ServiceLayer {
                 return
             }
             
-            guard response != nil else {
+            guard let response = response as? HTTPURLResponse else {
                 return
             }
             
@@ -41,11 +47,19 @@ class ServiceLayer {
                 return
             }
             
-            let responseObject = try! JSONDecoder().decode(T.self, from: data)
-            
-            DispatchQueue.main.async {
-                completion(.success(responseObject))
-            }
+            switch response.statusCode {
+            case 200...299:
+                do {
+                     let responseObject = try JSONDecoder().decode(T.self, from: data)
+                     DispatchQueue.main.async {
+                        completion(.success(responseObject))
+                    }
+                } catch {
+                    completion(.failure(error))
+                    }
+            default:
+                completion(.failure(error!))
+                }
         }
         
         dataTask.resume()

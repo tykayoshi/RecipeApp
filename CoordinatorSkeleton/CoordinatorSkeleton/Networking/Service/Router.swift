@@ -24,28 +24,25 @@ import Foundation
 enum Router {
     case getRecipes
     case getProfile
+    case postRecipes
     
     var scheme: String {
         switch self {
-        case .getRecipes:
-           return "http"
-        case .getProfile:
+        case .getRecipes, .getProfile, .postRecipes:
             return "http"
         }
     }
     
     var host: String {
         switch self {
-        case .getRecipes:
-           return "32.176.0.180"
-        case .getProfile:
-           return "35.177.13.233"
+        case .getRecipes, .getProfile, .postRecipes:
+            return "35.176.29.6"
         }
     }
         
     var port: Int? {
         switch self {
-        case .getRecipes:
+        case .getRecipes, .postRecipes:
             return 8081
         case .getProfile:
             return 8082
@@ -54,7 +51,7 @@ enum Router {
     
     var path: String {
         switch self {
-        case .getRecipes:
+        case .getRecipes, .postRecipes:
             return "/api/recipes"
         case .getProfile:
             return "/api/profiles/1"
@@ -72,7 +69,7 @@ enum Router {
     
     var parameters: [URLQueryItem]? {
         switch self {
-        case .getRecipes:
+        case .getRecipes, .postRecipes:
             return nil
         case .getProfile:
             return nil
@@ -85,6 +82,8 @@ enum Router {
             return "GET"
         case .getProfile:
             return "GET"
+        case .postRecipes:
+            return "POST"
         }
     }
 }

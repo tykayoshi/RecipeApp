@@ -36,13 +36,13 @@ class RecipeListPresenter: RecipeListPresenterProtocol {
             switch result {
             case .success(let values):
                 Helper.saveJsonToDocumentDirectory(object: values, fileName: FileConstants.RECIPELIST)
-                self.allRecipes = values.recipes
-                self.view?.getRecipe(result: values.recipes)
+                self.allRecipes = values
+                self.view?.getRecipe(result: values)
             case .failure(let error):
                 if Helper.isJsonAvailable(fileName: FileConstants.RECIPELIST) {
                     if let recipes = Helper.readRecipeFromDocumentDirectory(fileName: FileConstants.RECIPELIST) {
-                        self.allRecipes = recipes.recipes
-                        self.view?.getRecipe(result: recipes.recipes)
+                        self.allRecipes = recipes
+                        self.view?.getRecipe(result: recipes)
                     }
                 } else {
                     print(error)

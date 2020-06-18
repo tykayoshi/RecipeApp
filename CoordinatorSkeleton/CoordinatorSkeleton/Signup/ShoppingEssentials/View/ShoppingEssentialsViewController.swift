@@ -11,6 +11,7 @@ import UIKit
 
 class ShoppingEssentialsViewController: UIViewController {
     var presenter: ShoppingEssentialsPresenterProtocol!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var essentialsTextField: RATextField!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!

@@ -40,14 +40,14 @@ struct Helper {
            }
        }
     
-        static func readRecipeFromDocumentDirectory(fileName: String) -> Recipes? {
+        static func readRecipeFromDocumentDirectory(fileName: String) -> [RecipeAPI]? {
                do {
                     let decoder = JSONDecoder()
                     let fileManager = FileManager.default
                     let url = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
                     let jsonUrl = url.appendingPathComponent(fileName)
                 
-                guard let data = try? decoder.decode(Recipes.self, from: Data(contentsOf: jsonUrl)) else {
+                guard let data = try? decoder.decode([RecipeAPI].self, from: Data(contentsOf: jsonUrl)) else {
                     return nil
                 }
                    return data
