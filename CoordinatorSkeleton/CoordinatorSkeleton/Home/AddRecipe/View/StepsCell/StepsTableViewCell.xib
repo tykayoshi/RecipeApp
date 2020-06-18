@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,12 +17,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-u0-rwP">
-                        <rect key="frame" x="16" y="12" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-Bl-9Cl">
                         <rect key="frame" x="290" y="9.5" width="25" height="25"/>
                         <constraints>
@@ -34,13 +28,20 @@
                             <action selector="removeStepButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CeS-Nj-ocH"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-u0-rwP">
+                        <rect key="frame" x="16" y="11" width="258" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="OCd-u0-rwP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="AG4-ru-Wv1"/>
-                    <constraint firstItem="OCd-u0-rwP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="an7-yu-hkL"/>
+                    <constraint firstItem="OCd-u0-rwP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UcF-Ao-5dQ"/>
+                    <constraint firstItem="jWP-Bl-9Cl" firstAttribute="leading" secondItem="OCd-u0-rwP" secondAttribute="trailing" constant="16" id="VBC-7h-sn5"/>
+                    <constraint firstItem="OCd-u0-rwP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="acZ-Od-k9O"/>
                     <constraint firstAttribute="trailing" secondItem="jWP-Bl-9Cl" secondAttribute="trailing" constant="5" id="gQA-o4-dOw"/>
                     <constraint firstItem="jWP-Bl-9Cl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="glo-6D-jEq"/>
-                    <constraint firstAttribute="bottom" secondItem="OCd-u0-rwP" secondAttribute="bottom" constant="11" id="qg4-j0-8Qp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="OCd-u0-rwP" secondAttribute="bottom" id="mCT-mf-hvU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
