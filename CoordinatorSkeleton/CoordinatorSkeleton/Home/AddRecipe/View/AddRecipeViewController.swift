@@ -37,6 +37,7 @@ class AddRecipeViewController: UIViewController{
         
         let stepsNib = UINib(nibName: String(describing: StepsTableViewCell.self), bundle: nil)
         stepsTableView?.register(stepsNib, forCellReuseIdentifier: String(describing: StepsTableViewCell.self))
+        
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -107,6 +108,9 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
             let stepCell = tableView.dequeueReusableCell(withIdentifier: String(describing: StepsTableViewCell.self), for: indexPath) as! StepsTableViewCell
             
             stepCell.stepLabel.text = stepsList[indexPath.row]
+            stepCell.stepLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+            stepCell.stepLabel.numberOfLines = 0
+
             stepCell.delegate = self
     
             return stepCell
@@ -114,6 +118,13 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if (tableView == self.stepsTableView) {
+//            return 115
+//        }
+//        return 44
+//    }
 }
 
 extension AddRecipeViewController: IngCellProtocol{

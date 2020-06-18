@@ -17,7 +17,6 @@ class StepsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     @IBAction func removeStepButtonPressed(_ sender: Any) {
