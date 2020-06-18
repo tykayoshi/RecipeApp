@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -401,14 +401,19 @@
                         <viewLayoutGuide key="safeArea" id="Gan-wV-H3G"/>
                     </view>
                     <connections>
+                        <outlet property="difficultyTextField" destination="7BE-vD-bdY" id="1nn-36-JZ4"/>
                         <outlet property="ingTableView" destination="dWs-Go-A0h" id="QSx-Jr-CIV"/>
                         <outlet property="ingTextField" destination="P7u-dJ-vvT" id="e6E-g0-Y4R"/>
                         <outlet property="ingTitleView" destination="SFn-DB-1Wk" id="fJO-Hw-zs3"/>
+                        <outlet property="peopleTextField" destination="Iaw-dF-3hU" id="iIU-FI-xeo"/>
                         <outlet property="recipeCardView" destination="ijf-jV-D7v" id="0ul-RR-eSA"/>
                         <outlet property="recipeInfoView" destination="8Hh-tu-2Y4" id="IZB-nm-tgx"/>
+                        <outlet property="recipeNameTextField" destination="0yP-ma-2rY" id="4uI-Xi-kNI"/>
+                        <outlet property="recipeTypeTextField" destination="zvB-Xs-G9n" id="eFC-5M-5Mi"/>
                         <outlet property="stepsTableView" destination="B4E-Sm-ykR" id="GKo-yA-Qhq"/>
                         <outlet property="stepsTextField" destination="mtw-6n-dcB" id="fZ1-gd-TZg"/>
                         <outlet property="stepsTitleView" destination="eiv-cl-iHA" id="UDC-AI-bYw"/>
+                        <outlet property="timeToCookTextField" destination="iXL-tq-TXy" id="dcB-yW-Egq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljo-Bp-0DY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

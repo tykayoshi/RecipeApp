@@ -24,6 +24,13 @@ class AddRecipeViewController: UIViewController{
     @IBOutlet weak var stepsTextField: RATextField!
     @IBOutlet weak var stepsTableView: UITableView!
     
+   
+    @IBOutlet weak var recipeNameTextField: UITextField!
+    @IBOutlet weak var recipeTypeTextField: UITextField!
+    @IBOutlet weak var timeToCookTextField: UITextField!
+    @IBOutlet weak var peopleTextField: UITextField!
+    @IBOutlet weak var difficultyTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +68,16 @@ class AddRecipeViewController: UIViewController{
     }
     
     @IBAction func addRecipeButtonPressed(_ sender: Any) {
-        print("Add Recipe Button Pressed")
+        let alert = UIAlertController(title: "Confirm Add Recipe", message: "Do you wish to add this recipe?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
+        self.present(alert, animated: true)
+        
+        let recipeName = recipeNameTextField.text
+        let recipeType = recipeTypeTextField.text
+        let time = timeToCookTextField.text
+        let person = peopleTextField.text
+        let difficulty = difficultyTextField.text
     }
     
     func textFieldShouldClear(_ textField: UITextField) {
