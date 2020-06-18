@@ -8,33 +8,31 @@
 
 import Foundation
 
+public enum APIError: Error {
+    case unhandledError(message: String)
+}
+
+protocol APIRequest {
+    associatedtype RequestRouter
+    associatedtype RequestObject
+    associatedtype ResponseDataType
+    
+    func makeRequest(from router: RequestRouter, requestObject: RequestObject) throws -> URLRequest
+    func parseResponse(data: Data, response: URLResponse?) throws -> ResponseDataType
+}
+
 class ServiceLayer {
     
-    class func request<T: Codable>(router: Router, data: RecipeAPI?, completion: @escaping (Result<T, Error>) -> ()) {
-        var components = URLComponents()
-        components.scheme = router.scheme
-        components.host = router.host
-        components.port = router.port
-        components.path = router.path
-        components.queryItems = router.parameters
+    class func request<T: APIRequest>(apiRequest: T, router: T.RequestRouter, requestObject: T.RequestObject, completion: @escaping (Result<T.ResponseDataType, APIError>) -> ()) {
+        
+        var urlRequest = try! apiRequest.makeRequest(from: router, requestObject: requestObject)
 
-        
-        guard let url = components.url else { return }
-        var urlRequest = URLRequest(url: url, timeoutInterval: 1)
-        urlRequest.httpMethod = router.method
-        
-//        let encoder = JSONEncoder()
-//        let jsonData = try! encoder.encode(data)
-//        urlRequest.httpBody = jsonData
-//        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        
         let session = URLSession(configuration: .default)
         
         let dataTask = session.dataTask(with: urlRequest) { data, response, error in
             
             guard error == nil else {
-                completion(.failure(error!))
+                completion(.failure(.unhandledError(message: "yep")))
                 print(error?.localizedDescription)
                 return
             }
@@ -50,15 +48,16 @@ class ServiceLayer {
             switch response.statusCode {
             case 200...299:
                 do {
-                     let responseObject = try JSONDecoder().decode(T.self, from: data)
+                    let parseResponse = try apiRequest.parseResponse(data: data, response: response)
+                    // let responseObject = try JSONDecoder().decode(T.self, from: data)
                      DispatchQueue.main.async {
-                        completion(.success(responseObject))
+                        completion(.success(parseResponse))
                     }
                 } catch {
-                    completion(.failure(error))
+                    completion(.failure(.unhandledError(message: "yep")))
                     }
             default:
-                completion(.failure(error!))
+                completion(.failure(.unhandledError(message: "yep")))
                 }
         }
         

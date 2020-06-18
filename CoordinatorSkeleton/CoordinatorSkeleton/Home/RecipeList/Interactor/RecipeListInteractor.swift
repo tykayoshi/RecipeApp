@@ -9,16 +9,29 @@
 import Foundation
 
 
-class RecipeListInteractor: RecipeListInteractorProtocol {    
-    func getRecipeList(completion: @escaping (Result<[RecipeAPI], Error>) -> Void) {
-        ServiceLayer.request(router: Router.getRecipes, data: nil) { (result: Result<[RecipeAPI], Error>) in
-                switch result {
-                case .success:
-                    completion(result)
-                case .failure:
-                    completion(result)
-                }
-        }
-
+class RecipeListInteractor: RecipeListInteractorProtocol {
+    
+    func getRecipeList(completion: @escaping (Result<[RecipeAPI], APIError>) -> Void) {
+//        ServiceLayer.request(router: Router.getRecipes, data: nil) { (result: Result<[RecipeAPI], Error>) in
+//                switch result {
+//                case .success:
+//                    completion(result)
+//                case .failure:
+//                    completion(result)
+//                }
+//        }
+        
+//        ServiceLayer.request(apiRequest: GetRecipeRequest(), router: , requestObject: "") { (result: Result<[RecipeAPI], Error>) in
+//                switch result {
+//                case .success:
+//                    completion(result)
+//                case .failure:
+//                    completion(result)
+//                }
+//        }
+        
+        ServiceLayer.request(apiRequest: GetRecipeRequest(), router: .getRecipes, requestObject: "") { (result: Result<[RecipeAPI], APIError>) in
+             completion(result)
+            }
     }
 }
