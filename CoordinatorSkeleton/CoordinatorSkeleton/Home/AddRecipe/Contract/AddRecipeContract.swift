@@ -20,7 +20,7 @@ protocol AddRecipePresenterProtocol {
 }
 
 protocol AddRecipeInteractorProtocol {
-    func postRecipe(using recipe: RecipeAPI, completion: @escaping (Result<RecipeAPI, Error>) -> Void)
+    func postRecipe(using recipe: RecipeAPI, completion: @escaping (Result<RecipeAPI, APIError>) -> Void)
 }
 
 protocol AddRecipeViewProtocol {
