@@ -68,18 +68,18 @@ class AddRecipeViewController: UIViewController{
     }
     
     @IBAction func addRecipeButtonPressed(_ sender: Any) {
-//        let alert = UIAlertController(title: "Confirm Add Recipe", message: "Do you wish to add this recipe?", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
-//        self.present(alert, animated: true)
-//
-//        let recipeName = recipeNameTextField.text
-//        let recipeType = recipeTypeTextField.text
-//        let time = timeToCookTextField.text
-//        let person = peopleTextField.text
-//        let difficulty = difficultyTextField.text
+        let alert = UIAlertController(title: "Confirm Add Recipe", message: "Do you wish to add this recipe?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
+        self.present(alert, animated: true)
+
+        let recipeName = recipeNameTextField.text
+        let recipeType = recipeTypeTextField.text
+        let time = timeToCookTextField.text
+        let person = peopleTextField.text
+        let difficulty = difficultyTextField.text
         
-        presenter.postRecipe()
+        /* Do not use presenter.postRecipe() here yet*/
     }
     
     func textFieldShouldClear(_ textField: UITextField) {
