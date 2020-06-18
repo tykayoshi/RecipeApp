@@ -8,11 +8,14 @@
 
 import Foundation
 
-class AddRecipePresenter: AddRecipePresenterProtocol{
-    //weak
+class AddRecipePresenter: AddRecipePresenterProtocol {
+    
     var view: AddRecipeViewProtocol?
     var interactor: AddRecipeInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
+    
+    var ingredients = [String]()
+    var steps = [String]()
     
     init(view: AddRecipeViewProtocol,
          interactor: AddRecipeInteractorProtocol,
@@ -26,4 +29,55 @@ class AddRecipePresenter: AddRecipePresenterProtocol{
     func cancelButtonPressed(){
         coordinator?.popBackScreen(showTabBar: false)
     }
+    
+    func ingAddButtonPressed(ingName: String){
+        ingredients.append(ingName)
+        view?.getIngredientsList(ingList: ingredients)
+        print(ingredients)
+    }
+    
+    func removeIngredient(ingName: String) {
+        if let index = ingredients.index(of: ingName) {
+            ingredients.remove(at: index)
+            view?.getIngredientsList(ingList: ingredients)
+            print("ing remove")
+        }
+    }
+    
+    func removeStep(step: String) {
+        if let index = steps.index(of: step) {
+            steps.remove(at: index)
+            view?.getStepsList(stepsList: steps)
+            print(steps)
+        }
+    }
+    
+    func stepAddButtonPressed(step: String){
+        steps.append(step)
+        view?.getStepsList(stepsList: steps)
+        print (steps)
+    }
+    
+    func addRecipeButtonPressed() {
+        print("add recipe pressed presenter")
+    }
+    
+    
+    
+    /* DONT TOUCH! */
+    func postRecipe() {
+        let recipe = RecipeAPI(userId: 1, recipeId: "lalala", name: "TestRecipe", ingredients: ["Test1" : "Test11"], steps: ["TestStep"], timeToCook: 1, difficulty: "hard", cuisine: "Test", image: "hello", people: 1)
+        
+        interactor.postRecipe(using: recipe) { (result) in
+            switch result {
+            case .success(let recipe):
+                print("succes")
+            case .failure(let error):
+                print("error")
+            }
+        }
+
+    }
+    
+    
 }

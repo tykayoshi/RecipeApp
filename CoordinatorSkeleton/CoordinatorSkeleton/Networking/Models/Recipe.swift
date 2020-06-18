@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Home Page
 struct Recipe: Codable {
     var name: String
     var timeToCook: String
@@ -18,20 +19,15 @@ struct Recipe: Codable {
     var ingredients: [String]
 }
 
-
-struct Recipes: Codable {
-    var recipes: [RecipeAPI]
-}
-
 struct RecipeAPI: Codable {
     var userId: Int
-    var recipeId: Int
+    var recipeId: String
     var name: String
     var ingredients: [String: String]
     var steps: [String]
-    var timeToCook: Double
-    var difficulty: Int
+    var timeToCook: Int
+    var difficulty: String
     var cuisine: String
     var image: String
-    var people: String
+    var people: Int
 }

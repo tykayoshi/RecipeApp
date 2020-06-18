@@ -10,13 +10,20 @@ import Foundation
 
 protocol AddRecipePresenterProtocol {
     func cancelButtonPressed()
+    func ingAddButtonPressed(ingName: String)
+    func removeIngredient(ingName: String)
+    func stepAddButtonPressed(step: String)
+    func removeStep(step: String)
+    func addRecipeButtonPressed()
+    func postRecipe()
     
 }
 
 protocol AddRecipeInteractorProtocol {
-    
+    func postRecipe(using recipe: RecipeAPI, completion: @escaping (Result<RecipeAPI, Error>) -> Void)
 }
 
 protocol AddRecipeViewProtocol {
-    
+    func getIngredientsList(ingList: [String])
+    func getStepsList(stepsList: [String])
 }
