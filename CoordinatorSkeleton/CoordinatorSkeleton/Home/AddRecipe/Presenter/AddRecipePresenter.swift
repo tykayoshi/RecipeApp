@@ -38,9 +38,9 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
     
     func removeIngredient(ingName: String) {
         ingredients.removeValue(forKey: ingName)
+        print(ingredients)
         view?.getIngredientsList(ingList: ingredients)
         print("ing remove")
-        
         
     }
     

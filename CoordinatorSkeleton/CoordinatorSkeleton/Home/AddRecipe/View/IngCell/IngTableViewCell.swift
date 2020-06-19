@@ -23,6 +23,7 @@ class IngTableViewCell: UITableViewCell {
     }
     
     @IBAction func removeIngButtonPressed(_ sender: Any) {
+        print(ingLabel.text)
         guard let ingName = ingLabel.text else {
             return
         }
