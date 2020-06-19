@@ -75,22 +75,23 @@ class AddRecipeViewController: UIViewController{
     @IBAction func addRecipeButtonPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Confirm Add Recipe", message: "Do you wish to add this recipe?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nill)
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: {action in self.confirmAddRecipe()}))
         self.present(alert, animated: true)
         
        
     }
     
     func confirmAddRecipe() {
-        let recipeName = recipeNameTextField.text
-        let recipeType = recipeTypeTextField.text
-        let time = timeToCookTextField.text
-        let person = peopleTextField.text
-        let difficulty = difficultyTextField.text
+        let recipeName = recipeNameTextField.text!
+        let recipeType = recipeTypeTextField.text!
+        let time = Int(timeToCookTextField.text!)!
+        let person = Int(peopleTextField.text!)!
+        let difficulty = difficultyTextField.text!
         
-//        let recipe = RecipeAPI(userId: 1, recipeId: "", name: recipeName, ingredients: <#T##[String : String]#>, steps: <#T##[String]#>, timeToCook: <#T##Int#>, difficulty: <#T##String#>, cuisine: <#T##String#>, image: <#T##String#>, people: <#T##Int#>)
+        let recipe = RecipeAPI(userId: 1, recipeId: "", name: recipeName, ingredients: ingList, steps: stepsList, timeToCook: time, difficulty: difficulty, cuisine: recipeType, image: "", people: person)
         
-        presenter.postRecipe()
+        print("confirmation working")
+        presenter.postRecipe(recipe: recipe)
     }
     
     func textFieldShouldClear(_ textField: UITextField) {

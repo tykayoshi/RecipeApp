@@ -63,9 +63,7 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
     }
     
     
-    func postRecipe() {
-        let recipe = RecipeAPI(userId: 1, recipeId: "lalala", name: "TestRecipe", ingredients: ["Test1" : "Test11"], steps: ["TestStep"], timeToCook: 1, difficulty: "hard", cuisine: "Test", image: "hello", people: 1)
-        
+    func postRecipe(recipe: RecipeAPI) {        
         interactor.postRecipe(using: recipe) { (result) in
             switch result {
             case .success(let recipe):
