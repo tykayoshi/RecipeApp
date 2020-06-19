@@ -14,7 +14,7 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
     var interactor: AddRecipeInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
     
-    var ingredients = [String]()
+    var ingredients = [String:String]()
     var steps = [String]()
     
     init(view: AddRecipeViewProtocol,
@@ -30,18 +30,18 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
         coordinator?.popBackScreen(showTabBar: false)
     }
     
-    func ingAddButtonPressed(ingName: String){
-        ingredients.append(ingName)
+    func ingAddButtonPressed(ingName: String, ingAmount: String){
+        ingredients[ingName] = ingAmount
         view?.getIngredientsList(ingList: ingredients)
         print(ingredients)
     }
     
     func removeIngredient(ingName: String) {
-        if let index = ingredients.index(of: ingName) {
-            ingredients.remove(at: index)
-            view?.getIngredientsList(ingList: ingredients)
-            print("ing remove")
-        }
+        ingredients.removeValue(forKey: ingName)
+        view?.getIngredientsList(ingList: ingredients)
+        print("ing remove")
+        
+        
     }
     
     func removeStep(step: String) {

@@ -12,8 +12,9 @@ import UIKit
 class AddRecipeViewController: UIViewController{
     var presenter: AddRecipePresenterProtocol!
     
-    var ingList = [String]()
+    var ingList: [String:String] = [:]
     var stepsList = [String]()
+    var indicies = [String]()
     
     @IBOutlet weak var recipeCardView: UIView!
     @IBOutlet weak var recipeInfoView: UIView!
@@ -30,6 +31,8 @@ class AddRecipeViewController: UIViewController{
     @IBOutlet weak var timeToCookTextField: UITextField!
     @IBOutlet weak var peopleTextField: UITextField!
     @IBOutlet weak var difficultyTextField: UITextField!
+    @IBOutlet weak var ingAmountTextField: RATextField!
+    
     
     
     override func viewDidLoad() {
@@ -53,8 +56,9 @@ class AddRecipeViewController: UIViewController{
     
     @IBAction func ingAddButtonPressed(_ sender: Any) {
         let ingName = ingTextField.text
+        let ingAmount = ingAmountTextField.text
         if (ingName?.isEmpty == false){
-            presenter.ingAddButtonPressed(ingName: ingName!)
+            presenter.ingAddButtonPressed(ingName: ingName!, ingAmount: ingAmount!)
             textFieldShouldClear(ingTextField)
         }
     }
@@ -68,28 +72,34 @@ class AddRecipeViewController: UIViewController{
     }
     
     @IBAction func addRecipeButtonPressed(_ sender: Any) {
-//        let alert = UIAlertController(title: "Confirm Add Recipe", message: "Do you wish to add this recipe?", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
-//        self.present(alert, animated: true)
-//
-//        let recipeName = recipeNameTextField.text
-//        let recipeType = recipeTypeTextField.text
-//        let time = timeToCookTextField.text
-//        let person = peopleTextField.text
-//        let difficulty = difficultyTextField.text
+        let alert = UIAlertController(title: "Confirm Add Recipe", message: "Do you wish to add this recipe?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+//        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nill)
+        self.present(alert, animated: true)
         
-        /* Do not use presenter.postRecipe() here yet*/
+       
+    }
+    
+    func confirmAddRecipe() {
+        let recipeName = recipeNameTextField.text
+        let recipeType = recipeTypeTextField.text
+        let time = timeToCookTextField.text
+        let person = peopleTextField.text
+        let difficulty = difficultyTextField.text
+        
+//        let recipe = RecipeAPI(userId: 1, recipeId: "", name: recipeName, ingredients: <#T##[String : String]#>, steps: <#T##[String]#>, timeToCook: <#T##Int#>, difficulty: <#T##String#>, cuisine: <#T##String#>, image: <#T##String#>, people: <#T##Int#>)
+        
         presenter.postRecipe()
     }
     
     func textFieldShouldClear(_ textField: UITextField) {
       textField.text!.removeAll()
     }
+    
 }
 
 extension AddRecipeViewController: AddRecipeViewProtocol{
-    func getIngredientsList(ingList: [String]){
+    func getIngredientsList(ingList: [String:String]){
         self.ingList = ingList
         ingTableView.reloadData()
     }
@@ -118,7 +128,8 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if (tableView == self.ingTableView) {
             let ingCell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngTableViewCell.self), for: indexPath) as! IngTableViewCell
-            ingCell.ingLabel.text = ingList[indexPath.row]
+//            ingCell.ingLabel.text = ingList[indexPath.row]
+            ingCell.ingLabel.text = (ingList[indicies[indexPath.row]]!) + "  " +  indicies[indexPath.row]
             ingCell.delegate = self
             return ingCell
         }
