@@ -126,13 +126,12 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //ingredient
-        let amount = Array(ingList.keys)
+        let ingredient = Array(ingList.keys)
         
         if (tableView == self.ingTableView) {
             let ingCell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngTableViewCell.self), for: indexPath) as! IngTableViewCell
-//            ingCell.ingLabel.text = ingList[indexPath.row]
-            ingCell.ingLabel.text = ingList[amount[indexPath.row]]! + " " + amount[indexPath.row]
+            ingCell.ingAmountLbl.text = ingList[ingredient[indexPath.row]]!
+            ingCell.ingLable.text = ingredient[indexPath.row]
             ingCell.delegate = self
             return ingCell
         }
