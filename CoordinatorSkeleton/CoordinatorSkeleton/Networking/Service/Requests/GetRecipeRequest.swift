@@ -35,7 +35,7 @@ class GetRecipeRequest: APIRequest {
     
     func parseResponse(data: Data, response: URLResponse?) throws -> [RecipeAPI] {
         let decoder = JSONDecoder()
-         let data = try decoder.decode([RecipeAPI].self, from: data)
-         return data
+        let data = try decoder.decode([RecipeAPI].self, from: data)
+        return data
     }
 }

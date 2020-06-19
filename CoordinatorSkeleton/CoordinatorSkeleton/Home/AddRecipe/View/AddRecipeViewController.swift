@@ -87,8 +87,8 @@ class AddRecipeViewController: UIViewController{
         let time = Int(timeToCookTextField.text!)!
         let person = Int(peopleTextField.text!)!
         let difficulty = difficultyTextField.text!
-        
-        let recipe = RecipeAPI(userId: 1, recipeId: "", name: recipeName, ingredients: ingList, steps: stepsList, timeToCook: time, difficulty: difficulty, cuisine: recipeType, image: "", people: person)
+
+        let recipe = RecipeAPI(userId: 1, recipeId: "", name: recipeName, ingredients: ingList, steps: stepsList, timeToCook: time, difficulty: difficulty, cuisine: recipeType, image: "image", people: person)
         
         print("confirmation working")
         presenter.postRecipe(recipe: recipe)

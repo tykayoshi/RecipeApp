@@ -72,8 +72,5 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
                 print("error")
             }
         }
-
     }
-    
-    
 }
