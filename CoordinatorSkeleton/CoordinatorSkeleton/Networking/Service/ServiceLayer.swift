@@ -25,6 +25,7 @@ class ServiceLayer {
     
     class func request<T: APIRequest>(apiRequest: T, router: T.RequestRouter, requestObject: T.RequestObject, completion: @escaping (Result<T.ResponseDataType, APIError>) -> ()) {
         
+        
         var urlRequest = try! apiRequest.makeRequest(from: router, requestObject: requestObject)
 
         let session = URLSession(configuration: .default)

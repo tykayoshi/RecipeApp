@@ -25,6 +25,7 @@ class GetRecipeRequest: APIRequest {
         guard let url = components.url else {
             fatalError()
         }
+        
         var urlRequest = URLRequest(url: url, timeoutInterval: 1)
         urlRequest.httpMethod = router.method
         
