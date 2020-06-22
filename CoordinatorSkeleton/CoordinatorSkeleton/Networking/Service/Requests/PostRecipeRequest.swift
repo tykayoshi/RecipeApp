@@ -28,6 +28,7 @@ class PostRecipeRequest: APIRequest {
         var urlRequest = URLRequest(url: url, timeoutInterval: 1)
         urlRequest.httpMethod = router.method
         
+        //Posts object in the body
         let encoder = JSONEncoder()
         let jsonData = try! encoder.encode(requestObject)
         urlRequest.httpBody = jsonData

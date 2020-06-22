@@ -49,18 +49,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         recipeTypeLbl.text = recipe?.cuisine
         timeLbl.text = String(recipe!.timeToCook) + " hrs"
         personLbl.text = String(recipe!.people)
-        
-        if (String(recipe!.difficulty) == "1") {
-            difficultyLbl.text = "Easy"
-        }
-        
-        if (String(recipe!.difficulty) == "2") {
-            difficultyLbl.text = "Medium"
-        }
-        
-        if (String(recipe!.difficulty) == "3") {
-            difficultyLbl.text = "Hard"
-        }
+        difficultyLbl.text = recipe?.difficulty
         
         indicies = recipe!.ingredients.keys.sorted()
         

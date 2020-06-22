@@ -12,8 +12,9 @@ import UIKit
 class AddRecipeViewController: UIViewController{
     var presenter: AddRecipePresenterProtocol!
     
-    var ingList = [String]()
+    var ingList: [String:String] = [:]
     var stepsList = [String]()
+    var indicies = [String]()
     
     @IBOutlet weak var recipeCardView: UIView!
     @IBOutlet weak var recipeInfoView: UIView!
@@ -30,6 +31,9 @@ class AddRecipeViewController: UIViewController{
     @IBOutlet weak var timeToCookTextField: UITextField!
     @IBOutlet weak var peopleTextField: UITextField!
     @IBOutlet weak var difficultyTextField: UITextField!
+    @IBOutlet weak var ingAmountTextField: RATextField!
+    
+    @IBOutlet weak var addRecipeButton: RAButton!
     
     
     override func viewDidLoad() {
@@ -45,7 +49,17 @@ class AddRecipeViewController: UIViewController{
         let stepsNib = UINib(nibName: String(describing: StepsTableViewCell.self), bundle: nil)
         stepsTableView?.register(stepsNib, forCellReuseIdentifier: String(describing: StepsTableViewCell.self))
         
+        addRecipeButton.isEnabled = false
+        addRecipeButton.alpha = 0.5
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
     }
+    
+    @objc func dismissKeyboard() {
+           view.endEditing(true)
+       }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         presenter.cancelButtonPressed()
@@ -53,9 +67,11 @@ class AddRecipeViewController: UIViewController{
     
     @IBAction func ingAddButtonPressed(_ sender: Any) {
         let ingName = ingTextField.text
+        let ingAmount = ingAmountTextField.text
         if (ingName?.isEmpty == false){
-            presenter.ingAddButtonPressed(ingName: ingName!)
+            presenter.ingAddButtonPressed(ingName: ingName!, ingAmount: ingAmount!)
             textFieldShouldClear(ingTextField)
+            textFieldShouldClear(ingAmountTextField)
         }
     }
     
@@ -68,28 +84,47 @@ class AddRecipeViewController: UIViewController{
     }
     
     @IBAction func addRecipeButtonPressed(_ sender: Any) {
-//        let alert = UIAlertController(title: "Confirm Add Recipe", message: "Do you wish to add this recipe?", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
-//        self.present(alert, animated: true)
-//
-//        let recipeName = recipeNameTextField.text
-//        let recipeType = recipeTypeTextField.text
-//        let time = timeToCookTextField.text
-//        let person = peopleTextField.text
-//        let difficulty = difficultyTextField.text
+        let alert = UIAlertController(title: "Confirm Add Recipe", message: "Do you wish to add this recipe?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: {action in self.confirmAddRecipe()}))
+        self.present(alert, animated: true)
         
-        /* Do not use presenter.postRecipe() here yet*/
-        presenter.postRecipe()
+       
+    }
+    
+    func confirmAddRecipe() {
+        let recipeName = recipeNameTextField.text!
+        let recipeType = recipeTypeTextField.text!
+        let time = Int(timeToCookTextField.text!)!
+        let person = Int(peopleTextField.text!)!
+        let difficulty = difficultyTextField.text!
+
+        let recipe = RecipeAPI(userId: 1, recipeId: "", name: recipeName, ingredients: ingList, steps: stepsList, timeToCook: time, difficulty: difficulty, cuisine: recipeType, image: "image", people: person)
+        
+        presenter.postRecipe(recipe: recipe)
+        presenter.cancelButtonPressed()
     }
     
     func textFieldShouldClear(_ textField: UITextField) {
       textField.text!.removeAll()
     }
+    
+}
+
+extension AddRecipeViewController: UITextFieldDelegate{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let recipeName = recipeNameTextField.text,
+        let recipeType = recipeTypeTextField.text,
+        let time = Int(timeToCookTextField.text!),
+        let person = Int(peopleTextField.text!),
+        let difficulty = difficultyTextField.text else {return}
+        
+        presenter.editingEndedWithAddRecipe(recipeName: recipeName, recipeType: recipeType, time: time, person: person, difficulty: difficulty)
+    }
 }
 
 extension AddRecipeViewController: AddRecipeViewProtocol{
-    func getIngredientsList(ingList: [String]){
+    func getIngredientsList(ingList: [String:String]){
         self.ingList = ingList
         ingTableView.reloadData()
     }
@@ -98,6 +133,29 @@ extension AddRecipeViewController: AddRecipeViewProtocol{
         self.stepsList = stepsList
         stepsTableView.reloadData()
     }
+    
+    func isAddRecipeButtonEnabled(isEnabled: Bool) {
+        if isEnabled{
+            addRecipeButton.isEnabled = isEnabled
+            addRecipeButton.alpha = 1
+        } else {
+            addRecipeButton.isEnabled = isEnabled
+            addRecipeButton.alpha = 0.5
+        }
+    }
+    
+    func successAlert() {
+        let alert = UIAlertController(title: "Success", message: "Your recipe has been successfully added", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func failureAlert() {
+           let alert = UIAlertController(title: "Failure", message: "Your recipe has not been added", preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+           self.present(alert, animated: true)
+       }
+    
 }
 
 extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -115,10 +173,12 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let ingredient = Array(ingList.keys)
         
         if (tableView == self.ingTableView) {
             let ingCell = tableView.dequeueReusableCell(withIdentifier: String(describing: IngTableViewCell.self), for: indexPath) as! IngTableViewCell
-            ingCell.ingLabel.text = ingList[indexPath.row]
+            ingCell.ingAmountLbl.text = ingList[ingredient[indexPath.row]]!
+            ingCell.ingLable.text = ingredient[indexPath.row]
             ingCell.delegate = self
             return ingCell
         }
@@ -137,13 +197,6 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if (tableView == self.stepsTableView) {
-//            return 115
-//        }
-//        return 44
-//    }
 }
 
 extension AddRecipeViewController: IngCellProtocol{

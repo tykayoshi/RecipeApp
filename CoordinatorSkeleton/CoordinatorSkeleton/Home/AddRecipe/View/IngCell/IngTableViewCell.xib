@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -34,18 +34,28 @@
                             <action selector="removeIngButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SKx-vc-Oug"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jos-d2-BRx">
+                        <rect key="frame" x="68" y="12" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="P3T-qe-nUg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="B43-KO-UOR"/>
+                    <constraint firstItem="Jos-d2-BRx" firstAttribute="leading" secondItem="Xeg-pH-tZc" secondAttribute="trailing" constant="10" id="BiV-1G-3A4"/>
                     <constraint firstItem="Xeg-pH-tZc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Ode-6r-P0F"/>
+                    <constraint firstItem="Jos-d2-BRx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="RVZ-t3-z9M"/>
                     <constraint firstAttribute="bottom" secondItem="Xeg-pH-tZc" secondAttribute="bottom" constant="11" id="bT0-gx-4ft"/>
                     <constraint firstItem="Xeg-pH-tZc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hbQ-XM-xt3"/>
+                    <constraint firstAttribute="bottom" secondItem="Jos-d2-BRx" secondAttribute="bottom" constant="11" id="jOJ-e7-8ns"/>
                     <constraint firstAttribute="trailing" secondItem="P3T-qe-nUg" secondAttribute="trailing" constant="5" id="pBX-4A-XCw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="ingLabel" destination="Xeg-pH-tZc" id="d4z-Ss-Tu9"/>
+                <outlet property="ingAmountLbl" destination="Xeg-pH-tZc" id="ov3-Cn-SNg"/>
+                <outlet property="ingLable" destination="Jos-d2-BRx" id="SW7-5N-hV8"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
         </tableViewCell>
