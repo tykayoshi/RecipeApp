@@ -14,7 +14,7 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
     var interactor: AddRecipeInteractorProtocol
     weak var coordinator: HomeCoordinatorProtocol?
     
-    var ingredients = [String]()
+    var ingredients = [String:String]()
     var steps = [String]()
     
     init(view: AddRecipeViewProtocol,
@@ -30,18 +30,18 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
         coordinator?.popBackScreen(showTabBar: false)
     }
     
-    func ingAddButtonPressed(ingName: String){
-        ingredients.append(ingName)
+    func ingAddButtonPressed(ingName: String, ingAmount: String){
+        ingredients[ingName] = ingAmount
         view?.getIngredientsList(ingList: ingredients)
         print(ingredients)
     }
     
     func removeIngredient(ingName: String) {
-        if let index = ingredients.index(of: ingName) {
-            ingredients.remove(at: index)
-            view?.getIngredientsList(ingList: ingredients)
-            print("ing remove")
-        }
+        ingredients.removeValue(forKey: ingName)
+        print(ingredients)
+        view?.getIngredientsList(ingList: ingredients)
+        print("ing remove")
+        
     }
     
     func removeStep(step: String) {
@@ -63,19 +63,24 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
     }
     
     
-    func postRecipe() {
-        let recipe = RecipeAPI(userId: 1, recipeId: "lalala", name: "TestRecipe", ingredients: ["Test1" : "Test11"], steps: ["TestStep"], timeToCook: 1, difficulty: "hard", cuisine: "Test", image: "hello", people: 1)
-        
+    func postRecipe(recipe: RecipeAPI) {
         interactor.postRecipe(using: recipe) { (result) in
             switch result {
             case .success(let recipe):
-                print("succes")
+                print("success")
+                self.view?.successAlert()
             case .failure(let error):
                 print("error")
+                self.view?.failureAlert()
             }
         }
-
     }
     
-    
+    func editingEndedWithAddRecipe(recipeName: String, recipeType: String, time: Int, person: Int, difficulty: String){
+        if recipeName == "" || recipeType == "" || difficulty == "" || steps.count == 0 || ingredients.isEmpty == true {
+            view?.isAddRecipeButtonEnabled(isEnabled: false)
+        } else {
+            view?.isAddRecipeButtonEnabled(isEnabled: true)
+        }
+    }
 }

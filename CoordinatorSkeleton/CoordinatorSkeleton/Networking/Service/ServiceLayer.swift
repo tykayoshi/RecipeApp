@@ -55,7 +55,7 @@ class ServiceLayer {
                         completion(.success(parseResponse))
                     }
                 } catch {
-                    completion(.failure(.unhandledError(message: "yep")))
+                    completion(.failure(.unhandledError(message: "ILKAY: \(error.localizedDescription)")))
                     }
             default:
                 completion(.failure(.unhandledError(message: "yep")))

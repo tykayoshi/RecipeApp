@@ -13,8 +13,11 @@ protocol IngCellProtocol: class {
 }
 
 class IngTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var ingLabel: UILabel!
+    @IBOutlet weak var ingAmountLbl: UILabel!
+    @IBOutlet weak var ingLable: UILabel!
+    
+    
+    
     weak var delegate: IngCellProtocol?
     
     override func awakeFromNib() {
@@ -23,7 +26,7 @@ class IngTableViewCell: UITableViewCell {
     }
     
     @IBAction func removeIngButtonPressed(_ sender: Any) {
-        guard let ingName = ingLabel.text else {
+        guard let ingName = ingLable.text else {
             return
         }
         delegate?.removeIngredient(ingName: ingName)
