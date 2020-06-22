@@ -73,4 +73,12 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
             }
         }
     }
+    
+    func editingEndedWithAddRecipe(recipeName: String, recipeType: String, time: Int, person: Int, difficulty: String){
+        if recipeName == "" || recipeType == "" || difficulty == "" || steps.count == 0 || ingredients.isEmpty == true {
+            view?.isAddRecipeButtonEnabled(isEnabled: false)
+        } else {
+            view?.isAddRecipeButtonEnabled(isEnabled: true)
+        }
+    }
 }

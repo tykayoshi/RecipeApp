@@ -16,7 +16,7 @@ protocol AddRecipePresenterProtocol {
     func removeStep(step: String)
     func addRecipeButtonPressed()
     func postRecipe(recipe: RecipeAPI)
-    
+    func editingEndedWithAddRecipe(recipeName: String, recipeType: String, time: Int, person: Int, difficulty: String)
 }
 
 protocol AddRecipeInteractorProtocol {
@@ -26,4 +26,5 @@ protocol AddRecipeInteractorProtocol {
 protocol AddRecipeViewProtocol {
     func getIngredientsList(ingList: [String:String])
     func getStepsList(stepsList: [String])
+    func isAddRecipeButtonEnabled(isEnabled: Bool)
 }

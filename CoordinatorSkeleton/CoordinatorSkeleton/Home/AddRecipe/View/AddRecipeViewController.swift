@@ -33,6 +33,7 @@ class AddRecipeViewController: UIViewController{
     @IBOutlet weak var difficultyTextField: UITextField!
     @IBOutlet weak var ingAmountTextField: RATextField!
     
+    @IBOutlet weak var addRecipeButton: RAButton!
     
     
     override func viewDidLoad() {
@@ -47,6 +48,11 @@ class AddRecipeViewController: UIViewController{
         
         let stepsNib = UINib(nibName: String(describing: StepsTableViewCell.self), bundle: nil)
         stepsTableView?.register(stepsNib, forCellReuseIdentifier: String(describing: StepsTableViewCell.self))
+        
+        addRecipeButton.isEnabled = false
+        addRecipeButton.alpha = 0.5
+        
+        
         
     }
     
@@ -100,6 +106,18 @@ class AddRecipeViewController: UIViewController{
     
 }
 
+extension AddRecipeViewController: UITextFieldDelegate{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let recipeName = recipeNameTextField.text,
+        let recipeType = recipeTypeTextField.text,
+        let time = Int(timeToCookTextField.text!),
+        let person = Int(peopleTextField.text!),
+        let difficulty = difficultyTextField.text else {return}
+        
+        presenter.editingEndedWithAddRecipe(recipeName: recipeName, recipeType: recipeType, time: time, person: person, difficulty: difficulty)
+    }
+}
+
 extension AddRecipeViewController: AddRecipeViewProtocol{
     func getIngredientsList(ingList: [String:String]){
         self.ingList = ingList
@@ -109,6 +127,17 @@ extension AddRecipeViewController: AddRecipeViewProtocol{
     func getStepsList(stepsList: [String]){
         self.stepsList = stepsList
         stepsTableView.reloadData()
+    }
+    
+    func isAddRecipeButtonEnabled(isEnabled: Bool) {
+        if isEnabled{
+            addRecipeButton.isEnabled = isEnabled
+            addRecipeButton.alpha = 1
+        } else {
+            addRecipeButton.isEnabled = isEnabled
+            addRecipeButton.alpha = 0.5
+        }
+        
     }
 }
 
