@@ -52,9 +52,14 @@ class AddRecipeViewController: UIViewController{
         addRecipeButton.isEnabled = false
         addRecipeButton.alpha = 0.5
         
-        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         
     }
+    
+    @objc func dismissKeyboard() {
+           view.endEditing(true)
+       }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         presenter.cancelButtonPressed()
