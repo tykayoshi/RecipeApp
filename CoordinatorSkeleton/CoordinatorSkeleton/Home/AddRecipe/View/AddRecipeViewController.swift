@@ -96,8 +96,8 @@ class AddRecipeViewController: UIViewController{
 
         let recipe = RecipeAPI(userId: 1, recipeId: "", name: recipeName, ingredients: ingList, steps: stepsList, timeToCook: time, difficulty: difficulty, cuisine: recipeType, image: "image", people: person)
         
-        print("confirmation working")
         presenter.postRecipe(recipe: recipe)
+        presenter.cancelButtonPressed()
     }
     
     func textFieldShouldClear(_ textField: UITextField) {
@@ -137,8 +137,20 @@ extension AddRecipeViewController: AddRecipeViewProtocol{
             addRecipeButton.isEnabled = isEnabled
             addRecipeButton.alpha = 0.5
         }
-        
     }
+    
+    func successAlert() {
+        let alert = UIAlertController(title: "Success", message: "Your recipe has been successfully added", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func failureAlert() {
+           let alert = UIAlertController(title: "Failure", message: "Your recipe has not been added", preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+           self.present(alert, animated: true)
+       }
+    
 }
 
 extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -180,13 +192,6 @@ extension AddRecipeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if (tableView == self.stepsTableView) {
-//            return 115
-//        }
-//        return 44
-//    }
 }
 
 extension AddRecipeViewController: IngCellProtocol{

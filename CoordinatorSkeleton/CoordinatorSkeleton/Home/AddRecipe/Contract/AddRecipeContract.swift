@@ -27,4 +27,6 @@ protocol AddRecipeViewProtocol {
     func getIngredientsList(ingList: [String:String])
     func getStepsList(stepsList: [String])
     func isAddRecipeButtonEnabled(isEnabled: Bool)
+    func successAlert()
+    func failureAlert()
 }

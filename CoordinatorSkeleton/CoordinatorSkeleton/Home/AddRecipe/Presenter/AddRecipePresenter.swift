@@ -63,13 +63,15 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
     }
     
     
-    func postRecipe(recipe: RecipeAPI) {        
+    func postRecipe(recipe: RecipeAPI) {
         interactor.postRecipe(using: recipe) { (result) in
             switch result {
             case .success(let recipe):
-                print("succes")
+                print("success")
+                self.view?.successAlert()
             case .failure(let error):
                 print("error")
+                self.view?.failureAlert()
             }
         }
     }
