@@ -15,6 +15,7 @@
 		1B29780B245725F200C2CC23 /* RATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780A245725F200C2CC23 /* RATextField.swift */; };
 		1B29781024572DC800C2CC23 /* RegisterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B29780E24572DC800C2CC23 /* RegisterName.storyboard */; };
 		1B29781124572DC800C2CC23 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */; };
+		1B61272624A20E0E0074BD45 /* GetProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61272524A20E0E0074BD45 /* GetProfileRequest.swift */; };
 		1B7A19B4247FDC3600CE0152 /* AddRecipeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19B3247FDC3600CE0152 /* AddRecipeContract.swift */; };
 		1B7A19B6247FDC5800CE0152 /* AddRecipeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19B5247FDC5800CE0152 /* AddRecipeInteractor.swift */; };
 		1B7A19B8247FDC6700CE0152 /* AddRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A19B7247FDC6700CE0152 /* AddRecipePresenter.swift */; };
@@ -133,6 +134,7 @@
 		1B29780A245725F200C2CC23 /* RATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RATextField.swift; sourceTree = "<group>"; };
 		1B29780E24572DC800C2CC23 /* RegisterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterName.storyboard; sourceTree = "<group>"; };
 		1B29780F24572DC800C2CC23 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		1B61272524A20E0E0074BD45 /* GetProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileRequest.swift; sourceTree = "<group>"; };
 		1B7A19B3247FDC3600CE0152 /* AddRecipeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeContract.swift; sourceTree = "<group>"; };
 		1B7A19B5247FDC5800CE0152 /* AddRecipeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeInteractor.swift; sourceTree = "<group>"; };
 		1B7A19B7247FDC6700CE0152 /* AddRecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipePresenter.swift; sourceTree = "<group>"; };
@@ -794,6 +796,7 @@
 			children = (
 				C4B02997249BE5F6004E78D3 /* GetRecipeRequest.swift */,
 				C4B02999249BE6A1004E78D3 /* PostRecipeRequest.swift */,
+				1B61272524A20E0E0074BD45 /* GetProfileRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -1269,6 +1272,7 @@
 				C4DFE93B232FD98F001EEB3D /* HomeInteractor.swift in Sources */,
 				C4C89D4B2456FCC30063D721 /* RAButton.swift in Sources */,
 				C3F07D35246C466900794371 /* RecipeListContract.swift in Sources */,
+				1B61272624A20E0E0074BD45 /* GetProfileRequest.swift in Sources */,
 				C3F41DA7245996D700B9EC46 /* DietaryRequirementsViewController.swift in Sources */,
 				C44C5C41244731EF003B7825 /* StoryboardScenes.swift in Sources */,
 				1B7A19B8247FDC6700CE0152 /* AddRecipePresenter.swift in Sources */,

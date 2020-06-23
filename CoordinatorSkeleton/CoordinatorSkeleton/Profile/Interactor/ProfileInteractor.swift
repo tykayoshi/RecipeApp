@@ -9,15 +9,10 @@
 import Foundation
 
 class ProfileInteractor: ProfileInteractorProtocol {
-    func getProfile(completion: @escaping (Result<User, Error>) -> Void) {
-//        ServiceLayer.request(router: Router.getProfile, data: nil) { (result: Result<User, Error>) in
-//                switch result {
-//                case .success:
-//                    completion(result)
-//                case .failure:
-//                    completion(result)
-//                }
-//        }
+    func getProfile(completion: @escaping (Result<User, APIError>) -> Void) {
+        ServiceLayer.request(apiRequest: GetProfileRequest(), router: .getProfile, requestObject: "") { (result: Result<User, APIError>) in
+            completion(result)
+        }
 
     }
 }
