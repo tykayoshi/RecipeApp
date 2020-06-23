@@ -22,5 +22,5 @@ protocol ProfileViewProtocol: class {
     func getProfile(result: User) 
 }
 protocol ProfileInteractorProtocol: class {
-    func getProfile(completion: @escaping (Result<User, Error>) -> Void)
+    func getProfile(completion: @escaping (Result<User, APIError>) -> Void)
 }
