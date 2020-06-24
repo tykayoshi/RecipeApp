@@ -14,8 +14,6 @@ enum SettingSections {
 }
 
 enum SettingOption {
-    case about
-    case terms
     case about2
     case terms2
 }
@@ -33,7 +31,7 @@ class SettingsViewController: UIViewController {
         let settingsNib = UINib(nibName: String(describing: SettingsTableViewCell.self), bundle: nil)
         tableView?.register(settingsNib, forCellReuseIdentifier: String(describing: SettingsTableViewCell.self))
         
-        options = [.about, .terms, .about2, .terms2]
+        options = [.about2, .terms2]
         
         sections = [.setting(rows: options)]
       
@@ -72,18 +70,12 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case let .setting(rows: options):
             let rowTitle = options[indexPath.row]
             switch rowTitle {
-            case .about:
-                cell.settingsImg.image = UIImage(named: "about")
-                cell.settingsTitle.text = "About"
-            case .terms:
-                cell.settingsImg.image = UIImage(named: "terms")
-                cell.settingsTitle.text = "Terms and Conditions"
             case .about2:
                 cell.settingsImg.image = UIImage(named: "about2")
-                cell.settingsTitle.text = "About2"
+                cell.settingsTitle.text = "About"
             case .terms2:
                 cell.settingsImg.image = UIImage(named: "terms2")
-                cell.settingsTitle.text = "Terms and Conditions2"
+                cell.settingsTitle.text = "Terms and Conditions"
             }
         }
             return cell
