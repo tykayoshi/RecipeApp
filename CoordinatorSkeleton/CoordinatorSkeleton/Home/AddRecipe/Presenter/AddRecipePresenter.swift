@@ -67,10 +67,10 @@ class AddRecipePresenter: AddRecipePresenterProtocol {
         interactor.postRecipe(using: recipe) { (result) in
             switch result {
             case .success(let recipe):
-                print("success")
+                print(recipe)
                 self.view?.successAlert()
             case .failure(let error):
-                print("error")
+                print(error)
                 self.view?.failureAlert()
             }
         }

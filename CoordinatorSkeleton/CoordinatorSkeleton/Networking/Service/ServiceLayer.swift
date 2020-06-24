@@ -26,7 +26,7 @@ class ServiceLayer {
     class func request<T: APIRequest>(apiRequest: T, router: T.RequestRouter, requestObject: T.RequestObject, completion: @escaping (Result<T.ResponseDataType, APIError>) -> ()) {
         
         
-        var urlRequest = try! apiRequest.makeRequest(from: router, requestObject: requestObject)
+        let urlRequest = try! apiRequest.makeRequest(from: router, requestObject: requestObject)
 
         let session = URLSession(configuration: .default)
         
@@ -34,7 +34,6 @@ class ServiceLayer {
             
             guard error == nil else {
                 completion(.failure(.unhandledError(message: "yep")))
-                print(error?.localizedDescription)
                 return
             }
             
