@@ -29,9 +29,16 @@ class RecipeListViewController: UIViewController {
         let recipeListNib = UINib(nibName: String(describing: RecipeTableViewCell.self), bundle: nil)
         tableView?.register(recipeListNib, forCellReuseIdentifier: String(describing: RecipeTableViewCell.self))
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         if let textfield = searchRecipe.value(forKey: "searchField") as? UITextField {
             textfield.backgroundColor = UIColor.white
         }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
