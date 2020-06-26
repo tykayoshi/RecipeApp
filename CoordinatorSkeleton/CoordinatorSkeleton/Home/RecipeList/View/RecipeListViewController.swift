@@ -31,6 +31,8 @@ class RecipeListViewController: UIViewController {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
+        
         
         if let textfield = searchRecipe.value(forKey: "searchField") as? UITextField {
             textfield.backgroundColor = UIColor.white
